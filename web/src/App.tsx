@@ -30,9 +30,12 @@ export default function App() {
       .then((d) => {
         setData(d);
         // open on the first day of the July 2025 heatwave alerts if present, else the first alert
-        const jul = d.alerts.find((a) => a.origin_date >= "2025-06-25");
-        const first = jul ?? d.alerts[0];
-        setOriginIdx(first ? Math.max(0, d.origins.indexOf(first.origin_date)) : 0);
+        // deep link: ?d=YYYY-MM-DD opens that issue date; default = start of the June 2025 heatwave alerts
+        const q = new URLSearchParams(location.search).get("d");
+        const qi = q ? d.origins.indexOf(q) : -1;
+        const jun = d.alerts.find((a) => a.origin_date >= "2025-06-19");
+        const first = jun ?? d.alerts[0];
+        setOriginIdx(qi >= 0 ? qi : first ? Math.max(0, d.origins.indexOf(first.origin_date)) : 0);
       })
       .catch((e) => setErr(String(e)));
   }, []);

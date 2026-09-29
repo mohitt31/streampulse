@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Alert } from "../types";
 import { View, fmtC } from "../lib/data";
 import { fmtDay } from "../lib/time";
@@ -18,6 +18,12 @@ export function AlertPanel({ v, originIdx, acks, onAck, onPick, disabled }: Prop
   const origin = v.d.origins[originIdx];
   const alert = v.alertFor(origin);
   const product = v.d.product_model;
+  const listRef = useRef<HTMLUListElement | null>(null);
+  useEffect(() => {
+    const list = listRef.current;
+    const el = list?.querySelector<HTMLElement>('[aria-current="true"]');
+    if (list && el) list.scrollTop = Math.max(0, el.offsetTop - 8);
+  }, [origin]);
   return (
     <div className="grid" style={{ gap: 12 }}>
       <div className="card">
@@ -37,7 +43,7 @@ export function AlertPanel({ v, originIdx, acks, onAck, onPick, disabled }: Prop
       </div>
       <div className="card">
         <h2>2025 alerts <span className="muted small">({v.d.alerts.length})</span></h2>
-        <ul className="alert-list">
+        <ul className="alert-list" ref={listRef}>
           {v.d.alerts.map((a) => {
             const i = v.d.origins.indexOf(a.origin_date);
             const acked = !!acks[a.alert_id];

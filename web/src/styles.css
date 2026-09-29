@@ -192,7 +192,7 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
 .alert-box.on { background: var(--watch-soft); border: 1px solid var(--watch); }
 .alert-box.off { background: var(--surface-2); border: 1px solid var(--border); }
 .alert-box h3 { margin: 0; display: flex; align-items: center; gap: 8px; }
-.alert-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-height: 280px; overflow: auto; }
+.alert-list { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-height: 280px; overflow: auto; }
 .alert-list button { width: 100%; text-align: left; border: 1px solid transparent; background: none; border-radius: 8px; padding: 6px 8px; cursor: pointer; display: flex; gap: 8px; align-items: center; }
 .alert-list button:hover { background: var(--surface-2); }
 .alert-list button[aria-current="true"] { border-color: var(--accent); background: var(--accent-soft); }

@@ -25,7 +25,7 @@ export function ForecastChart({ v, originIdx, model, showOutcome, showBaselines,
   const dates = useMemo(() => Array.from({ length: nDays + 1 }, (_, i) => addDays(start, i)), [start, nDays]);
 
   const H = width < 560 ? 270 : 330;
-  const m = { l: 40, r: 14, t: 18, b: 30 };
+  const m = { l: 40, r: 14, t: 26, b: 30 };
 
   const fc = v.d.leads.map((h) => ({ h, date: addDays(origin, h), c: v.cell(model, originIdx, h) }));
   const pers = v.cell("persistence", originIdx, 1)?.[0] ?? null;
@@ -97,7 +97,7 @@ export function ForecastChart({ v, originIdx, model, showOutcome, showBaselines,
             <text x={m.l - 6} y={y(t) + 4} textAnchor="end">{t}</text>
           </g>
         ))}
-        <text x={m.l - 6} y={m.t - 6} textAnchor="end">°C</text>
+        <text x={m.l - 6} y={m.t - 12} textAnchor="end">°C</text>
         {xt.map((d) => (
           <text key={d} x={xd(d)} y={H - 10} textAnchor="middle">{fmtDay(d)}</text>
         ))}
