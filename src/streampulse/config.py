@@ -52,7 +52,9 @@ def code_version(root: Path | None = None) -> str:
         sha = out.stdout.strip()
         if not sha:
             return "nogit"
-        dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"],
+        # dirty = uncommitted changes to code or contract (not to generated outputs such as reports/)
+        dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no", "--",
+                                "src", "config", "scripts", "pyproject.toml"],
                                cwd=root or REPO_ROOT, capture_output=True, text=True, timeout=5)
         return sha + ("-dirty" if dirty.stdout.strip() else "")
     except Exception:
