@@ -38,14 +38,14 @@ export function MethodView({ v }: { v: View }) {
             <div style={{ flex: 8.6, background: "#0b6e79" }}>train 2010–18</div>
             <div style={{ flex: 2.4, background: "repeating-linear-gradient(45deg,#9aa7ab,#9aa7ab 4px,#b8c3c6 4px,#b8c3c6 8px)", color: "#233" }}>gap</div>
             <div style={{ flex: 2, background: "#0b6e79" }}>2021–22</div>
-            <div style={{ flex: 1, background: "#5b8fd6" }}>2023</div>
-            <div style={{ flex: 1, background: "#8a63c9" }}>2024</div>
+            <div style={{ flex: 1, background: "#3b6fb6" }}>2023</div>
+            <div style={{ flex: 1, background: "#6b46b0" }}>2024</div>
             <div style={{ flex: 0.65, background: "#c2410c" }}>2025</div>
           </div>
           <div className="legend" style={{ marginTop: 6 }}>
             <span><i className="sw" style={{ background: "#0b6e79" }} /> train</span>
-            <span><i className="sw" style={{ background: "#5b8fd6" }} /> tune α (2023)</span>
-            <span><i className="sw" style={{ background: "#8a63c9" }} /> validate weather (2024)</span>
+            <span><i className="sw" style={{ background: "#3b6fb6" }} /> tune α (2023)</span>
+            <span><i className="sw" style={{ background: "#6b46b0" }} /> validate weather (2024)</span>
             <span><i className="sw" style={{ background: "#c2410c" }} /> test, opened once (2025)</span>
           </div>
           <ul className="notes small" style={{ marginTop: 10 }}>

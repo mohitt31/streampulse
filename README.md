@@ -25,6 +25,8 @@ The dashboard replays 2025 day by day, exactly as forecasts would have been issu
 
 ![Stale inputs: no forecast is issued](docs/img/stale.png)
 
+Accessibility: axe-core WCAG 2 A/AA and best-practice rules report **0 violations** on all three tabs in light and dark mode (`web/scripts/a11y.mjs`). The dashboard is keyboard-operable, and status is never shown by colour alone.
+
 ## Results (2025 test, opened once)
 
 All methods are scored on the **same 224 paired days** (1 Jan–21 Aug 2025). The design, splits and thresholds were fixed in [`config/contract.toml`](config/contract.toml) before 2025 was touched.

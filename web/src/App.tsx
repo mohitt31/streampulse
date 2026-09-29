@@ -73,7 +73,7 @@ export default function App() {
               <path d="M4 19c4 0 4-6 8-6s4 8 8 8 4-9 8-9" stroke="var(--accent-ink)" strokeWidth="3" fill="none" strokeLinecap="round" />
             </svg>
             <div>
-              StreamPulse
+              <h1>StreamPulse</h1>
               <small>Garonne water-temperature watch · Portet-sur-Garonne</small>
             </div>
           </div>
@@ -88,6 +88,7 @@ export default function App() {
           </button>
         </div>
       </header>
+      <section aria-label="Scope notice">
       {data?.synthetic && (
         <div className="ribbon synthetic"><div className="wrap">SYNTHETIC DATA: pipeline smoke test, not results.</div></div>
       )}
@@ -97,6 +98,7 @@ export default function App() {
           would have been issued in 2025; the station feed ends in August 2025.
         </div>
       </div>
+      </section>
       <main>
         <div className="wrap">
           {err && <div className="card"><b>Could not load data.</b> <span className="muted">{err}</span></div>}
