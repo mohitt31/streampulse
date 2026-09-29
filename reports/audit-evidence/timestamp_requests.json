@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://hubeau.eaufrance.fr/page/api-temperature-continu",
+    "retrieved_at": "2026-09-29T16:53:38.984993+00:00",
+    "status": 200,
+    "sha256": "43aec1d2d9a63bff2147f22b6c9914270344210c522278d30df49bf3bbf57e16",
+    "timezone_terms": {
+      "\\bUTC\\b": false,
+      "fuseau": false,
+      "timezone": false,
+      "heure locale": false
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/api-docs",
+    "retrieved_at": "2026-09-29T16:53:39.997725+00:00",
+    "status": 200,
+    "sha256": "797506a9cf78fbba29fb82eca71ac278d7fe84bd90aa4552ac79a71752c059ef",
+    "timezone_terms": {
+      "\\bUTC\\b": false,
+      "fuseau": false,
+      "timezone": false,
+      "heure locale": false
+    }
+  }
+]

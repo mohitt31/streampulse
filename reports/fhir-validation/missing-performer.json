@@ -1,0 +1,175 @@
+{
+  "resourceType" : "OperationOutcome",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Warning</td><td>Observation</td><td>Invalid Content</td><td>Best Practice Recommendation: In general, all observations should have a performer</td><td/><td>InstanceValidator</td></tr><tr><td>Error</td><td>Observation</td><td>Structural Issue</td><td>Observation.performer: minimum required = 1, but only found 0 (from http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah)</td><td/><td>InstanceValidator</td></tr><tr><td>Information</td><td>Observation.code</td><td>Invalid Code</td><td>None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#daily-mean-water-temperature)</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Observation.component[0].code</td><td>Invalid Code</td><td>None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#n-hours)</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Observation.component[1].code</td><td>Invalid Code</td><td>None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#n-quarters)</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Observation.component[2].code</td><td>Invalid Code</td><td>None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#source-qualification)</td><td/><td>TerminologyEngine</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+    "valueString" : "fhir/negative-controls/missing-performer.json"
+  }],
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 1
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 2
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "InstanceValidator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "All_observations_should_have_a_performer"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "text" : "Best Practice Recommendation: In general, all observations should have a performer"
+    },
+    "expression" : ["Observation"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 1
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 2
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "InstanceValidator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "Validation_VAL_Profile_Minimum"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+      "valueString" : "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+    }],
+    "severity" : "error",
+    "code" : "structure",
+    "details" : {
+      "text" : "Observation.performer: minimum required = 1, but only found 0 (from http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah)"
+    },
+    "expression" : ["Observation"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 14
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 4
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "TerminologyEngine"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "Terminology_TX_NoValid_3_CC"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+      "valueString" : "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "text" : "None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#daily-mean-water-temperature)"
+    },
+    "expression" : ["Observation.code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 43
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 8
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "TerminologyEngine"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "Terminology_TX_NoValid_3_CC"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+      "valueString" : "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "text" : "None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#n-hours)"
+    },
+    "expression" : ["Observation.component[0].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 59
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 8
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "TerminologyEngine"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "Terminology_TX_NoValid_3_CC"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+      "valueString" : "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "text" : "None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#n-quarters)"
+    },
+    "expression" : ["Observation.component[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger" : 75
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger" : 8
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+      "valueString" : "TerminologyEngine"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueCode" : "Terminology_TX_NoValid_3_CC"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+      "valueString" : "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "text" : "None of the codings provided are in the value set 'OAH Indicators (Non-Health)' (http://hl7.eu/fhir/ig/oah/ValueSet/oah-indicators-no-health-oah-vs), and a coding is recommended to come from this value set (codes = https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse#source-qualification)"
+    },
+    "expression" : ["Observation.component[2].code"]
+  }]
+}

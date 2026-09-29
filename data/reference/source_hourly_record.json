@@ -1,0 +1,13 @@
+{
+  "source_url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2025-01-01&date_fin_mesure=2025-01-01&size=20000",
+  "record": {
+    "geometry": null,
+    "code_station": "05174000",
+    "date_mesure_temp": "2025-01-01",
+    "heure_mesure_temp": "00:00:00",
+    "resultat": 6.0770001411438,
+    "code_unite": "27",
+    "symbole_unite": "°C",
+    "code_qualification": "4"
+  }
+}

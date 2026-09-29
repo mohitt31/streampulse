@@ -1,0 +1,1 @@
+{"alert_id": "demo-warmth-20250701", "station_id": "05174000", "origin_date": "2025-07-01", "target_dates": ["2025-07-04"], "forecast_refs": [0], "action": "confirm_temperature_and_measure_DO", "status": "acknowledged", "ack": {"by": "demo-coordinator", "at": "2026-09-29T16:52:10Z", "note": "Synthetic demo acknowledgement; no field sampling performed."}}

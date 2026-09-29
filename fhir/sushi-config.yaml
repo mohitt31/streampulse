@@ -1,0 +1,17 @@
+id: streampulse.fhir
+canonical: https://mohitt31.github.io/streampulse/fhir
+name: StreamPulseFHIR
+title: StreamPulse Experimental FHIR Evidence
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026
+releaseLabel: experimental
+publisher:
+  name: StreamPulse hackathon prototype
+  url: https://github.com/mohitt31/streampulse
+dependencies:
+  hl7.eu.fhir.oah: 0.1.0-ci-build
+
+menu:
+  Home: index.html

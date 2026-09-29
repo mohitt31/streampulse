@@ -1,0 +1,40 @@
+{
+  "resourceType": "Device",
+  "id": "46b390ff-8739-53df-86da-12dc0dffa709",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse model software water_ridge_v1 version 0000000000000000000000000000000000000000. No medical-device or operational approval implied.</p></div>"
+  },
+  "meta": {
+    "profile": [
+      "https://mohitt31.github.io/streampulse/fhir/StructureDefinition/streampulse-model-device"
+    ]
+  },
+  "status": "active",
+  "deviceName": [
+    {
+      "name": "water_ridge_v1",
+      "type": "model-name"
+    }
+  ],
+  "version": [
+    {
+      "value": "0000000000000000000000000000000000000000"
+    }
+  ],
+  "owner": {
+    "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+  },
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "66053c78-533c-5c5b-9c56-4baa4b265d6d",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse DEMO processing organization. Not an environmental authority or the original sensor operator.</p></div>"
+      },
+      "active": true,
+      "name": "StreamPulse DEMO processing organization"
+    }
+  ]
+}

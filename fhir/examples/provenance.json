@@ -1,0 +1,957 @@
+{
+  "resourceType": "Provenance",
+  "id": "f42d868f-6366-5733-a8b5-c090f2a0b260",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Forecast generation lineage. No weather run supplied.</p></div>"
+  },
+  "target": [
+    {
+      "reference": "#476c21d9-1606-50eb-9e0b-254eb39e151e"
+    }
+  ],
+  "recorded": "2026-09-29T16:51:10Z",
+  "occurredDateTime": "2026-09-29T16:51:10Z",
+  "activity": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+      }
+    ]
+  },
+  "agent": [
+    {
+      "who": {
+        "reference": "#46b390ff-8739-53df-86da-12dc0dffa709"
+      },
+      "onBehalfOf": {
+        "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+      }
+    },
+    {
+      "who": {
+        "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+      }
+    }
+  ],
+  "entity": [
+    {
+      "role": "source",
+      "what": {
+        "reference": "#cf96440d-84c1-55c3-b0a1-d75112a92706"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#778d6b8d-7168-5b82-b927-7046d81a01ea"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#0154920d-7428-56ea-b884-8085514030fd"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#81d848c0-03f9-5623-b3b2-517d5a832acd"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#e276207f-abec-5447-8054-461886362436"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#9cb42771-1687-5888-84a8-90734f6888be"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "reference": "#a5ec854d-ceb8-5cda-bac6-bc99d3e43701"
+      }
+    },
+    {
+      "role": "source",
+      "what": {
+        "identifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2025-06-24&date_fin_mesure=2025-06-30&size=20000"
+        },
+        "display": "Hub'eau upstream retrieval URL; exact pipeline snapshot/hash is not supplied by the contract"
+      }
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Observation",
+      "id": "0154920d-7428-56ea-b884-8085514030fd",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 23.58870840072632 °C on 2025-06-26; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-26&amp;date_fin_mesure=2025-06-26&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-26",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 23.58870840072632,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Device",
+      "id": "46b390ff-8739-53df-86da-12dc0dffa709",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse model software water_ridge_v1 version 0000000000000000000000000000000000000000. No medical-device or operational approval implied.</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "https://mohitt31.github.io/streampulse/fhir/StructureDefinition/streampulse-model-device"
+        ]
+      },
+      "status": "active",
+      "deviceName": [
+        {
+          "name": "water_ridge_v1",
+          "type": "model-name"
+        }
+      ],
+      "version": [
+        {
+          "value": "0000000000000000000000000000000000000000"
+        }
+      ],
+      "owner": {
+        "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+      }
+    },
+    {
+      "resourceType": "Observation",
+      "id": "476c21d9-1606-50eb-9e0b-254eb39e151e",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Forecast reconstructed in historical replay. effectivePeriod uses date-only boundaries for the target source-calendar day. issued is real generation; forecast-origin is the simulated/operational origin. Watch is supplied by the pipeline; its decision rule is not specified by this contract. SYNTHETIC FORECAST FIXTURE: not a trained model result or skill claim. Predicted daily mean 22.1 °C for 2025-07-04.</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "https://mohitt31.github.io/streampulse/fhir/StructureDefinition/streampulse-forecast-observation"
+        ]
+      },
+      "extension": [
+        {
+          "url": "https://mohitt31.github.io/streampulse/fhir/StructureDefinition/forecast-origin",
+          "valueDateTime": "2025-07-01T12:00:00Z"
+        },
+        {
+          "url": "https://mohitt31.github.io/streampulse/fhir/StructureDefinition/run-mode",
+          "valueCode": "replay"
+        }
+      ],
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "predicted-daily-mean-water-temperature",
+            "display": "Predicted daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectivePeriod": {
+        "start": "2025-07-04",
+        "end": "2025-07-04"
+      },
+      "issued": "2026-09-29T16:51:10Z",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "water_ridge_v1",
+            "display": "Water-history ridge v1"
+          }
+        ]
+      },
+      "device": {
+        "reference": "#46b390ff-8739-53df-86da-12dc0dffa709"
+      },
+      "derivedFrom": [
+        {
+          "reference": "#cf96440d-84c1-55c3-b0a1-d75112a92706"
+        },
+        {
+          "reference": "#778d6b8d-7168-5b82-b927-7046d81a01ea"
+        },
+        {
+          "reference": "#0154920d-7428-56ea-b884-8085514030fd"
+        },
+        {
+          "reference": "#81d848c0-03f9-5623-b3b2-517d5a832acd"
+        },
+        {
+          "reference": "#e276207f-abec-5447-8054-461886362436"
+        },
+        {
+          "reference": "#9cb42771-1687-5888-84a8-90734f6888be"
+        },
+        {
+          "reference": "#a5ec854d-ceb8-5cda-bac6-bc99d3e43701"
+        }
+      ],
+      "valueQuantity": {
+        "value": 22.1,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "pi90-low"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 21.2,
+            "system": "http://unitsofmeasure.org",
+            "code": "Cel",
+            "unit": "°C"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "pi90-high"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 23.0,
+            "system": "http://unitsofmeasure.org",
+            "code": "Cel",
+            "unit": "°C"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "p90-reference"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 21.9,
+            "system": "http://unitsofmeasure.org",
+            "code": "Cel",
+            "unit": "°C"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "watch"
+              }
+            ]
+          },
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "watch-on"
+              }
+            ]
+          }
+        }
+      ],
+      "note": [
+        {
+          "text": "Forecast reconstructed in historical replay. effectivePeriod uses date-only boundaries for the target source-calendar day. issued is real generation; forecast-origin is the simulated/operational origin. Watch is supplied by the pipeline; its decision rule is not specified by this contract. SYNTHETIC FORECAST FIXTURE: not a trained model result or skill claim."
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "66053c78-533c-5c5b-9c56-4baa4b265d6d",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse DEMO processing organization. Not an environmental authority or the original sensor operator.</p></div>"
+      },
+      "active": true,
+      "name": "StreamPulse DEMO processing organization"
+    },
+    {
+      "resourceType": "Observation",
+      "id": "778d6b8d-7168-5b82-b927-7046d81a01ea",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 24.142999966939286 °C on 2025-06-25; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-25&amp;date_fin_mesure=2025-06-25&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-25",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 24.142999966939286,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "81d848c0-03f9-5623-b3b2-517d5a832acd",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 23.722124735514313 °C on 2025-06-27; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-27&amp;date_fin_mesure=2025-06-27&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-27",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 23.722124735514313,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "9cb42771-1687-5888-84a8-90734f6888be",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 24.641583283742268 °C on 2025-06-29; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-29&amp;date_fin_mesure=2025-06-29&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-29",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 24.641583283742268,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "a5ec854d-ceb8-5cda-bac6-bc99d3e43701",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 25.2325832049052 °C on 2025-06-30; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-30&amp;date_fin_mesure=2025-06-30&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-30",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 25.2325832049052,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "cf96440d-84c1-55c3-b0a1-d75112a92706",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 24.158833185831707 °C on 2025-06-24; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-24&amp;date_fin_mesure=2025-06-24&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-24",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 24.158833185831707,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "e276207f-abec-5447-8054-461886362436",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 24.180083115895595 °C on 2025-06-28; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-28&amp;date_fin_mesure=2025-06-28&amp;size=20000</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+        ]
+      },
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-mean-water-temperature",
+            "display": "Daily mean water temperature"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+      },
+      "effectiveDateTime": "2025-06-28",
+      "performer": [
+        {
+          "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+        }
+      ],
+      "valueQuantity": {
+        "value": 24.180083115895595,
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel",
+        "unit": "°C"
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "daily-aggregation"
+          }
+        ]
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-hours"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 24,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "hours counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "n-quarters"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "system": "http://unitsofmeasure.org",
+            "code": "1",
+            "unit": "portions counted"
+          }
+        },
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+                "code": "source-qualification"
+              }
+            ]
+          },
+          "valueString": "4"
+        }
+      ]
+    },
+    {
+      "resourceType": "Location",
+      "id": "f0ecad8e-4383-58d7-8f58-6b2721304fb0",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>La Garonne en amont de l'Ariège; Hub'eau station 05174000, Portet-sur-Garonne. Source: https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=05174000&amp;size=1</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+        ]
+      },
+      "identifier": [
+        {
+          "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+          "value": "05174000"
+        }
+      ],
+      "status": "active",
+      "name": "La Garonne en amont de l'Ariège",
+      "mode": "instance",
+      "description": "Historical demonstration site near Toulouse; official OAH sampling-site membership UNVERIFIED. Station URI: https://id.eaufrance.fr/StationMesureEauxSurface/05174000",
+      "position": {
+        "longitude": 1.387766337,
+        "latitude": 43.512148118
+      }
+    }
+  ]
+}

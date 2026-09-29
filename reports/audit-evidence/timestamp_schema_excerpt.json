@@ -1,0 +1,17 @@
+{
+  "source": "https://hubeau.eaufrance.fr/api/v1/temperature/api-docs",
+  "definition": "Chronique",
+  "properties": {
+    "date_mesure_temp": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2016-12-01",
+      "description": "Date de la mesure"
+    },
+    "heure_mesure_temp": {
+      "type": "string",
+      "example": "16:12:36",
+      "description": "Heure de la mesure"
+    }
+  }
+}

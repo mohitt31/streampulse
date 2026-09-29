@@ -1,0 +1,41 @@
+{
+  "positive": {
+    "counts": {
+      "information": 183
+    },
+    "expected_failure": false
+  },
+  "missing-performer": {
+    "counts": {
+      "warning": 1,
+      "error": 1,
+      "information": 4
+    },
+    "expected_failure": true
+  },
+  "wrong-subject-type": {
+    "counts": {
+      "information": 4,
+      "error": 1
+    },
+    "expected_failure": true
+  },
+  "missing-run-mode": {
+    "counts": {
+      "information": 35,
+      "error": 2
+    },
+    "expected_failure": true
+  },
+  "generated_at": "2026-09-29T21:10:07.778129+00:00",
+  "validator": "6.10.4",
+  "fhir": "4.0.1",
+  "terminology_server": "https://tx.fhir.org/r4",
+  "positive_documents": 10,
+  "standalone_examples": 9,
+  "fixture_bundle_sha256": "4e12c83598e9c62c90def88ca020cbe47a840b6982743e23f4eb23e8d2cbf39e",
+  "fixture_resource_count": 15,
+  "python_version": "3.11",
+  "tests_passed": 26,
+  "notes": "24 exporter contract tests plus 2 validator stale-report regression tests; GitHub-hosted CI not executed."
+}

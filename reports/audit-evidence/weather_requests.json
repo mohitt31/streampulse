@@ -1,0 +1,1531 @@
+[
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-03-13T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:09.264120+00:00",
+    "error": "HTTP Error 400: Bad Request",
+    "status": 400,
+    "run_date": "2024-03-13",
+    "boundary_probe": true,
+    "eight_full_days": false
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-03-14T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:12.049970+00:00",
+    "status": 200,
+    "sha256": "90f1ab58ed18f4e358436c5d3243aa63781c1477ddcb0bfba12523fc9fbe7cd0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-03-14",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-03-14T00:00",
+    "time_end": "2024-03-21T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-03-21T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:14.864466+00:00",
+    "status": 200,
+    "sha256": "0e9894861a8e750845b0d3b78f5a6d9ca0b65e6171fe2eb06112881efa1ccd61",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-03-21",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-03-21T00:00",
+    "time_end": "2024-03-28T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-03-28T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:17.801494+00:00",
+    "status": 200,
+    "sha256": "1ce880afc4baea9afdc97253136eb2c32c5c5db973d92219394277a188b41d5e",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-03-28",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-03-28T00:00",
+    "time_end": "2024-04-04T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-04-04T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:20.616268+00:00",
+    "status": 200,
+    "sha256": "3c9f0fae6906df1845ebf1e6ce4ff0030250caa3569fb20bcf20c90a218fbde6",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-04-04",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-04-04T00:00",
+    "time_end": "2024-04-11T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-04-11T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:23.576768+00:00",
+    "status": 200,
+    "sha256": "b411b538eb91e3d2501dc6fd723782cdb4b27bca3c9314d53941939acee91d45",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-04-11",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-04-11T00:00",
+    "time_end": "2024-04-18T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-04-18T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:26.389118+00:00",
+    "status": 200,
+    "sha256": "56c498481ac06ce555031d6967411abd9528e73922f1e2023d90e144c915bdcd",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-04-18",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-04-18T00:00",
+    "time_end": "2024-04-25T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-04-25T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:29.395382+00:00",
+    "status": 200,
+    "sha256": "4978395f9a00366ec1ef032268df78400610803a56754abb6d5ed35f2fe576bc",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-04-25",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-04-25T00:00",
+    "time_end": "2024-05-02T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-05-02T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:32.229464+00:00",
+    "status": 200,
+    "sha256": "f9316aeab32bde2f6a9ee0e3c21962856a571314b5ba17b6389045d68a2a618f",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-05-02",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-05-02T00:00",
+    "time_end": "2024-05-09T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-05-09T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:34.972292+00:00",
+    "status": 200,
+    "sha256": "1881842663de9ebfc0b2c0c4c434b70441463f47164194c53a7c4c58233dbe1d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-05-09",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-05-09T00:00",
+    "time_end": "2024-05-16T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-05-16T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:37.782843+00:00",
+    "status": 200,
+    "sha256": "2b69f9650cca51ca3c3e743368b9703e8e1b8155e2344338fea4fe60832e3f5a",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-05-16",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-05-16T00:00",
+    "time_end": "2024-05-23T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-05-23T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:40.570665+00:00",
+    "status": 200,
+    "sha256": "187705583e7173588427fdafb2f202b9027eeedd85b46f819efb257fd050d60d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-05-23",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-05-23T00:00",
+    "time_end": "2024-05-30T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-05-30T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:43.381271+00:00",
+    "status": 200,
+    "sha256": "f228516f5efadb30adae57ae78fe449011f50eff1a562f11fa8edbaea9303222",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-05-30",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-05-30T00:00",
+    "time_end": "2024-06-06T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-06-06T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:46.335110+00:00",
+    "status": 200,
+    "sha256": "ecf2b8e5ef32fa8f7b63d70b8833355c6fd01ebd8d25d67975e951c592221b4d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-06-06",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-06-06T00:00",
+    "time_end": "2024-06-13T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-06-13T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:49.209719+00:00",
+    "status": 200,
+    "sha256": "bf48ac34741469f7f55c0c5eb084253a2cceb96abc9deea6982b279061b30518",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-06-13",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-06-13T00:00",
+    "time_end": "2024-06-20T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-06-20T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:52.055462+00:00",
+    "status": 200,
+    "sha256": "f99750452af26435aa5aebb7f0ecfe1619dc982f96f06475bdc5edc2f9ed6cb0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-06-20",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-06-20T00:00",
+    "time_end": "2024-06-27T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-06-27T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:54.879402+00:00",
+    "status": 200,
+    "sha256": "52425bca873554da0240e70e88bbba73a225dedcea140c87f0409cf625faed74",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-06-27",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-06-27T00:00",
+    "time_end": "2024-07-04T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-07-04T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:43:57.888040+00:00",
+    "status": 200,
+    "sha256": "bece5cbcb26f0ff922e494a99d80b863fc3591d7ba4051e59ce2664b65b93274",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-07-04",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-07-04T00:00",
+    "time_end": "2024-07-11T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-07-11T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:00.756673+00:00",
+    "status": 200,
+    "sha256": "7b65826732486edb3adff9539511e967e68f01be21009e3166cb3b71a612b337",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-07-11",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-07-11T00:00",
+    "time_end": "2024-07-18T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-07-18T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:03.575320+00:00",
+    "status": 200,
+    "sha256": "93dcd8f1996d2720fb2504ef11eb9a3c54aa1c6a0859f4e547497bb1e4e82653",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-07-18",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-07-18T00:00",
+    "time_end": "2024-07-25T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-07-25T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:06.296318+00:00",
+    "status": 200,
+    "sha256": "968088caddd89bf654e3cb4aa486189c9c2ecd65f63b8dcc2aa7c91790eccd6b",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-07-25",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-07-25T00:00",
+    "time_end": "2024-08-01T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-08-01T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:09.182847+00:00",
+    "status": 200,
+    "sha256": "be7313d936e200947f4ba8ad099cd42db62ea392a0cc425b0184d4a57b11589e",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-08-01",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-08-01T00:00",
+    "time_end": "2024-08-08T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-08-08T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:12.099311+00:00",
+    "status": 200,
+    "sha256": "3cfa61875696af292bb27961539ddb62fcd2963286355e5f240c06da1f140f93",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-08-08",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-08-08T00:00",
+    "time_end": "2024-08-15T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-08-15T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:14.864736+00:00",
+    "status": 200,
+    "sha256": "d88fbb8476d10cfc2cffe9df28239673a2c64ddbc10dfdd147e91c5513291742",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-08-15",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-08-15T00:00",
+    "time_end": "2024-08-22T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-08-22T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:17.703961+00:00",
+    "status": 200,
+    "sha256": "4206a04e2bbe1637561d54f808834fe16ed4583ade9a2f17e0049f5dd241f5b0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-08-22",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-08-22T00:00",
+    "time_end": "2024-08-29T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-08-29T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:20.571190+00:00",
+    "status": 200,
+    "sha256": "eb1cede995fedc1dc82b519c7a61d2298891273d4b1d3cb2aeea371bf72332e6",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-08-29",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-08-29T00:00",
+    "time_end": "2024-09-05T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-09-05T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:23.407488+00:00",
+    "status": 200,
+    "sha256": "da475092e412695c14d84aaeedc01628475ad774fc0ac09b93550cc561c4ac2f",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-09-05",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-09-05T00:00",
+    "time_end": "2024-09-12T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-09-12T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:26.171158+00:00",
+    "status": 200,
+    "sha256": "c88224088b7243f441e22c0329d758875695714a09cfcd1104a9d0c62fd308bd",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-09-12",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-09-12T00:00",
+    "time_end": "2024-09-19T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-09-19T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:29.007471+00:00",
+    "status": 200,
+    "sha256": "bb1ab621e71c263047dee790a0d60d738004b3cd5b72e02d5e4ef867815a8d13",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-09-19",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-09-19T00:00",
+    "time_end": "2024-09-26T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-09-26T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:31.854064+00:00",
+    "status": 200,
+    "sha256": "a76c4d19889c391dbdf42008568bb64968d5bde3d5b5ffe5dc939f32519af205",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-09-26",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-09-26T00:00",
+    "time_end": "2024-10-03T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-10-03T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:34.758615+00:00",
+    "status": 200,
+    "sha256": "047bfb3ffa190dcdc50417e73cb3027f73845cdd80f8dffc7e3a6b51e46cce11",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-10-03",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-10-03T00:00",
+    "time_end": "2024-10-10T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-10-10T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:37.751497+00:00",
+    "status": 200,
+    "sha256": "b0ee8bca7fc9aae2ddf0466614233ac95996c65a578e1a2827e84c15c47b9236",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-10-10",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-10-10T00:00",
+    "time_end": "2024-10-17T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-10-17T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:40.507985+00:00",
+    "status": 200,
+    "sha256": "0a19f0d87acde83af7dc49c72392a1e6a1e8a412e025fd3c42f37b27b3605ff3",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-10-17",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-10-17T00:00",
+    "time_end": "2024-10-24T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-10-24T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:43.240704+00:00",
+    "status": 200,
+    "sha256": "6761c3c1b7cf996ff8755d88ef32377b05877fddcfffcf94fa5e75f8cbfe1883",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-10-24",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-10-24T00:00",
+    "time_end": "2024-10-31T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-10-31T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:46.262024+00:00",
+    "status": 200,
+    "sha256": "e0499101aa4198a8e50e165e34eeb21e2a198ad9bebb111032c84742a028df86",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-10-31",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-10-31T00:00",
+    "time_end": "2024-11-07T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-11-07T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:49.062684+00:00",
+    "status": 200,
+    "sha256": "4b170ec1153bd04bff82517b11c329d0a7bb326fd464208d0d33e4fce5da0839",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-11-07",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-11-07T00:00",
+    "time_end": "2024-11-14T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-11-14T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:52.090735+00:00",
+    "status": 200,
+    "sha256": "27c3a65e8871ffbf6d055f61463277d7fbd50e03e32271fc38dfc341f73437f6",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-11-14",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-11-14T00:00",
+    "time_end": "2024-11-21T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-11-21T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:54.792160+00:00",
+    "status": 200,
+    "sha256": "3b3d3ecaf2405846bb8c6bc9c44340a95fc91a17b7da740615302ec1d14b17fe",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-11-21",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-11-21T00:00",
+    "time_end": "2024-11-28T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-11-28T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:44:57.522081+00:00",
+    "status": 200,
+    "sha256": "490779838fbfe300dff4ed81ae4af45534500e0cfe82a35d73c8487a83f9027b",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-11-28",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-11-28T00:00",
+    "time_end": "2024-12-05T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-12-05T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:00.295058+00:00",
+    "status": 200,
+    "sha256": "e8fb8ba6faaca9ffa14efb9e781d6adf32295172734ac44ea04727f6e4696633",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-12-05",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-12-05T00:00",
+    "time_end": "2024-12-12T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-12-12T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:02.973659+00:00",
+    "status": 200,
+    "sha256": "8b6d849da5d520954140cb9686a19a5764d6fab16320d91106f3dbe5c0567939",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-12-12",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-12-12T00:00",
+    "time_end": "2024-12-19T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-12-19T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:05.755191+00:00",
+    "status": 200,
+    "sha256": "93b12389dcf1f1d41c7b0d97fb158876b718417c6a9119356e7461222c279547",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-12-19",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-12-19T00:00",
+    "time_end": "2024-12-26T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2024-12-26T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:08.537026+00:00",
+    "status": 200,
+    "sha256": "49f58c2867183dbd9ae514d98dfeffac58a66ffdb639e4efb0ada6efaf56d6d2",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2024-12-26",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2024-12-26T00:00",
+    "time_end": "2025-01-02T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-01-02T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:11.400968+00:00",
+    "status": 200,
+    "sha256": "8b69fbf3da1497461fb73eb3f6ffb4f5f179ba902dc601ef6875cc2bfde27eff",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-01-02",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-01-02T00:00",
+    "time_end": "2025-01-09T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-01-09T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:14.152554+00:00",
+    "status": 200,
+    "sha256": "14f6eff84fdd7efd7de9fb8f418c4293841a07182f4b3fcfe5f7bfc157d2a68b",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-01-09",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-01-09T00:00",
+    "time_end": "2025-01-16T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-01-16T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:17.821289+00:00",
+    "status": 200,
+    "sha256": "7858c33949f3492b59fdec52581dd90d76b6e2036cd9aef3b3e973c9dbd79d27",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-01-16",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-01-16T00:00",
+    "time_end": "2025-01-23T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-01-23T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:21.428425+00:00",
+    "status": 200,
+    "sha256": "73805f071b28f91dd483a5f0cb1f04e3e1f9f6b78b76d2171e8183043f2fbf24",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-01-23",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-01-23T00:00",
+    "time_end": "2025-01-30T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-01-30T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:25.240577+00:00",
+    "status": 200,
+    "sha256": "5aa0b8bf47080012e4f932db46066196ade94a13240ce99f0e96109127e2af3b",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-01-30",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-01-30T00:00",
+    "time_end": "2025-02-06T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-02-06T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:28.989622+00:00",
+    "status": 200,
+    "sha256": "902f889c5a8c7b6d516de131e4798a90abb600fc58e3ee9fa809bb5029fb48b1",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-02-06",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-02-06T00:00",
+    "time_end": "2025-02-13T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-02-13T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:31.901276+00:00",
+    "status": 200,
+    "sha256": "10792912af59caebf899696d5a4cf04af9fd86a351459d0a14fdbf7e8cd51cff",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-02-13",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-02-13T00:00",
+    "time_end": "2025-02-20T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-02-20T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:34.639441+00:00",
+    "status": 200,
+    "sha256": "2e08476e0ef8f5ce1273d4519b47b2a54bf4f6726e51fceae3a63e4c6eafeb61",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-02-20",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-02-20T00:00",
+    "time_end": "2025-02-27T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-02-27T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:37.414296+00:00",
+    "status": 200,
+    "sha256": "18f2a2bb046ae2e03ed20c36ac0ee98c0e6964cddb12bf8cbae9de5d52b6f7f7",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-02-27",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-02-27T00:00",
+    "time_end": "2025-03-06T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-03-06T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:40.168232+00:00",
+    "status": 200,
+    "sha256": "e9d970cb5f3f3b2330b12cf7af5dfe587b8dc588d1dc8b4a8a4c3e85f5dd4c5f",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-03-06",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-03-06T00:00",
+    "time_end": "2025-03-13T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-03-13T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:42.971293+00:00",
+    "status": 200,
+    "sha256": "8c7bda7b1924478e7005d97b7ff798c271721fc910aa3ffff2a0abae5b7d8a6d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-03-13",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-03-13T00:00",
+    "time_end": "2025-03-20T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-03-20T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:45.645718+00:00",
+    "status": 200,
+    "sha256": "f2638a0f9791a2b5839abddcfba6d8cae9c24bd98a77bb19a976eb3593022b59",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-03-20",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-03-20T00:00",
+    "time_end": "2025-03-27T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-03-27T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:48.389793+00:00",
+    "status": 200,
+    "sha256": "f147c9e0c1c73dc0ae6456ea1579f26b6c8ce665fb50ab96f11d81e7f1d1573d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-03-27",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-03-27T00:00",
+    "time_end": "2025-04-03T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-04-03T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:51.136998+00:00",
+    "status": 200,
+    "sha256": "a8254196e2dfaf876f9b29a8ed708237748af7324687dda2507dcbbc6dffbad0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-04-03",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-04-03T00:00",
+    "time_end": "2025-04-10T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-04-10T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:53.865175+00:00",
+    "status": 200,
+    "sha256": "7e38588309257c41ad83a759879b09578d4cc64f4c99864a963cacdff839f750",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-04-10",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-04-10T00:00",
+    "time_end": "2025-04-17T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-04-17T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:56.610162+00:00",
+    "status": 200,
+    "sha256": "b8ecc4ed2a65a0d8478061b6e593df028587f208d436f913351b8454d459ead9",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-04-17",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-04-17T00:00",
+    "time_end": "2025-04-24T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-04-24T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:45:59.345228+00:00",
+    "status": 200,
+    "sha256": "368d5ec2d387e1d1bb66e4330a93c28db24ab28f7487796640727d778c01c1cb",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-04-24",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-04-24T00:00",
+    "time_end": "2025-05-01T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-05-01T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:02.047033+00:00",
+    "status": 200,
+    "sha256": "5ca54c6370c606205a2ddad3f1cc38e9005d31082c650426056b896ba0f16901",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-05-01",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-05-01T00:00",
+    "time_end": "2025-05-08T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-05-08T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:04.796230+00:00",
+    "status": 200,
+    "sha256": "abbdf983cf42f89706d91073e1445f832f14b27713c279ef3ef6ae2dde736810",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-05-08",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-05-08T00:00",
+    "time_end": "2025-05-15T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-05-15T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:07.492765+00:00",
+    "status": 200,
+    "sha256": "cf74921ab4189ca59af99d79d91dce7664a381d5c5d38becfc9b442b34f1da38",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-05-15",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-05-15T00:00",
+    "time_end": "2025-05-22T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-05-22T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:10.216210+00:00",
+    "status": 200,
+    "sha256": "73d0706936fe6ab27b68dffdd8ea37d910666049ce77bc129070e6288da451dd",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-05-22",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-05-22T00:00",
+    "time_end": "2025-05-29T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-05-29T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:12.952706+00:00",
+    "status": 200,
+    "sha256": "358592847704489a55263bd85ac5212834bc72e87f515f52c548d97d82e692e3",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-05-29",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-05-29T00:00",
+    "time_end": "2025-06-05T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-06-05T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:15.678079+00:00",
+    "status": 200,
+    "sha256": "71d3b04627672745ecea7f42177e53d05fd242196a2cc7738643b21eca9c589c",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-06-05",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-06-05T00:00",
+    "time_end": "2025-06-12T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-06-12T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:18.390805+00:00",
+    "status": 200,
+    "sha256": "040b86f0963c638709110b8ee3f436ab34be7306f099f3074ef7050b7e9086fe",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-06-12",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-06-12T00:00",
+    "time_end": "2025-06-19T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-06-19T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:21.125065+00:00",
+    "status": 200,
+    "sha256": "f5b7e4f6d5443739e3f14a091ad4c23b25ce9962f6bf5b7ae75f6eb5c6db4b77",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-06-19",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-06-19T00:00",
+    "time_end": "2025-06-26T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-06-26T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:23.993786+00:00",
+    "status": 200,
+    "sha256": "fe8c85bcbbc4b21dfb858aa6eaf9d6e239e65f1a76dbeb067a7683323c8a731d",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-06-26",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-06-26T00:00",
+    "time_end": "2025-07-03T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-07-03T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:26.767069+00:00",
+    "status": 200,
+    "sha256": "c237edafd0770cc6b8177817bf08ad96615cb9dbb55d5ea527313915fbb2ae78",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-07-03",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-07-03T00:00",
+    "time_end": "2025-07-10T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-07-10T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:29.493392+00:00",
+    "status": 200,
+    "sha256": "c261639567a774453bb4f83029270c69dbc10f4374e539e5414ea82c92d0ad71",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-07-10",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-07-10T00:00",
+    "time_end": "2025-07-17T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-07-17T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:32.221816+00:00",
+    "status": 200,
+    "sha256": "88283755d8065ba2515dfc5f1909918ba87cb432133af7605cf0a65de2b30430",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-07-17",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-07-17T00:00",
+    "time_end": "2025-07-24T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-07-24T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:34.951536+00:00",
+    "status": 200,
+    "sha256": "1403be53e93195bebafa39c70f078f8da1405599a3e41852336f0c4f76e01e02",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-07-24",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-07-24T00:00",
+    "time_end": "2025-07-31T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-07-31T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:37.662711+00:00",
+    "status": 200,
+    "sha256": "7f2baf2070c8f8110b0619b1f562497e41fdb63b53cb03223cc3d05a139c57d3",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-07-31",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-07-31T00:00",
+    "time_end": "2025-08-07T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-08-07T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:40.491281+00:00",
+    "status": 200,
+    "sha256": "242e1e6d6254f38d338ab07aeb79d6dd07eccc1c86a6ba4423c2f796830b4c51",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-08-07",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 0,
+    "time_start": "2025-08-07T00:00",
+    "time_end": "2025-08-14T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": false
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-08-14T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:43.209063+00:00",
+    "status": 200,
+    "sha256": "5d4f167d2a25a2d79c15e0a60030862a955aeac86baf5b60df24cc679ec05c8f",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-08-14",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-08-14T00:00",
+    "time_end": "2025-08-21T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  },
+  {
+    "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-08-21T00:00&forecast_days=8&timezone=GMT",
+    "retrieved_at": "2026-09-29T16:46:45.921966+00:00",
+    "status": 200,
+    "sha256": "f1b79eaac41c1c704cfbb7d5bbb0c21e48a769b1c678dc7589a01d229f31098e",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "run_date": "2025-08-21",
+    "boundary_probe": false,
+    "n_times": 192,
+    "n_values": 192,
+    "non_null": 192,
+    "time_start": "2025-08-21T00:00",
+    "time_end": "2025-08-28T23:00",
+    "exact_192_hour_axis": true,
+    "unit": "\u00b0C",
+    "utc_offset_seconds": 0,
+    "eight_full_days": true
+  }
+]

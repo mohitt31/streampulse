@@ -1,0 +1,82 @@
+{
+  "resourceType": "Observation",
+  "id": "a3e2e377-c0b5-5094-9941-fab02b68b6c3",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Real Hub'eau sensor value 6.0770001411438 °C on source date 2025-01-01, source clock 00:00:00; timezone UNVERIFIED. Performer is the DEMO organization responsible for this representation, not an asserted sensor operator. Qualification 4.</p></div>"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.eu/fhir/ig/oah/CodeSystem/temporarySystem-oah-eu",
+        "code": "waterTemperature",
+        "display": "Water temperature"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+  },
+  "effectiveDateTime": "2025-01-01",
+  "performer": [
+    {
+      "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+    }
+  ],
+  "valueQuantity": {
+    "value": 6.0770001411438,
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel",
+    "unit": "°C"
+  },
+  "note": [
+    {
+      "text": "Original source date/time: 2025-01-01 00:00:00; timezone UNVERIFIED; https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2025-01-01&date_fin_mesure=2025-01-01&size=20000"
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "66053c78-533c-5c5b-9c56-4baa4b265d6d",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse DEMO processing organization. Not an environmental authority or the original sensor operator.</p></div>"
+      },
+      "active": true,
+      "name": "StreamPulse DEMO processing organization"
+    },
+    {
+      "resourceType": "Location",
+      "id": "f0ecad8e-4383-58d7-8f58-6b2721304fb0",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>La Garonne en amont de l'Ariège; Hub'eau station 05174000, Portet-sur-Garonne. Source: https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=05174000&amp;size=1</p></div>"
+      },
+      "meta": {
+        "profile": [
+          "http://hl7.eu/fhir/ig/oah/StructureDefinition/location-oah"
+        ]
+      },
+      "identifier": [
+        {
+          "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+          "value": "05174000"
+        }
+      ],
+      "status": "active",
+      "name": "La Garonne en amont de l'Ariège",
+      "mode": "instance",
+      "description": "Historical demonstration site near Toulouse; official OAH sampling-site membership UNVERIFIED. Station URI: https://id.eaufrance.fr/StationMesureEauxSurface/05174000",
+      "position": {
+        "longitude": 1.387766337,
+        "latitude": 43.512148118
+      }
+    }
+  ]
+}

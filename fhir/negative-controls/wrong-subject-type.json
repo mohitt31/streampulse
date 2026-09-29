@@ -1,0 +1,108 @@
+{
+  "resourceType": "Observation",
+  "id": "0154920d-7428-56ea-b884-8085514030fd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Derived source-calendar daily mean 23.58870840072632 °C on 2025-06-26; 24 hours, 4 six-hour portions. Source qualification: 4. FHIR final describes the completed aggregation, not source quality. Source timezone UNVERIFIED. https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&amp;date_debut_mesure=2025-06-26&amp;date_fin_mesure=2025-06-26&amp;size=20000</p></div>"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+        "code": "daily-mean-water-temperature",
+        "display": "Daily mean water temperature"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "#f0ecad8e-4383-58d7-8f58-6b2721304fb0"
+  },
+  "effectiveDateTime": "2025-06-26",
+  "performer": [
+    {
+      "reference": "#66053c78-533c-5c5b-9c56-4baa4b265d6d"
+    }
+  ],
+  "valueQuantity": {
+    "value": 23.58870840072632,
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel",
+    "unit": "°C"
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+        "code": "daily-aggregation"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "n-hours"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 24,
+        "system": "http://unitsofmeasure.org",
+        "code": "1",
+        "unit": "hours counted"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "n-quarters"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 4,
+        "system": "http://unitsofmeasure.org",
+        "code": "1",
+        "unit": "portions counted"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+            "code": "source-qualification"
+          }
+        ]
+      },
+      "valueString": "4"
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "66053c78-533c-5c5b-9c56-4baa4b265d6d",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamPulse DEMO processing organization. Not an environmental authority or the original sensor operator.</p></div>"
+      },
+      "active": true,
+      "name": "StreamPulse DEMO processing organization"
+    },
+    {
+      "resourceType": "Patient",
+      "id": "f0ecad8e-4383-58d7-8f58-6b2721304fb0",
+      "active": true
+    }
+  ]
+}

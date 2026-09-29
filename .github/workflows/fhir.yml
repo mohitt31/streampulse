@@ -1,0 +1,50 @@
+name: FHIR conformance
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: fhir/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.fhir/packages
+            tools/validator_cli.jar
+          key: fhir-${{ runner.os }}-validator-6.10.4-oah-b907cf08-${{ hashFiles('fhir/tool-versions.json', 'fhir/package-lock.json') }}
+      - name: Compile pinned OAH and local IG
+        run: bash scripts/build_fhir.sh
+      - name: Build explicit demonstration fixtures
+        run: python scripts/make_fhir_examples.py
+      - name: Official validator and negative controls
+        run: bash scripts/validate_fhir.sh --fixtures
+      - name: Exporter contract tests
+        run: python -m unittest discover -s tests/fhir -v
+      - name: Validate real pipeline export when present
+        if: ${{ hashFiles('data/processed/daily_water.csv', 'reports/forecasts.jsonl', 'reports/alerts.jsonl') != '' }}
+        run: |
+          if [[ -f data/processed/daily_water.csv && -f reports/forecasts.jsonl && -f reports/alerts.jsonl ]]; then
+            PYTHONPATH=src python -m streampulse.fhir_export
+            bash scripts/validate_fhir.sh
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fhir-validation
+          path: reports/fhir-validation/

@@ -1,0 +1,31 @@
+test_ack_must_be_real_time (test_export.ExportTests.test_ack_must_be_real_time) ... ok
+test_bad_model_sha (test_export.ExportTests.test_bad_model_sha) ... ok
+test_bool_number_rejected (test_export.ExportTests.test_bool_number_rejected) ... ok
+test_communication_subject_absent (test_export.ExportTests.test_communication_subject_absent) ... ok
+test_deterministic_and_reference_closed (test_export.ExportTests.test_deterministic_and_reference_closed) ... ok
+test_escaped_untrusted_note (test_export.ExportTests.test_escaped_untrusted_note) ... ok
+test_export_cli_equivalent (test_export.ExportTests.test_export_cli_equivalent) ... ok
+test_future_observation_rejected (test_export.ExportTests.test_future_observation_rejected) ... ok
+test_future_weather_rejected (test_export.ExportTests.test_future_weather_rejected) ... ok
+test_index_out_of_range_rejected (test_export.ExportTests.test_index_out_of_range_rejected) ... ok
+test_ineligible_observation_rejected (test_export.ExportTests.test_ineligible_observation_rejected) ... ok
+test_invalid_interval_rejected (test_export.ExportTests.test_invalid_interval_rejected) ... ok
+test_missing_observation_rejected (test_export.ExportTests.test_missing_observation_rejected) ... ok
+test_naive_issued_rejected (test_export.ExportTests.test_naive_issued_rejected) ... ok
+test_nan_rejected (test_export.ExportTests.test_nan_rejected) ... ok
+test_negative_index_rejected (test_export.ExportTests.test_negative_index_rejected) ... ok
+test_open_alert_export (test_export.ExportTests.test_open_alert_export) ... ok
+test_open_alert_has_no_ack (test_export.ExportTests.test_open_alert_has_no_ack) ... ok
+test_operational_label_supported (test_export.ExportTests.test_operational_label_supported) ... ok
+test_target_mismatch_rejected (test_export.ExportTests.test_target_mismatch_rejected) ... ok
+test_truthful_replay_and_date_precision (test_export.ExportTests.test_truthful_replay_and_date_precision) ... ok
+test_watch_not_rederived (test_export.ExportTests.test_watch_not_rederived) ... ok
+test_weather_requires_run (test_export.ExportTests.test_weather_requires_run) ... ok
+test_wrong_station_rejected (test_export.ExportTests.test_wrong_station_rejected) ... ok
+test_crashed_negative_cannot_reuse_old_expected_error (test_validation_runner.ValidationRunnerTests.test_crashed_negative_cannot_reuse_old_expected_error) ... ok
+test_crashed_positive_cannot_reuse_old_success (test_validation_runner.ValidationRunnerTests.test_crashed_positive_cannot_reuse_old_success) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.296s
+
+OK

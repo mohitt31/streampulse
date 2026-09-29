@@ -1,0 +1,107 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "StreamPulseCodes",
+  "id": "streampulse",
+  "title": "StreamPulse local prototype codes",
+  "description": "Project-defined codes; not official OAH, HL7 or clinical terminology.",
+  "url": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+  "concept": [
+    {
+      "code": "predicted-daily-mean-water-temperature",
+      "display": "Predicted daily mean water temperature"
+    },
+    {
+      "code": "daily-mean-water-temperature",
+      "display": "Daily mean water temperature"
+    },
+    {
+      "code": "pi90-low",
+      "display": "Lower bound of empirical 90 percent prediction interval"
+    },
+    {
+      "code": "pi90-high",
+      "display": "Upper bound of empirical 90 percent prediction interval"
+    },
+    {
+      "code": "p90-reference",
+      "display": "Training-only seasonal 90th percentile reference"
+    },
+    {
+      "code": "watch",
+      "display": "Unusual-warmth watch"
+    },
+    {
+      "code": "watch-on",
+      "display": "Watch on"
+    },
+    {
+      "code": "watch-off",
+      "display": "Watch off"
+    },
+    {
+      "code": "replay",
+      "display": "Historical replay"
+    },
+    {
+      "code": "operational",
+      "display": "Operational mode"
+    },
+    {
+      "code": "water_ridge_v1",
+      "display": "Water-history ridge v1"
+    },
+    {
+      "code": "weather_corr_v1",
+      "display": "Weather correction v1"
+    },
+    {
+      "code": "persistence",
+      "display": "Persistence baseline"
+    },
+    {
+      "code": "climatology",
+      "display": "Climatology baseline"
+    },
+    {
+      "code": "daily-aggregation",
+      "display": "Aggregation of source-calendar hourly measurements"
+    },
+    {
+      "code": "n-hours",
+      "display": "Number of hourly measurements"
+    },
+    {
+      "code": "n-quarters",
+      "display": "Number of six-hour portions represented"
+    },
+    {
+      "code": "source-qualification",
+      "display": "Source qualification codes; not FHIR result status"
+    },
+    {
+      "code": "confirm-temperature-and-measure-do",
+      "display": "Confirm temperature and measure dissolved oxygen"
+    },
+    {
+      "code": "acknowledgement",
+      "display": "Acknowledgement; not evidence sampling was completed"
+    },
+    {
+      "code": "forecast-generation",
+      "display": "Forecast generation"
+    },
+    {
+      "code": "source-url",
+      "display": "Source request URL"
+    },
+    {
+      "code": "synthetic-fixture",
+      "display": "Synthetic forecast fixture"
+    }
+  ],
+  "caseSensitive": true,
+  "experimental": true,
+  "count": 23
+}

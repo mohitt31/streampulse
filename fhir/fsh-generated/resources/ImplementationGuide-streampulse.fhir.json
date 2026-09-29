@@ -1,0 +1,101 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "streampulse.fhir",
+  "url": "https://mohitt31.github.io/streampulse/fhir/ImplementationGuide/streampulse.fhir",
+  "version": "0.1.0",
+  "name": "StreamPulseFHIR",
+  "title": "StreamPulse Experimental FHIR Evidence",
+  "status": "draft",
+  "publisher": "StreamPulse hackathon prototype",
+  "contact": [
+    {
+      "name": "StreamPulse hackathon prototype",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/mohitt31/streampulse"
+        }
+      ]
+    }
+  ],
+  "packageId": "streampulse.fhir",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.eu.fhir.oah",
+      "version": "0.1.0-ci-build",
+      "uri": "http://hl7.eu/fhir/ig/oah",
+      "id": "hl7_eu_fhir_oah"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/forecast-origin"
+        },
+        "name": "Forecast origin",
+        "description": "Simulated issuance time in replay mode; distinct from actual result publication time.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/run-mode"
+        },
+        "name": "Run mode",
+        "description": "Distinguishes reconstructed historical forecasts from operational results.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/streampulse"
+        },
+        "name": "StreamPulse local prototype codes",
+        "description": "Project-defined codes; not official OAH, HL7 or clinical terminology.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/streampulse-forecast-observation"
+        },
+        "name": "StreamPulse predicted daily mean water temperature",
+        "description": "Experimental numerical forecast at an OAH Location; not a health RiskAssessment. Target dates retain source-calendar precision when timezone is unknown.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/run-modes"
+        },
+        "name": "StreamPulse run modes",
+        "description": "Operational mode is a label, not certification of deployment readiness.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/streampulse-model-device"
+        },
+        "name": "StreamPulse versioned model software",
+        "description": "Software identity and source-code revision; not a medical-device approval claim.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026"
+      },
+      {
+        "code": "releaselabel",
+        "value": "experimental"
+      }
+    ]
+  }
+}

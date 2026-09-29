@@ -1,0 +1,152 @@
+[
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=05174000&size=1",
+    "retrieved_at": "2026-09-29T16:43:07.258775+00:00",
+    "error": "The read operation timed out",
+    "status": null
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2010-01-01&date_fin_mesure=2010-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:08.942169+00:00",
+    "status": 200,
+    "sha256": "17ceae45a373c1af9ab39d546e90f4fbd7ead5d0b808a3392e5696b81d1c171f",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2011-01-01&date_fin_mesure=2011-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:14.577014+00:00",
+    "status": 200,
+    "sha256": "1a50a6161914d76f8c1c13656cc1e229b986bc4ca0f3e91e6e07d64194984eca",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2012-01-01&date_fin_mesure=2012-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:25.994474+00:00",
+    "status": 200,
+    "sha256": "38a87399475f24decc598be8cef311d5b5879c11d44dd5b25f3638df5a736b7a",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2013-01-01&date_fin_mesure=2013-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:41.272871+00:00",
+    "status": 200,
+    "sha256": "b6055998f88c28cc2c8a6ffef0e4acba3bc3db75df0a99b97e51d019f7915412",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2014-01-01&date_fin_mesure=2014-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:51.540711+00:00",
+    "status": 200,
+    "sha256": "9016ff5caefd13cb3e2fdea5d34c20ed8cdb50b40ad42fa8bdb4166499c11b55",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2015-01-01&date_fin_mesure=2015-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:44:55.863925+00:00",
+    "status": 200,
+    "sha256": "82b99f72ea4b313f23ddb1dac35b85f87e66a3f5e51267df3203be68ba08c8fc",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2016-01-01&date_fin_mesure=2016-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:08.837322+00:00",
+    "status": 200,
+    "sha256": "9ff33f62e6b4f1a9b71449748d2fe3b292f45f8ed5a6fda815fa018006621341",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2017-01-01&date_fin_mesure=2017-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:34.312998+00:00",
+    "status": 200,
+    "sha256": "4cb867121db86e08f56b61f884119f34a4ecd7d3e33cd13ba410a3d18b3e756c",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2018-01-01&date_fin_mesure=2018-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:43.469635+00:00",
+    "status": 200,
+    "sha256": "d6c0cdfc9333dd9ef3c2a4e75e87eb4d015d10921c8c80b1435dceb10ea343ac",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2019-01-01&date_fin_mesure=2019-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:49.385346+00:00",
+    "status": 200,
+    "sha256": "cb0533bd6139c5e99ed5c3b623e56084ecbf317d85d93403f7e833e1288c7086",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2020-01-01&date_fin_mesure=2020-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:51.003642+00:00",
+    "status": 200,
+    "sha256": "5536707ec2b7e9dec176c520036c6f6371f2b449d8446cf71b09bee912a29741",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2021-01-01&date_fin_mesure=2021-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:45:52.536724+00:00",
+    "status": 200,
+    "sha256": "e7298de29d90babe55329f05a7ac1f44540ec08352524920ebfe49432bd16eac",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2022-01-01&date_fin_mesure=2022-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:46:03.612901+00:00",
+    "status": 200,
+    "sha256": "11606200c005bcf6dc3da524d9c5a20ffd401c73253b0a86fbf30a3a349cd16f",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2023-01-01&date_fin_mesure=2023-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:46:13.386077+00:00",
+    "status": 200,
+    "sha256": "2388d3fb0207ada5d27773e5ff0b381f59a722a440d578cdaf3999e625b00684",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2024-01-01&date_fin_mesure=2024-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:46:26.889448+00:00",
+    "status": 200,
+    "sha256": "55b5e4d488bfd8fcfad8a6a34782da9572c63e63aa914a3248e0bec8af57524d",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  {
+    "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05174000&date_debut_mesure=2025-01-01&date_fin_mesure=2025-12-31&size=20000&fields=code_station,date_mesure_temp,heure_mesure_temp,resultat,code_qualification,code_unite,symbole_unite",
+    "retrieved_at": "2026-09-29T16:46:34.049210+00:00",
+    "status": 200,
+    "sha256": "965a6a2b016b88ac98dd868fbb1ca61fe5e480f399dbb79ba20202f476c6d670",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+]

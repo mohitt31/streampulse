@@ -1,0 +1,46 @@
+info  Running SUSHI v3.20.1 (implements FHIR Shorthand specification v3.0.0)
+info  Arguments:
+info    --snapshot
+info    /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/vendor/oah
+info  No output path specified. Output to vendor/oah
+info  Using configuration file: /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/vendor/oah/sushi-config.yaml
+info  Importing FSH text...
+info  Preprocessed 61 documents with 192 aliases.
+info  Imported 28 definitions and 475 instances.
+info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources
+info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 1.2.0
+info  Loaded hl7.fhir.uv.tools.r4#1.2.0 with 123 resources
+info  Resolved hl7.terminology.r4#latest to concrete version 7.4.0
+info  Loaded hl7.terminology.r4#7.4.0 with 4211 resources
+info  Loaded hl7.fhir.uv.xver-r5.r4#0.1.0 with 4707 resources
+info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources
+info  Resolved hl7.fhir.uv.extensions.r4#latest to concrete version 5.3.0
+info  Loaded hl7.fhir.uv.extensions.r4#5.3.0 with 885 resources
+info  Loaded virtual package sushi-local#LOCAL with 0 resources
+info  Converting FSH to FHIR resources...
+info  Converted 16 FHIR StructureDefinitions.
+info  Converted 1 FHIR CodeSystems.
+info  Converted 11 FHIR ValueSets.
+info  Converted 475 FHIR instances.
+info  Exporting FHIR resources as JSON...
+info  Exported 503 FHIR resources as JSON.
+info  Assembling Implementation Guide sources...
+info  Generated ImplementationGuide-hl7.eu.fhir.oah.json
+info  Assembled Implementation Guide sources; ready for IG Publisher.
+
+========================= SUSHI RESULTS ===========================
+|  -------------------------------------------------------------  |
+| |    Profiles   |  Extensions  |   Logicals   |   Resources   | |
+| |-------------------------------------------------------------| |
+| |       7       |      2       |      7       |       0       | |
+|  -------------------------------------------------------------  |
+|  -------------------------------------------------------------  |
+| |      ValueSets     |    CodeSystems    |     Instances      | |
+| |-------------------------------------------------------------| |
+| |         11         |         1         |        475         | |
+|  -------------------------------------------------------------  |
+|                                                                 |
+===================================================================
+| You really made a splash!              0 Errors      0 Warnings |
+===================================================================
+

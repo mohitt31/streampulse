@@ -1,0 +1,10 @@
+{
+  "url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=43.512148&longitude=1.387766&hourly=temperature_2m&models=ecmwf_ifs&run=2025-08-07T00:00&forecast_days=8&timezone=GMT",
+  "retrieved_at": "2026-09-29T16:53:40.922792+00:00",
+  "status": 200,
+  "sha256": "30623b4fd4e44f6830b09a023beef64abf73497d29d7e94c04ac4a711e418918",
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "non_null": 0
+}

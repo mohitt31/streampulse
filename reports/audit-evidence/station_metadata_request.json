@@ -1,0 +1,9 @@
+{
+  "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=05174000&size=1",
+  "retrieved_at": "2026-09-29T21:06:10.573489+00:00",
+  "status": 200,
+  "sha256": "165238a78cd97ca36c18b38b0f664f69d8821e48476b240e10133ffa22e13439",
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}

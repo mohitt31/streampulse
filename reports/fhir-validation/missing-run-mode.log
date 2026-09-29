@@ -1,0 +1,32 @@
+FHIR Validation tool Version 6.10.4 (Git# 1b90fb13f77b). Built 2026-09-04T05:45:41.468Z (25 days old)
+  Java:   21.0.12.1 from /opt/homebrew/Cellar/openjdk@21/21.0.12.1/libexec/openjdk.jdk/Contents/Home on aarch64 (64bit). 2048MB available
+  Paths:  Current = /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff, Package Cache = /Users/mohit/.fhir/packages
+  Params: fhir/negative-controls/missing-run-mode.json -version 4.0.1 -ig fhir/packages/oah-pinned.tgz -ig fhir/fsh-generated/resources -tx https://tx.fhir.org/r4 -output reports/fhir-validation/missing-run-mode.json
+  Locale: India/IN
+  Jurisdiction: India
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:03.004)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:00.722)
+  Loaded FHIR - 8268 resources (00:00.000)
+  Terminology server https://tx.fhir.org/r4 - Version Connected to Terminology Server at https://tx.fhir.org/r4 (00:02.187)
+  Load hl7.terminology#7.4.0 - 4181 resources (00:01.479)
+  Load hl7.fhir.uv.extensions.r5#5.2.0 - 759 resources (00:00.347)
+  Load hl7.terminology.r5#7.1.0 - 4072 resources (00:00.452)
+  Load hl7.fhir.uv.extensions#5.3.0 - 856 resources (00:00.008)
+  Load hl7.terminology.r4#7.1.0 - 4072 resources (00:00.898)
+  Load hl7.fhir.uv.xver-r5.r4#0.1.0 - 4707 resources (00:00.023)
+  Load fhir/packages/oah-pinned.tgz#0.1.0-ci-build - 28 resources (00:00.036)
+  Load fhir/fsh-generated/resources - 7 resources (00:00.016)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.4.0, hl7.fhir.uv.extensions.r5#5.2.0, hl7.terminology.r5#7.1.0, hl7.fhir.uv.extensions#5.3.0, hl7.terminology.r4#7.1.0, hl7.fhir.uv.xver-r5.r4#0.1.0, hl7.eu.fhir.oah#0.1.0-ci-build]
+  Terminology Cache at /var/folders/s0/2h38n9_s7xv_cclszw9hb7qh0000gn/T/default-tx-cache
+  Get set... 
+  ...go! (00:02.867)
+Cached new session. Cache size = 1
+Sources to validate: fhir/negative-controls/missing-run-mode.json
+Validating
+  Validate fhir/negative-controls/missing-run-mode.json
+ 00:00.710
+Done. Times: Loading: 00:12.079, validation: 00:00.711. Memory = 687Mb
+
+Done. Times: Loading: 00:12.079, validation: 00:00.711. Max Memory = 2Gb

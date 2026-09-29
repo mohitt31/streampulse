@@ -1,0 +1,14 @@
+{
+  "sushi": "3.20.1",
+  "validator": "6.10.4",
+  "fhir": "4.0.1",
+  "oah_commit": "b907cf0869b59d82d9138b3d147fca66f333d911",
+  "oah_package": "hl7.eu.fhir.oah",
+  "oah_version": "0.1.0-ci-build",
+  "validator_sha256": "1106b9d58f9e363e47bea7c4fc065841e5fc91fe9d062775c3bfdd212bd653cc",
+  "sushi_resolved_implicit_packages": {
+    "hl7.terminology.r4": "7.4.0",
+    "hl7.fhir.uv.tools.r4": "1.2.0",
+    "hl7.fhir.uv.extensions.r4": "5.3.0"
+  }
+}

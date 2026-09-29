@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "StreamPulseRunModes",
+  "id": "run-modes",
+  "title": "StreamPulse run modes",
+  "description": "Operational mode is a label, not certification of deployment readiness.",
+  "url": "https://mohitt31.github.io/streampulse/fhir/ValueSet/run-modes",
+  "compose": {
+    "include": [
+      {
+        "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+        "concept": [
+          {
+            "code": "replay"
+          },
+          {
+            "code": "operational"
+          }
+        ]
+      }
+    ]
+  }
+}
