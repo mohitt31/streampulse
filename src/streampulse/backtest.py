@@ -337,7 +337,7 @@ def run_test(cfg: dict, paths: Paths, reopen: bool = False) -> dict:
     out = allp.copy()
     for c in ("origin", "target", "last_date"):
         out[c] = out[c].dt.strftime("%Y-%m-%d")
-    out["weather_run_init"] = pd.to_datetime(out["weather_run_init"]).dt.strftime("%Y-%m-%dT00:00Z")
+    out["weather_run_init"] = pd.to_datetime(out["weather_run_init"]).dt.strftime("%Y-%m-%dT00:00:00Z")
     out.to_csv(paths.reports / "test_predictions.csv", index=False, float_format="%.4f")
 
     # metrics on paired rows
@@ -391,7 +391,7 @@ def run_test(cfg: dict, paths: Paths, reopen: bool = False) -> dict:
             "p90_reference_c": None if not np.isfinite(r.p90) else round(float(r.p90), 3),
             "watch": bool(r.watch),
             "weather_run_init": None if pd.isna(r.weather_run_init)
-            else pd.Timestamp(r.weather_run_init).strftime("%Y-%m-%dT%H:%MZ"),
+            else pd.Timestamp(r.weather_run_init).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "input_obs_dates": r.input_obs_dates,
         })
     with open(paths.reports / "forecasts.jsonl", "w") as f:
