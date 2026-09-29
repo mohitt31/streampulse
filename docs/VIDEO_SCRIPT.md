@@ -30,7 +30,7 @@ Target: about 130 words per minute. Each block lists its word budget.
 
 **Screen:** Evaluation tab: the KPI row, the MAE-by-lead chart, the gate table. Then Replay at `?d=2025-05-31` for the failure case.
 
-> Is it better than just saying tomorrow equals today? We fixed every rule before looking at 2025, then opened it once. At day three the error is 0.79 degrees against 1.20 for persistence: 34% better, all six pre-registered checks passed. On 2024 validation it was 13.5%, so we report that range honestly. And here is a miss: on 31 May it forecast 18.4. The river dropped to 15.6. Flow isn't an input yet.
+> Is it better than just saying tomorrow equals today? We fixed every rule before looking at 2025, then opened it once. At day three the error is 0.79 degrees against 1.20 for persistence: 34% better, all six pre-registered checks passed. On 2024 validation it was 13.5%, and in February it lost to persistence, so we report that range honestly. And here is a miss: on 31 May it forecast 18.4. The river dropped to 15.6. Flow isn't an input yet.
 
 ## 2:25–3:10 · Decision workflow (UX + Impact) · ~90 words
 

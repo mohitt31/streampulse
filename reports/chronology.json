@@ -37,9 +37,9 @@
    "detail": "1596 weather rows"
   },
   {
-   "check": "no validation-period target used after val_end",
+   "check": "every replayed origin is after all fitting data (origin >= test_start > val_end)",
    "passed": true,
-   "detail": "enforced by in_split purge"
+   "detail": "first origin 2025-01-01"
   }
  ]
 }

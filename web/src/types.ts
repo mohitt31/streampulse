@@ -47,6 +47,7 @@ export interface Replay {
   alerts: Alert[];
   metrics: Record<string, { n: number; n_may_aug: number; episodes: number; models: Partial<Record<ModelId, ModelMetrics>> }>;
   validation: { lead: number; rows: number; folds: string[]; mae: Record<string, number>; selected: string; coef: [number, number] | null };
+  monthly: { month: string; n: number; mae: number; mae_persistence: number; skill: number }[];
   delay1: Partial<Record<ModelId, { mae: number; skill: number | null }>>;
   gate: { decision: string; passed: boolean; primary_lead: number; product_model: string; criteria: GateCriterion[];
           mae: { product: number; persistence: number; climatology: number } };

@@ -4,7 +4,7 @@
 
 Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse (Hub'eau station `05174000`).
 
-**[Live replay dashboard](https://mohitt31.github.io/streampulse/)** · [Video (4:30)](#) · OneAquaHealth IEEE Global Hackathon 2026 · Track 6 (primary) and Track 7 (interoperability)
+**[Live replay dashboard](https://mohitt31.github.io/streampulse/)** · [Video (4:30)](#) · OneAquaHealth IEEE Global Hackathon 2026 · **Track 6: Resilience Informatics** (early warning) · **Track 7: Digital Health Standards** (FHIR interoperability)
 
 ![Replay: 20 June 2025, three days above the watch line, all three confirmed](docs/img/replay.png)
 
@@ -63,11 +63,19 @@ When it raises a watch it is usually right. At day 3 it misses more than half of
 
 ### What we do not claim
 
-- **2024 validation skill was 13.5%; 2025 test skill is 34%.** The hot 2025 summer probably made the air-temperature signal unusually useful. Expect somewhere in that range, not 34% every year.
+- **2024 validation skill was 13.5%; 2025 test skill is 34%, and it swings by month.** Expect year-to-year variation within roughly that range, not 34% every year.
+
+  | 2025 (day 3) | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug |
+  |---|---:|---:|---:|---:|---:|---:|---:|---:|
+  | Skill vs persistence | 31% | **−21.5%** | 32% | 48% | 60% | 43% | **1%** | 51% |
+  | Days | 28 | 28 | 31 | 30 | 31 | 30 | 31 | 15 |
+
+  February was worse than persistence and July gained nothing, so the air signal does not help every month.
 - **One station, one river.** This is a historical proof of concept, not an operational service.
 - **The 90% intervals are too wide.** They cover 95–98% instead of 90%, because they were calibrated on 2024 residuals.
 - **Day-3 bias is −0.40 °C.** 2025 ran warmer than the model expected.
 - **ECMWF inputs are archived runs** from the Open-Meteo Single Runs API. Early coverage may be reprocessed hindcasts, so this is a *reforecast evaluation*.
+- **Missing weather runs hit at a bad time.** Five ECMWF runs (5–9 Aug 2025) are missing or empty, right at the start of the August 2025 heat. On those days the dashboard shows a labelled water-only fallback that raises no alert, and it under-forecast the warming.
 - **A failure case we show on purpose.** On 31 May 2025 the model forecast 18.4 °C for 3 June; the river dropped to 15.6 °C. Nothing in its inputs could see that cooling coming, and river flow is not yet a feature.
 
 ![Failure case: 31 May 2025](docs/img/failure-case.png)
@@ -98,7 +106,7 @@ ECMWF IFS 00 UTC run (Open-Meteo Single Runs) ─► air mean D+1…D+h ─►+ 
   - A row belongs to a split only if both its issue date and its target date lie inside it.
   - All windows are trailing.
   - `validate` never reads 2025. `test` records the hash of the frozen selection in `reports/test_lock.json`, and the CLI refuses to re-validate or re-test with a changed selection unless `--reopen` is passed, which is logged.
-  - Eight chronology assertions run on every forecast row.
+  - Eight chronology assertions run after every test run; four of them check every forecast row (last observation date, target date, input dates, weather run time).
 
 ### A data finding: the source clock is French local time
 

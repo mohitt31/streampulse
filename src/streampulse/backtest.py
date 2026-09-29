@@ -310,7 +310,9 @@ def chronology_checks(fc: pd.DataFrame, cfg: dict, frozen: dict, lock: dict) -> 
     issued = fc.loc[wr.index, "origin"] + pd.Timedelta(hours=int(cfg["timing"]["issuance_hour_utc"]))
     run_t = wr + pd.Timedelta(hours=int(cfg["weather"]["run_hour_utc"]))
     add("weather run init <= issuance time", bool((run_t <= issued).all()), f"{len(wr)} weather rows")
-    add("no validation-period target used after val_end", True, "enforced by in_split purge")
+    t0 = pd.Timestamp(s["test_start"])
+    add("every replayed origin is after all fitting data (origin >= test_start > val_end)",
+        bool((fc["origin"] >= t0).all()) and s["val_end"] < s["test_start"], f"first origin {fc['origin'].min().date()}")
     return checks
 
 

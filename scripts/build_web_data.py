@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Pack pipeline outputs into one compact JSON for the static replay dashboard.
 
-Reads only files the pipeline already wrote (reports/*.json[l], data/processed/*.csv);
-it computes nothing new about skill, so the web numbers are the report numbers.
+Reads only files the pipeline already wrote (reports/*, data/processed/*.csv). The only
+thing computed here is a by-month breakdown of the primary-lead errors, on the same
+paired rows (all four models present) that the pipeline scores.
 
     python3 scripts/build_web_data.py            -> web/public/data/replay.json
 """
@@ -90,6 +91,25 @@ def main():
                                  for m, v in e["models"].items()}}
     d1 = tm["runs"]["delay1"]["leads"].get(ph, {}).get("models", {})
 
+    # by-month day-3 breakdown on paired rows (every model present, observation present)
+    rows = {}
+    with open(os.path.join(ROOT, "reports", "test_predictions.csv")) as f:
+        for r in csv.DictReader(f):
+            if r["run"] != "primary" or r["lead"] != ph or not r["y"]:
+                continue
+            rows.setdefault(r["origin"], {"target": r["target"], "y": float(r["y"])})[r["model_id"]] = float(r["pred"])
+    by_month = {}
+    for o, r in rows.items():
+        if not all(m in r for m in MODELS):
+            continue
+        mth = r["target"][:7]
+        b = by_month.setdefault(mth, {"n": 0, "prod": 0.0, "pers": 0.0})
+        b["n"] += 1
+        b["prod"] += abs(r[p["product_model"]] - r["y"])
+        b["pers"] += abs(r["persistence"] - r["y"])
+    monthly = [{"month": k, "n": b["n"], "mae": r3(b["prod"] / b["n"]), "mae_persistence": r3(b["pers"] / b["n"]),
+                "skill": r3(1 - b["prod"] / b["pers"])} for k, b in sorted(by_month.items())]
+
     out = {
         "generated_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "synthetic": bool(tm.get("synthetic")),
@@ -118,6 +138,7 @@ def main():
                        "mae": {k: r3(v["mae"]) for k, v in ew.items() if isinstance(v, dict)},
                        "selected": p["weather"]["selected_variant"],
                        "coef": p["weather"]["coef"].get(ph, {}).get("full")},
+        "monthly": monthly,
         "delay1": {m: {"mae": r3(v["mae"]), "skill": r3(v.get("skill_vs_persistence"))} for m, v in d1.items()},
         "gate": gate, "chronology": chron,
         "qc": {"per_year": qc["per_year"], "dropped": qc["dropped"],

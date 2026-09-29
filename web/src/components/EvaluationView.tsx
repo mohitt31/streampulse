@@ -1,4 +1,4 @@
-import type { ModelId } from "../types";
+import type { ModelId, Replay } from "../types";
 import { View, MODEL_LABEL, MODEL_SHORT, fmtC, pct } from "../lib/data";
 import { linear, niceTicks, pathOf, useWidth } from "../lib/useWidth";
 
@@ -20,6 +20,12 @@ export function EvaluationView({ v }: { v: View }) {
   const valSkill = val.mae.full != null && val.mae.persistence ? 1 - val.mae.full / val.mae.persistence : null;
   const w = p[prod]!.watch;
   const nPass = v.d.gate.criteria.filter((c) => c.passed).length;
+  const mon = v.d.monthly ?? [];
+  const worst = mon.reduce((a, b) => (b.skill < a.skill ? b : a), mon[0]);
+  const best = mon.reduce((a, b) => (b.skill > a.skill ? b : a), mon[0]);
+  const swing = mon.length
+    ? `, and it swings by month: from ${pct(worst.skill)} in ${monthName(worst.month)} to ${pct(best.skill)} in ${monthName(best.month)}`
+    : "";
 
   return (
     <div className="grid" style={{ gap: 16 }}>
@@ -136,10 +142,18 @@ export function EvaluationView({ v }: { v: View }) {
       </div>
 
       <div className="card">
+        <h2>Day-3 skill by month, 2025</h2>
+        <p className="small muted" style={{ marginTop: 0 }}>
+          Same paired days as above, split by target month. Bars left of zero mean StreamPulse did worse than persistence that month.
+        </p>
+        <MonthlyChart rows={mon} />
+      </div>
+
+      <div className="card">
         <h2>Limits we report, not hide</h2>
         <ul className="notes small">
           <li>One station, one river. This is a historical proof of concept, not a validated operational service.</li>
-          <li>Skill on 2025 ({pct(p[prod]!.skill)}) is higher than on 2024 validation ({pct(valSkill, 1)}). The hot 2025 summer probably made the air-temperature signal unusually useful. Expect roughly 13–34%.</li>
+          <li>Skill on 2025 ({pct(p[prod]!.skill)}) is higher than on 2024 validation ({pct(valSkill, 1)}){swing}. Expect year-to-year variation within roughly that validation–test range, not {pct(p[prod]!.skill)} every year.</li>
           <li>Recall of the watch is modest ({pct(w.recall)} at day 3): it catches fewer than half of warm-anomaly days but rarely cries wolf.</li>
           <li>ECMWF inputs are archived runs from the Open-Meteo Single Runs API (early coverage may be reprocessed hindcasts), so this is a reforecast evaluation.</li>
           <li>Station record has a gap from Aug 2018 to Jan 2021 and ends on {v.d.qc.last_date}. Gaps are never interpolated.</li>
@@ -205,6 +219,50 @@ function SkillChart({ v }: { v: View }) {
         ))}
         <span><i className="sw" style={{ background: "var(--surface-2)", border: "1px solid var(--border)" }} /> exploratory leads</span>
       </div>
+    </div>
+  );
+}
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+function monthName(ym: string) { return MONTHS_LONG[+ym.slice(5, 7) - 1]; }
+
+function MonthlyChart({ rows }: { rows: Replay["monthly"] }) {
+  const [ref, width] = useWidth<HTMLDivElement>();
+  if (!rows.length) return null;
+  const rowH = 26;
+  const narrow = width < 560;
+  const m = { l: 44, r: narrow ? 48 : 190, t: 8, b: 22 };
+  const H = m.t + rows.length * rowH + m.b;
+  const lo = Math.min(-0.3, ...rows.map((r) => r.skill));
+  const hi = Math.max(0.7, ...rows.map((r) => r.skill));
+  const x = linear(lo, hi, m.l, width - m.r);
+  const ticks = niceTicks(lo, hi, 5);
+  return (
+    <div className="chart" ref={ref}>
+      <svg viewBox={`0 0 ${width} ${H}`} role="img" aria-label={`Day-3 skill versus persistence by month: ${rows.map((r) => `${MONTHS[+r.month.slice(5, 7) - 1]} ${pct(r.skill)}`).join(", ")}.`}>
+        {ticks.map((t) => (
+          <g key={t}>
+            <line className="gridline" x1={x(t)} x2={x(t)} y1={m.t} y2={H - m.b} />
+            <text x={x(t)} y={H - 6} textAnchor="middle">{Math.round(t * 100)}%</text>
+          </g>
+        ))}
+        <line x1={x(0)} x2={x(0)} y1={m.t} y2={H - m.b} stroke="var(--text)" strokeWidth={1} />
+        {rows.map((r, i) => {
+          const yy = m.t + i * rowH + 4;
+          const x0 = x(Math.min(0, r.skill));
+          const w = Math.abs(x(r.skill) - x(0));
+          return (
+            <g key={r.month}>
+              <text x={m.l - 8} y={yy + 13} textAnchor="end">{MONTHS[+r.month.slice(5, 7) - 1]}</text>
+              <rect x={x0} y={yy} width={Math.max(w, 1)} height={rowH - 10} rx={3} fill={r.skill >= 0 ? "var(--accent)" : "var(--watch)"}>
+                <title>{`${monthName(r.month)}: skill ${pct(r.skill)}, MAE ${r.mae.toFixed(2)} vs persistence ${r.mae_persistence.toFixed(2)} °C, n=${r.n}`}</title>
+              </rect>
+              <text x={width - m.r + 8} y={yy + 13} className="num">{narrow ? pct(r.skill) : `${pct(r.skill)} · ${r.mae.toFixed(2)} vs ${r.mae_persistence.toFixed(2)} °C · n=${r.n}`}</text>
+            </g>
+          );
+        })}
+      </svg>
     </div>
   );
 }

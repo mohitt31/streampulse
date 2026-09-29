@@ -108,13 +108,15 @@ export function ReplayView({ v, originIdx, setOriginIdx, acks, onAck }: Props) {
             const p90 = v.p90(target);
             const exploratory = h > 3;
             return (
-              <div key={h} className={`lead ${c?.[3] && !live && !exploratory ? "watch" : ""}`} style={live ? { opacity: 0.45 } : undefined}>
+              <div key={h} className={`lead ${c?.[3] && !live && !exploratory && eff === model ? "watch" : ""}`} style={live ? { opacity: 0.45 } : undefined}>
                 <span className="lbl">Day +{h} · {fmtDay(target)}{exploratory ? " · exploratory" : ""}</span>
                 <span className="val num">{fmtC(c?.[0] ?? null)}</span>
                 <span className="rng num">90% range {c?.[1] != null ? `${c[1].toFixed(1)}–${c[2]!.toFixed(1)} °C` : "–"}</span>
                 <span className="rng num">watch line {fmtC(p90)}</span>
                 {live ? (
                   <span className="chip neutral">withheld</span>
+                ) : c?.[3] && eff !== model ? (
+                  <span className="chip warn">▲ Above line (fallback, no alert)</span>
                 ) : c?.[3] ? (
                   <span className="chip watch">▲ Above watch line</span>
                 ) : (

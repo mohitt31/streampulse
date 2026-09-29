@@ -30,6 +30,14 @@ export function AlertPanel({ v, originIdx, acks, onAck, onPick, disabled }: Prop
         <h2>Thermal watch</h2>
         {disabled ? (
           <p className="muted small" style={{ margin: 0 }}>No alert can be raised while inputs are stale.</p>
+        ) : !alert && !v.cell(product, originIdx, 1) ? (
+          <div className="alert-box off">
+            <h3><span aria-hidden="true">!</span> No alert: ECMWF run missing</h3>
+            <p className="small muted" style={{ margin: 0 }}>
+              The air-temperature run for {fmtDay(origin)} is missing or empty, so the evaluated product model did not run.
+              The chart shows the labelled water-only fallback; alerts are raised only by the evaluated model.
+            </p>
+          </div>
         ) : alert ? (
           <AlertBox v={v} a={alert} ack={acks[alert.alert_id]} onAck={onAck} product={product} />
         ) : (
