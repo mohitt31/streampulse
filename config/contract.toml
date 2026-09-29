@@ -1,0 +1,97 @@
+# StreamPulse evaluation contract.
+# FROZEN before any look at 2025 data. Any edit changes the contract sha256,
+# which is recorded in reports/frozen_selection.json and reports/test_lock.json.
+# Editing this file after the test stage has run means the test was reopened;
+# the CLI refuses to do that silently.
+
+[site]
+station_id = "05174000"
+name = "La Garonne a Portet-sur-Garonne (amont Ariege)"
+lat = 43.512148118
+lon = 1.387766337
+framing = "Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse."
+
+[qc]
+# Daily mean is valid only if it has >= min_hours unique hourly readings
+# and covers all four 6-hour quarters (00-05, 06-11, 12-17, 18-23) of the
+# source calendar day. Hub'eau timezone is UNVERIFIED (audit pending).
+min_hours = 18
+require_all_quarters = true
+# Hub'eau code_qualification values that are excluded outright.
+# (2 = incorrecte). Codes kept are listed per day in daily_water.csv.
+exclude_qual_codes = ["2"]
+allowed_units = ["°C", "Cel", "degC", "C"]
+plausible_min_c = -1.0
+plausible_max_c = 40.0
+# Identical duplicates (same date, time, value) are collapsed.
+# Conflicting duplicates (same date, time, different value) are quarantined.
+# Long gaps are never interpolated.
+
+[timing]
+# Issuance at 12:00 UTC on origin day D. Observations complete through D-1-obs_delay_days.
+# Lead h targets calendar day D+h.
+issuance_hour_utc = 12
+obs_delay_days = 0
+sensitivity_obs_delay_days = 1
+product_leads = [1, 2, 3]
+exploratory_leads = [4, 5, 6, 7]
+primary_lead = 3
+
+[splits]
+train_start = "2010-01-01"
+train_end = "2022-12-31"
+tune_start = "2023-01-01"
+tune_end = "2023-12-31"
+refit_start = "2010-01-01"
+refit_end = "2023-12-31"
+val_start = "2024-01-01"
+val_end = "2024-12-31"
+# expanding-window weather selection: first fit uses runs through June,
+# then evaluate month by month Jul..Dec 2024.
+val_expanding_first_eval = "2024-07-01"
+test_start = "2025-01-01"
+test_end = "2025-08-21"
+# A row belongs to a split only if BOTH origin and target fall inside it
+# (rows whose targets cross a boundary are purged).
+
+[model]
+features = ["last", "m3_d", "m7_d", "change", "doy_sin", "doy_cos", "clim_d"]
+alphas = [0.1, 1.0, 10.0, 100.0, 1000.0]
+m3_min_valid = 2
+m7_min_valid = 5
+clim_window_days = 15
+clim_min_n = 20
+watch_quantile = 0.90
+interval_quantiles = [0.05, 0.95]
+# Product model candidates on validation: water_only vs full weather correction.
+# intercept_only is reported as an ablation, never selected as the product.
+weather_candidates = ["water_only", "full"]
+weather_ablations = ["intercept_only"]
+
+[weather]
+provider = "open-meteo single runs"
+endpoint = "https://single-runs-api.open-meteo.com/v1/forecast"
+model = "ecmwf_ifs"
+run_hour_utc = 0
+variable = "temperature_2m"
+forecast_days = 8
+timezone = "GMT"
+first_run = "2024-03-14"
+label = "reforecast evaluation (archived operational ECMWF IFS runs)"
+
+[gate]
+min_paired = 120
+min_paired_may_aug = 60
+min_skill = 0.10
+min_delta_abs_c = 0.10
+min_delta_rel_to_val_persistence = 0.10
+boot_reps = 2000
+boot_block_days = 14
+boot_block_days_check = 28
+boot_seed = 20261004
+min_watch_episodes = 10
+fallback = "Track 2: historical thermal-anomaly assessment and monitoring prioritization"
+
+[followup]
+action_code = "confirm_temperature_and_measure_DO"
+action_text = "Confirm temperature and measure dissolved oxygen (OAH field protocol). Biological sampling is an expert decision."
