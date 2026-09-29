@@ -9,3 +9,5 @@ web/dist/
 vendor/*.jar
 .DS_Store
 web/dist-single/
+*.tsbuildinfo
+web/dist-single/
