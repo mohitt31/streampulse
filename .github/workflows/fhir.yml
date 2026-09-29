@@ -40,7 +40,9 @@ jobs:
         if: ${{ hashFiles('data/processed/daily_water.csv', 'reports/forecasts.jsonl', 'reports/alerts.jsonl') != '' }}
         run: |
           if [[ -f data/processed/daily_water.csv && -f reports/forecasts.jsonl && -f reports/alerts.jsonl ]]; then
-            PYTHONPATH=src python -m streampulse.fhir_export
+            # one full issue date from the real replay (all models, all leads, its alert + demo ack);
+            # the full 6,489-forecast export works but is ~56 MB, too large to validate on every push
+            PYTHONPATH=src python scripts/fhir_real_demo.py
             bash scripts/validate_fhir.sh
           fi
       - uses: actions/upload-artifact@v4

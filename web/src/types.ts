@@ -58,5 +58,6 @@ export interface Replay {
     eligible_days: number; days: number; first_date: string; last_date: string;
     air_runs: { runs: number; first_run: string; last_run: string };
   };
-  fhir: null | { errors: number; warnings: number; validator: string; fhir: string; [k: string]: unknown };
+  fhir: null | { errors: number; warnings: number; information: number; validator: string; fhir: string;
+    positive_documents: number | null; negative_controls: Record<string, number>; generated_at: string };
 }

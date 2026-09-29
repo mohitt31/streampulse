@@ -151,7 +151,16 @@ def main():
     fhir_summary = os.path.join(ROOT, "reports", "fhir-validation", "summary.json")
     if os.path.exists(fhir_summary):
         with open(fhir_summary) as f:
-            out["fhir"] = json.load(f)
+            fs = json.load(f)
+        pos = fs.get("positive", {}).get("counts", {})
+        negs = {k: v for k, v in fs.items() if isinstance(v, dict) and v.get("expected_failure")}
+        out["fhir"] = {
+            "validator": fs.get("validator"), "fhir": fs.get("fhir"),
+            "errors": pos.get("error", 0) + pos.get("fatal", 0), "warnings": pos.get("warning", 0),
+            "information": pos.get("information", 0), "positive_documents": fs.get("positive_documents"),
+            "negative_controls": {k: v.get("counts", {}).get("error", 0) for k, v in negs.items()},
+            "generated_at": fs.get("generated_at"),
+        }
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     with open(a.out, "w") as f:
         json.dump(out, f, separators=(",", ":"))

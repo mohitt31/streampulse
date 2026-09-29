@@ -100,7 +100,24 @@ export function MethodView({ v }: { v: View }) {
           </ul>
           <h3 style={{ marginTop: 14 }}>FHIR conformance</h3>
           {v.d.fhir ? (
-            <p className="small">HL7 validator {String(v.d.fhir.validator)} on FHIR {String(v.d.fhir.fhir)}: <b className={v.d.fhir.errors === 0 ? "pass" : "fail"}>{v.d.fhir.errors} errors</b>, {v.d.fhir.warnings} warnings.</p>
+            <>
+              <p className="small" style={{ marginTop: 0 }}>
+                Official HL7 validator {v.d.fhir.validator}, FHIR {v.d.fhir.fhir}, against the pinned OneAquaHealth IG:{" "}
+                <b className={v.d.fhir.errors === 0 ? "pass" : "fail"}>{v.d.fhir.errors} errors, {v.d.fhir.warnings} warnings</b>
+                {v.d.fhir.positive_documents ? ` on ${v.d.fhir.positive_documents} documents` : ""}.
+              </p>
+              <p className="small" style={{ marginTop: 0 }}>
+                Negative controls correctly rejected: {Object.keys(v.d.fhir.negative_controls).map((k) => k.replace(/-/g, " ")).join(", ")}.
+              </p>
+              <ul className="notes small">
+                <li><b>Site</b>: OAH <code>Location</code> (Hub'eau station identifier)</li>
+                <li><b>Daily means</b>: OAH <code>ObservationIndicatorsOah</code>, UCUM <code>Cel</code></li>
+                <li><b>Forecasts</b>: local profile derived from the OAH indicator, with 90% interval, forecast origin and run mode</li>
+                <li><b>Alert</b>: <code>Communication</code> about the site and forecasts; acknowledgement via <code>inResponseTo</code></li>
+                <li><b>Lineage</b>: <code>Provenance</code> to input observations and the model <code>Device</code> (git version)</li>
+              </ul>
+              <p className="small faint">CI rebuilds the OAH IG from its pinned commit and re-validates a Bundle exported from these real forecasts on every push.</p>
+            </>
           ) : (
             <p className="small muted">FHIR export and validation report are published in the repository under <code>fhir/</code>.</p>
           )}

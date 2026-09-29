@@ -49,7 +49,9 @@ The prototype is a historical replay on the Garonne at Portet-sur-Garonne, near 
   - `LocationOah` and `ObservationIndicatorsOah` for the site and measurements.
   - A derived forecast Observation profile for forecasts.
   - `Communication` for alerts, and `Provenance` plus `Device` for the model.
-  - Validated with the official HL7 validator against the pinned OAH IG. *(Insert final result: "0 errors" and the negative controls once merged.)*
+  - Validated with the official HL7 validator 6.10.4 against the pinned OAH IG: 0 errors and 0 warnings on 10 documents.
+  - Three broken negative controls are each rejected for the intended reason.
+  - CI rebuilds everything and validates a Bundle exported from the real replay on every push.
 
 ## Results (2025, opened once)
 

@@ -114,15 +114,34 @@ Hub'eau does not document the timezone of `heure_mesure_temp`. The data answers 
 
 ## Interoperability (FHIR, Track 7)
 
-<!-- Update this section once the FHIR workstream is merged: fill in validator output and negative-control results. -->
-- **Site:** `LocationOah`.
-- **Measurements:** `ObservationIndicatorsOah`, in UCUM `Cel`.
-- **Forecasts:** a local forecast Observation profile derived from it, carrying the 90% interval, the forecast origin, the run mode (`replay`/`operational`) and the real generation time.
-- **Alerts:** a `Communication` about the Location and the forecasts. Acknowledgement uses `inResponseTo`.
-- **Provenance:** a `Provenance` resource plus a model `Device`.
-- **Pinned versions:** OAH IG commit `b907cf0`, FHIR 4.0.1, official HL7 validator.
+Everything the pipeline produces is exported as a FHIR R4 `collection` Bundle that conforms to the **OneAquaHealth IG** (pinned commit `b907cf0`). The profiles are built with SUSHI 3.20.1, and the official **HL7 validator 6.10.4** runs with online terminology.
 
-`RiskAssessment` is deliberately not used: in R4 its subject must be a Patient or Group. See [`fhir/`](fhir/) for profiles, examples, negative controls and validation reports.
+| Pipeline object | FHIR resource |
+|---|---|
+| Station 05174000 | OAH `Location` with the Hub'eau station identifier |
+| Daily mean water temperature | OAH `ObservationIndicatorsOah`, UCUM `Cel`, with QC coverage components |
+| Forecast | Local profile derived from the OAH indicator Observation: 90% interval, seasonal reference, watch flag, `forecast-origin` and `run-mode` (`replay`/`operational`) extensions; `issued` = real generation time |
+| Model | `Device` carrying the git version |
+| Lineage | `Provenance` from each forecast to its input Observations and model |
+| Alert | `Communication` (`preparation`) about the Location and forecasts, carrying the DO follow-up |
+| Acknowledgement | `Communication` (`completed`) with `inResponseTo` the alert |
+
+**Validation results:**
+
+- **Positive documents:** 0 errors, 0 warnings on 10 documents (a 15-resource Bundle plus 9 standalone examples). The 183 informational messages are preferred-binding notices, explained in `reports/fhir-validation/WARNINGS.md`.
+- **Negative controls:** three deliberately broken examples are each rejected for the intended reason:
+  - a missing performer (required by OAH);
+  - a Patient as subject where a Location is expected;
+  - a missing run-mode extension.
+- **CI** (`.github/workflows/fhir.yml`) runs on every push:
+  - rebuilds the OAH IG from source;
+  - validates the fixtures and the negative controls;
+  - exports a Bundle from the **real** replay and validates it. It uses one full issue date, 20 June 2025 (all four models, all seven leads, its alert and a labelled demo acknowledgement), via `scripts/fhir_real_demo.py`.
+- **Full export:** the whole replay also exports (`python -m streampulse.fhir_export`, 13,276 resources). It is simply too large to validate on every push.
+
+`RiskAssessment` is deliberately not used: in R4 its subject must be a Patient or Group, and this is not a health-risk claim.
+
+Local definitions are experimental project artefacts, not HL7 or OAH publications. The compiled OAH package is rebuilt from the pinned source and is not redistributed, because the OAH repository carries no licence file. Details are in `README_FHIR.md`, `reports/INTERFACE_NOTES.md` and `THIRD_PARTY_FHIR.md`.
 
 ## Data
 
@@ -160,7 +179,8 @@ config/contract.toml      frozen evaluation contract (hash recorded in every rep
 scripts/                  fetchers (stdlib only), web data packer
 src/streampulse/          quality, features, baselines, model, backtest, gate, cli
 reports/                  frozen_selection, test_metrics, gate, chronology, forecasts.jsonl, alerts.jsonl
-fhir/                     FHIR profiles, examples, validation
+fhir/                     FSH profiles (derived from OAH), examples, negative controls
+reports/fhir*             real-data demo Bundle, validator output, data audits
 web/                      React + TypeScript replay dashboard (no chart library)
 tests/                    pytest suite, run in CI
 ```
