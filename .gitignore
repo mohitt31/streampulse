@@ -8,3 +8,4 @@ web/node_modules/
 web/dist/
 vendor/*.jar
 .DS_Store
+web/dist-single/

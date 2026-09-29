@@ -1,0 +1,107 @@
+import { useState } from "react";
+import type { Alert } from "../types";
+import { View, fmtC } from "../lib/data";
+import { fmtDay } from "../lib/time";
+
+export type Acks = Record<string, { by: string; at: string; note: string }>;
+
+interface Props {
+  v: View;
+  originIdx: number;
+  acks: Acks;
+  onAck: (id: string, ack: { by: string; at: string; note: string }) => void;
+  onPick: (i: number) => void;
+  disabled?: boolean;
+}
+
+export function AlertPanel({ v, originIdx, acks, onAck, onPick, disabled }: Props) {
+  const origin = v.d.origins[originIdx];
+  const alert = v.alertFor(origin);
+  const product = v.d.product_model;
+  return (
+    <div className="grid" style={{ gap: 12 }}>
+      <div className="card">
+        <h2>Thermal watch</h2>
+        {disabled ? (
+          <p className="muted small" style={{ margin: 0 }}>No alert can be raised while inputs are stale.</p>
+        ) : alert ? (
+          <AlertBox v={v} a={alert} ack={acks[alert.alert_id]} onAck={onAck} product={product} />
+        ) : (
+          <div className="alert-box off">
+            <h3><span aria-hidden="true">●</span> No watch for days +1 to +3</h3>
+            <p className="small muted" style={{ margin: 0 }}>
+              Forecast daily means stay below the seasonal 90th percentile for {fmtDay(origin)}+1 to +3.
+            </p>
+          </div>
+        )}
+      </div>
+      <div className="card">
+        <h2>2025 alerts <span className="muted small">({v.d.alerts.length})</span></h2>
+        <ul className="alert-list">
+          {v.d.alerts.map((a) => {
+            const i = v.d.origins.indexOf(a.origin_date);
+            const acked = !!acks[a.alert_id];
+            return (
+              <li key={a.alert_id}>
+                <button aria-current={a.origin_date === origin} onClick={() => i >= 0 && onPick(i)}>
+                  <span className="dot" style={{ background: acked ? "var(--ok)" : "var(--watch)" }} aria-hidden="true" />
+                  <span className="num" style={{ minWidth: 64 }}>{fmtDay(a.origin_date)}</span>
+                  <span className="small muted">targets {a.target_dates.map((t) => fmtDay(t)).join(", ")}</span>
+                  <span className="spacer" />
+                  <span className={`chip ${acked ? "ok" : "watch"}`}>{acked ? "ack" : "open"}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function AlertBox({ v, a, ack, onAck, product }: {
+  v: View; a: Alert; ack?: { by: string; at: string; note: string };
+  onAck: Props["onAck"]; product: string;
+}) {
+  const [by, setBy] = useState("");
+  const [note, setNote] = useState("");
+  const i = v.d.origins.indexOf(a.origin_date);
+  return (
+    <div className="alert-box on" role="status">
+      <h3><span aria-hidden="true">▲</span> Watch: warm anomaly expected</h3>
+      <div className="small">
+        {a.target_dates.map((t) => {
+          const h = Math.round((Date.parse(t) - Date.parse(a.origin_date)) / 86400000);
+          const c = v.cell(product as never, i, h);
+          return (
+            <div key={t} className="num">
+              {fmtDay(t)} (day +{h}): <b>{fmtC(c?.[0] ?? null)}</b> vs watch line {fmtC(v.p90(t))}
+            </div>
+          );
+        })}
+      </div>
+      <div className="small">
+        <b>Follow-up:</b> {v.d.followup.action_text}
+      </div>
+      <div className="small muted mono">{a.alert_id}</div>
+      {ack ? (
+        <div className="chip ok">✓ Acknowledged by {ack.by} · {new Date(ack.at).toLocaleString()}</div>
+      ) : (
+        <form
+          className="form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (!by.trim()) return;
+            onAck(a.alert_id, { by: by.trim(), at: new Date().toISOString(), note: note.trim() });
+          }}
+        >
+          <label className="small" htmlFor="ackby">Acknowledge as</label>
+          <input id="ackby" placeholder="Name / role (e.g. field technician)" value={by} onChange={(e) => setBy(e.target.value)} />
+          <textarea rows={2} placeholder="Note (optional): e.g. DO probe scheduled 07:00" value={note} onChange={(e) => setNote(e.target.value)} aria-label="Acknowledgement note" />
+          <button className="btn primary" type="submit" disabled={!by.trim()}>Acknowledge alert</button>
+          <span className="faint small">Demo acknowledgement, kept in this browser only. In FHIR it becomes a Communication with inResponseTo.</span>
+        </form>
+      )}
+    </div>
+  );
+}

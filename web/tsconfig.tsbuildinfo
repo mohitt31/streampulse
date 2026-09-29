@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/AlertPanel.tsx","./src/components/EvaluationView.tsx","./src/components/ForecastChart.tsx","./src/components/MethodView.tsx","./src/components/ReplayView.tsx","./src/components/SeasonChart.tsx","./src/lib/data.ts","./src/lib/time.ts","./src/lib/useWidth.ts"],"version":"5.8.3"}
