@@ -25,27 +25,32 @@ NET = Path(os.environ.get("STREAMPULSE_NET", REPO_ROOT / "data" / "network"))
 OUT = Path(os.environ.get("STREAMPULSE_NET_OUT", REPO_ROOT / "reports"))
 
 
-def net_cfg() -> dict:
-    return tomllib.loads((REPO_ROOT / "config" / "network.toml").read_text(encoding="utf-8"))
+def net_cfg(stage: int = 1) -> dict:
+    name = "network.toml" if stage == 1 else "network_stage2.toml"
+    return tomllib.loads((REPO_ROOT / "config" / name).read_text(encoding="utf-8"))
+
+
+def _sfx(stage: int) -> str:
+    return "" if stage == 1 else "_s2"
 
 
 def cell_key(lat: float, lon: float, deg: float) -> str:
     return "%.2f_%.2f" % (round(lat / deg) * deg, round(lon / deg) * deg)
 
 
-def _stations() -> list[dict]:
-    return json.loads((NET / "stations.json").read_text())["stations"]
+def _stations(stage: int = 1) -> list[dict]:
+    return json.loads((NET / f"stations{_sfx(stage)}.json").read_text())["stations"]
 
 
-def eligibility() -> dict:
-    nc = net_cfg()
+def eligibility(stage: int = 1) -> dict:
+    nc = net_cfg(stage)
     e = nc["eligibility"]
     base = load_contract()
     t0, t1 = split(base, "test")
     out = {"rule": e, "eligible": [], "excluded": []}
-    pre_path = NET / "prescreen.json"
+    pre_path = NET / f"prescreen{_sfx(stage)}.json"
     pre = json.loads(pre_path.read_text()) if pre_path.exists() else None
-    for s in _stations():
+    for s in _stations(stage):
         code = s["code_station"]
         root = NET / code
         if pre and not pre["stations"].get(code, {}).get("pass", True):
@@ -87,10 +92,32 @@ def eligibility() -> dict:
             out["excluded"].append({"code_station": code, "reason": "; ".join(reasons), "counts": counts})
         else:
             out["eligible"].append(rec)
-    (NET / "eligible.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
-    print(f"eligible {len(out['eligible'])} / {len(out['eligible']) + len(out['excluded'])}")
+    out["stage"] = stage
+    samp = nc.get("sampling")
+    if samp and len(out["eligible"]) > samp["max_stations"]:
+        import random
+        pool = sorted(out["eligible"], key=lambda x: x["code_station"])
+        chosen = {x["code_station"] for x in random.Random(samp["seed"]).sample(pool, samp["max_stations"])}
+        for x in out["eligible"]:
+            x["sampled"] = x["code_station"] in chosen
+        out["sampling"] = {**samp, "eligible": len(pool), "sampled": len(chosen)}
+    (NET / f"eligible{_sfx(stage)}.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    print(f"stage {stage}: eligible {len(out['eligible'])} / {len(out['eligible']) + len(out['excluded'])}"
+          + (f", sampled {out['sampling']['sampled']}" if "sampling" in out else ""))
     for x in out["eligible"]:
         print("  +", x["code_station"], x.get("libelle_station"), x["counts"])
+    return out
+
+
+def _to_analyse() -> list[dict]:
+    """Stage-1 eligible stations plus stage-2 sampled ones, tagged with their stage."""
+    out = []
+    for stage in (1, 2):
+        p = NET / f"eligible{_sfx(stage)}.json"
+        if p.exists():
+            for x in json.loads(p.read_text())["eligible"]:
+                if x.get("sampled", True):
+                    out.append({**x, "stage": stage})
     return out
 
 
@@ -110,7 +137,7 @@ def run(only: list[str] | None = None) -> None:
     from .ingest import run_ingest
 
     nc = net_cfg()
-    el = json.loads((NET / "eligible.json").read_text())["eligible"]
+    el = _to_analyse()
     primary = nc["reporting"]["primary_station"]
     for s in el:
         code = s["code_station"]
@@ -179,14 +206,24 @@ def _replay_series(root: Path, prod: str) -> dict:
 
 def summary() -> dict:
     nc = net_cfg()
-    el = json.loads((NET / "eligible.json").read_text())
     primary = nc["reporting"]["primary_station"]
+    stages = {}
+    for stage in (1, 2):
+        p = NET / f"eligible{_sfx(stage)}.json"
+        if p.exists():
+            stages[stage] = json.loads(p.read_text())
+    el = {"eligible": [], "excluded": [], "rule": stages[1]["rule"]}
+    not_sampled = []
+    for stage, d in stages.items():
+        el["excluded"] += [{**x, "stage": stage} for x in d["excluded"]]
+        for x in d["eligible"]:
+            (el["eligible"] if x.get("sampled", True) else not_sampled).append({**x, "stage": stage})
     rows, replay = [], {}
     for s in el["eligible"]:
         code = s["code_station"]
         meta = {"code_station": code, "name": s.get("libelle_station"), "commune": s.get("libelle_commune"),
                 "river": s.get("libelle_cours_eau"), "lat": float(s["latitude"]), "lon": float(s["longitude"]),
-                "primary": code == primary, "counts": s.get("counts")}
+                "primary": code == primary, "counts": s.get("counts"), "stage": s["stage"]}
         root = REPO_ROOT if code == primary else NET / code
         r = _station_result(code, root, meta)
         rows.append(r)
@@ -194,13 +231,18 @@ def summary() -> dict:
             replay[code] = _replay_series(root, r["product_model"])
     ok = [r for r in rows if r["status"] == "ok"]
     sk = [r["leads"]["3"]["skill"] for r in ok if r["leads"].get("3", {}).get("skill") is not None]
-    head = {"candidates": len(el["eligible"]) + len(el["excluded"]), "eligible": len(el["eligible"]),
+    head = {"candidates": len(el["eligible"]) + len(el["excluded"]) + len(not_sampled),
+            "eligible": len(el["eligible"]) + len(not_sampled), "not_sampled": len(not_sampled),
+            "by_stage": {str(k): {"candidates": len(d["eligible"]) + len(d["excluded"]), "eligible": len(d["eligible"]),
+                                  "radius_km": net_cfg(k)["selection"]["radius_km"]} for k, d in stages.items()},
             "analysed": len(ok), "gate_passed": sum(1 for r in ok if r["gate_passed"]),
             "beats_persistence_day3": sum(1 for x in sk if x > 0),
             "median_skill_day3": round(float(np.median(sk)), 3) if sk else None,
             "skill_day3_range": [round(min(sk), 3), round(max(sk), 3)] if sk else None}
-    out = {"preregistration": "config/network.toml", "headline": head, "stations": rows,
-           "excluded": el["excluded"], "rule": el["rule"]}
+    out = {"preregistration": ["config/network.toml", "config/network_stage2.toml"][:len(stages)],
+           "headline": head, "stations": rows, "excluded": el["excluded"],
+           "not_sampled": [{"code_station": x["code_station"], "name": x.get("libelle_station")} for x in not_sampled],
+           "rule": el["rule"]}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "network_summary.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
     (OUT / "network_replay.json").write_text(json.dumps(replay, separators=(",", ":")))
@@ -212,8 +254,14 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="streampulse.network")
     ap.add_argument("step", choices=["eligibility", "run", "summary"])
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--stage", type=int, choices=[1, 2], default=1)
     a = ap.parse_args(argv)
-    {"eligibility": eligibility, "summary": summary}.get(a.step, lambda: run(a.only))()
+    if a.step == "eligibility":
+        eligibility(a.stage)
+    elif a.step == "summary":
+        summary()
+    else:
+        run(a.only)
     return 0
 
 

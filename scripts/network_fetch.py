@@ -5,7 +5,8 @@ Hub'eau and Open-Meteo). The selection rule is fixed in config/network.toml.
     python3 scripts/network_fetch.py stations          # candidate list  -> data/network/stations.json
     python3 scripts/network_fetch.py prescreen         # 2025 test-window reading count per candidate (1 request each)
     python3 scripts/network_fetch.py water             # Hub'eau history for candidates that can still meet the rule
-    python3 scripts/network_fetch.py weather           # ECMWF runs for stations in data/network/eligible.json
+    python3 scripts/network_fetch.py weather           # ECMWF runs for stations to analyse (stage 1 + stage 2)
+    python3 scripts/network_fetch.py --stage 2 stations prescreen water   # stage 2 (config/network_stage2.toml)
 
 Resumable: re-running skips files already downloaded (the per-station fetchers keep manifests).
 """
@@ -24,6 +25,12 @@ NET = os.path.join(ROOT, "data", "network")
 UA = "streampulse/0.1 (hackathon research; github.com/mohitt31/streampulse)"
 # kept in sync with config/network.toml (read with a tiny parser: no tomllib on older Pythons)
 CFG_PATH = os.path.join(ROOT, "config", "network.toml")
+SUFFIX = ""   # "" for stage 1, "_s2" for stage 2 (set in main)
+
+
+def f(name):
+    base, ext = os.path.splitext(name)
+    return os.path.join(NET, base + SUFFIX + ext)
 
 
 def cfg():
@@ -76,18 +83,24 @@ def stations(c):
     data = js.get("data", [])
     keep = [{k: d.get(k) for k in ("code_station", "libelle_station", "libelle_commune", "code_departement",
                                     "libelle_cours_eau", "latitude", "longitude", "date_maj_infos")} for d in data]
+    excluded_prev = 0
+    if SUFFIX:  # stage 2: drop stage-1 candidates (already assessed)
+        prev = {x["code_station"] for x in json.load(open(os.path.join(NET, "stations.json")))["stations"]}
+        excluded_prev = sum(1 for x in keep if x["code_station"] in prev)
+        keep = [x for x in keep if x["code_station"] not in prev]
     os.makedirs(NET, exist_ok=True)
-    with open(os.path.join(NET, "stations.json"), "w") as f:
+    with open(f("stations.json"), "w") as fh:
         json.dump({"url": url, "retrieved_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                   "api_count": js.get("count"), "stations": keep}, f, indent=1, ensure_ascii=False)
-    print("candidates: %d (api count %s)" % (len(keep), js.get("count")))
+                   "api_count": js.get("count"), "excluded_stage1": excluded_prev, "stations": keep},
+                  fh, indent=1, ensure_ascii=False)
+    print("candidates: %d (api count %s, %d stage-1 candidates excluded)" % (len(keep), js.get("count"), excluded_prev))
 
 
 def prescreen(c, workers):
     """One cheap request per candidate: hourly readings in the 2025 test window. A station needs at least
     min_test_days_2025 eligible days, and an eligible day needs >= 18 readings, so fewer than 18 x min_test_days
     readings means the pre-registered rule already excludes it; its full history is not downloaded."""
-    st = json.load(open(os.path.join(NET, "stations.json")))["stations"]
+    st = json.load(open(f("stations.json")))["stations"]
     need = 18 * int(c["eligibility"]["min_test_days_2025"])
 
     def one(s):
@@ -100,7 +113,7 @@ def prescreen(c, workers):
             return s["code_station"], None, str(e)[-160:]
 
     old = {}
-    pre = os.path.join(NET, "prescreen.json")
+    pre = f("prescreen.json")
     if os.path.exists(pre):
         old = json.load(open(pre)).get("stations", {})
     todo = [s for s in st if old.get(s["code_station"], {}).get("readings_2025_test") is None]
@@ -111,7 +124,7 @@ def prescreen(c, workers):
             if err:
                 res[code]["error"] = err
                 print("  %s: request failed (%s)" % (code, err), flush=True)
-    json.dump({"threshold_readings": need, "stations": res}, open(os.path.join(NET, "prescreen.json"), "w"), indent=1)
+    json.dump({"threshold_readings": need, "stations": res}, open(f("prescreen.json"), "w"), indent=1)
     failed = sum(1 for v in res.values() if v["pass"] is None)
     print("prescreen: %d of %d candidates can still meet the 2025 rule (>= %d readings); %d requests failed%s"
           % (sum(1 for v in res.values() if v["pass"]), len(res), need, failed,
@@ -124,8 +137,8 @@ def run(cmd):
 
 
 def water(workers):
-    st = json.load(open(os.path.join(NET, "stations.json")))["stations"]
-    pre = os.path.join(NET, "prescreen.json")
+    st = json.load(open(f("stations.json")))["stations"]
+    pre = f("prescreen.json")
     if os.path.exists(pre):
         ok = {k for k, v in json.load(open(pre))["stations"].items() if v["pass"]}
         st = [s for s in st if s["code_station"] in ok]
@@ -143,7 +156,13 @@ def water(workers):
 
 
 def weather(workers, c):
-    el = json.load(open(os.path.join(NET, "eligible.json")))
+    """Weather for every station to be analysed: stage-1 eligible + stage-2 sampled (whichever files exist)."""
+    todo = []
+    for name in ("eligible.json", "eligible_s2.json"):
+        p = os.path.join(NET, name)
+        if os.path.exists(p):
+            todo += [s for s in json.load(open(p))["eligible"] if s.get("sampled", True)]
+    el = {"eligible": todo}
     cell = float(c["weather"]["share_cell_deg"])
     cells = {}
     for s in el["eligible"]:
@@ -167,7 +186,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("steps", nargs="+", choices=["stations", "prescreen", "water", "weather"])
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--stage", type=int, choices=[1, 2], default=1)
     a = ap.parse_args()
+    global CFG_PATH, SUFFIX
+    if a.stage == 2:
+        CFG_PATH = os.path.join(ROOT, "config", "network_stage2.toml")
+        SUFFIX = "_s2"
     c = cfg()
     check_network()
     for s in a.steps:

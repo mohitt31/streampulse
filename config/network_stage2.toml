@@ -1,0 +1,41 @@
+# StreamPulse network replication, STAGE 2: PRE-REGISTERED before any stage-2 data was downloaded.
+#
+# Why a stage 2: stage 1 (config/network.toml, 100 km) yielded only 3 eligible stations out of 62,
+# because most regional loggers either started in 2025 or stopped before 2023. That eligibility
+# outcome is the only stage-1 result known when this file was committed; no stage-1 forecast skill
+# had been computed.
+#
+# Stage 2 widens the candidate radius and keeps EVERYTHING else identical: same method
+# (config/contract.toml, only [site] replaced), same eligibility rule as stage 1, same gate,
+# one frozen selection and one test lock per station.
+
+[selection]
+center_name = "Toulouse (Capitole)"
+center_lat = 43.6045
+center_lon = 1.4440
+radius_km = 300
+# stage-1 candidates (within 100 km) are excluded here; they were already assessed in stage 1
+exclude_within_km = 100
+source = "https://hubeau.eaufrance.fr/api/v1/temperature/station?latitude=43.6045&longitude=1.444&distance=300&size=500"
+
+[eligibility]
+min_training_years = 3
+min_training_year_days = 300
+min_tune_days_2023 = 300
+min_validation_days_2024 = 300
+min_test_days_2025 = 150
+
+[sampling]
+# The archived-ECMWF download costs ~527 API calls per station (free tier ~10,000/day).
+# If more stations are eligible than max_stations, analyse a simple random sample of that size,
+# drawn with this seed from the eligible list sorted by station code. Non-sampled eligible
+# stations are listed as "eligible, not sampled".
+max_stations = 15
+seed = 20261004
+
+[weather]
+share_cell_deg = 0.05
+
+[reporting]
+# Stage-1 and stage-2 stations are reported together and also separately by stage.
+stage = 2
