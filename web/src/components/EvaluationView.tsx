@@ -300,7 +300,7 @@ function WarmDays({ ctx }: { ctx: NonNullable<View["d"]["context"]> }) {
             </table>
           </div>
           <p className="small faint">
-            A multi-site deep-learning study found persistence was better above 18 °C (Zwart et al. 2023, Frontiers in Water). Here the advantage holds on warm days.
+            In a multi-site deep-learning study, persistence had better RMSE and bias than the models above 18 °C (Zwart et al. 2023, Frontiers in Water). Here the advantage holds on warm days (day-3 RMSE {ctx.leads["3"]?.strata?.above_18?.weather_corr_v1?.rmse?.toFixed(2)} vs {ctx.leads["3"]?.strata?.above_18?.persistence?.rmse?.toFixed(2)} °C).
             Different rivers and methods, so this is context, not a head-to-head. Strata split on the observed value.
           </p>
         </div>
