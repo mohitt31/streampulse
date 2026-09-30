@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import type { Network, NetworkStation, NetCell } from "../types";
 import { View, loadNetwork, fmtC, pct } from "../lib/data";
 import { addDays, fmtDay, fmtDayLong } from "../lib/time";
+import { VisitPlanner } from "./VisitPlanner";
 
 interface Props {
   v: View;
@@ -162,6 +163,8 @@ export function NetworkView({ v, originIdx, setOriginIdx, openPrimary }: Props) 
 
         <StationCard s={selSt} net={net} oi={oi} origin={origin} openPrimary={openPrimary} />
       </div>
+
+      <VisitPlanner net={net} oi={oi} origin={origin} onPick={setSel} />
 
       <div className="card">
         <h2>Every analysed river, 2025 test (day 3)</h2>

@@ -22,7 +22,7 @@ This is a large-river proof of concept near an OAH research city. Official OAH s
 
 The **2025** replay uses simulated **12:00 UTC** issuance and enforces date-based chronology. Historical input publication times remain **UNVERIFIED**. Archived weather runs may include reprocessed hindcasts, so we call this a reforecast evaluation. The static Live view withholds a current forecast because the bundled history ends on **2025-08-21**; it is not a continuously polling service.
 
-Acknowledgements are browser-local demonstrations. After acknowledgement, a field-check form accepts demonstration temperature, dissolved oxygen, optional saturation and a UTC measurement time. It downloads a FHIR collection Bundle linking the alert, acknowledgement, original forecasts, measurement Observations and provenance. Nothing is sent to field staff or a server; unsaved measurements leave memory when the view closes. A spot measurement versus daily-mean prediction is descriptive, not a new forecast-skill result. The browser-generated examples and missing-unit negative control are checked by the official HL7 validator in CI.
+The **Network** tab replays a regional watch map across four rivers and includes a field-visit planner that ranks rivers for a fixed daily number of visits. Acknowledgements are browser-local demonstrations. After acknowledgement, a field-check form accepts demonstration temperature, dissolved oxygen, optional saturation and a UTC measurement time. It downloads a FHIR collection Bundle linking the alert, acknowledgement, original forecasts, measurement Observations and provenance. Nothing is sent to field staff or a server; unsaved measurements leave memory when the view closes. A spot measurement versus daily-mean prediction is descriptive, not a new forecast-skill result. The browser-generated examples and missing-unit negative control are checked by the official HL7 validator in CI.
 
 ## How we built it
 
@@ -45,9 +45,13 @@ FHIR export uses OAH Location and indicator Observation profiles, a locally deri
 
 The same frozen method — no re-design, no re-tuning — was applied to every Hub'eau river station within 300 km of Toulouse that met the pre-registered data-quality rule. Station selection was committed to the repository ([`config/network.toml`](../config/network.toml) for stage 1, [`config/network_stage2.toml`](../config/network_stage2.toml) for stage 2) **before any network data was downloaded**, with the commit timestamps on GitHub as evidence. Of **274** candidate stations (62 within 100 km, 212 within 100–300 km), **4** met the rule, including the primary site. At day 3, **all 4** beat persistence on the 2025 test: median skill **38%**, range **19–65%**. **3 of 4** passed the full six-criterion frozen gate; the fourth (Jaur à Olargues, 06185900) beats persistence but is reported as **NO-GO**. Four stations is a small network: this shows the frozen method transfers within this region, not that it transfers everywhere. The **Network** tab shows per-station results and a regional watch map replayed across every 2025 date. Source: [network_summary.json](../reports/network_summary.json).
 
+**Field-visit planner (exploratory, post-hoc, not pre-registered):** with a fixed number of visits per day across the four rivers, ranking rivers by forecast margin above each river's watch line visits about as many real exceedances as ranking by persistence, with fewer wasted trips. At day 3 with two visits a day: **34** exceedance visits from **59** trips (**25** wasted) versus **35** from **81** (**46** wasted). At day 1 with one visit a day: **35** from **51** (**16** wasted) versus **33** from **55** (**22** wasted). Computed afterwards from the frozen 2025 forecasts, with no fitting or tuning; days are correlated and four rivers is small, so this is descriptive. Source: [visit_budget.json](../reports/exploratory/visit_budget.json).
+
 Sources: [test_metrics.json](../reports/test_metrics.json), [gate.json](../reports/gate.json), [frozen_selection.json](../reports/frozen_selection.json), [qc_summary.json](../reports/qc_summary.json), and the [FHIR summary](../reports/fhir-validation/summary.json). Exact keys are in [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md).
 
 ## Challenges and lessons
+
+**Feed latency is the operational blocker.** When checked on 2026-09-30, the public Hub'eau temperature API still ended on **2025-08-21** for the primary station, and the network stations also stop in August 2025. A live early-warning service therefore needs a direct producer feed, not only the public archive.
 
 Daylight-saving-shaped anomalies suggest a civil-time convention, but source timezone and publication delay remain **UNVERIFIED**. Date chronology is tested; historical availability at the exact simulated issuance is not proven. Local hashes and timestamps record the frozen selection and test opening; they are not independent preregistration.
 
@@ -61,7 +65,7 @@ The adapter would link site, alert, assignment and returned evidence. App APIs, 
 
 ## What's next
 
-Confirm source availability, establish a supervised fresh-feed pilot, and measure whether alerts improve visit decisions at a fixed sampling budget. Extend to low-cost loggers on small urban streams only after sensor QA, sufficient local history, site-specific calibration and new validation. Environmental or health benefits and cross-site skill remain **UNVERIFIED**.
+Secure a direct fresh feed from the producer (the public archive lags by more than a year), establish a supervised fresh-feed pilot, and measure whether alerts improve visit decisions at a fixed sampling budget. Extend to low-cost loggers on small urban streams only after sensor QA, sufficient local history, site-specific calibration and new validation. Environmental or health benefits and cross-site skill remain **UNVERIFIED**.
 
 ## Built with
 

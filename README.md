@@ -6,6 +6,8 @@ Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse 
 
 **[Live replay dashboard](https://mohitt31.github.io/streampulse/)** · [Video recording script](docs/VIDEO_SCRIPT.md) (recording link pending) · **Track 6: Resilience Informatics** · **Track 7: Digital Health Standards**
 
+**Two-minute tour for reviewers:** [June warm-anomaly replay](https://mohitt31.github.io/streampulse/?d=2025-06-20#replay) · [regional map and visit planner during the late-June heatwave](https://mohitt31.github.io/streampulse/?d=2025-06-30#network) · [frozen evaluation and gate](https://mohitt31.github.io/streampulse/#evaluation) · [FHIR validation evidence](reports/fhir-validation/summary.json)
+
 ![Historical replay with an unusual-warmth watch](docs/img/replay.png)
 
 ## Why
@@ -119,6 +121,12 @@ GitHub commit timestamps serve as the pre-registration evidence.
 
 Source: [network_summary.json](reports/network_summary.json). Four stations is a small sample; it shows the frozen method transfers within this region, not beyond it. The **Network** tab shows per-station results and a regional watch map replayed across every 2025 date.
 
+### Field-visit planner (exploratory)
+
+Not pre-registered. with a fixed number of visits per day across the four rivers, ranking rivers by forecast margin above each river's watch line visits about as many real exceedances as ranking by persistence, with fewer wasted trips. At day 3 with two visits a day: **34** exceedance visits from **59** trips (**25** wasted) versus **35** from **81** (**46** wasted). At day 1 with one visit a day: **35** from **51** (**16** wasted) versus **33** from **55** (**22** wasted). Computed afterwards from the frozen 2025 forecasts, with no fitting or tuning; days are correlated and four rivers is small, so this is descriptive. Source: [visit_budget.json](reports/exploratory/visit_budget.json). Script: [`scripts/visit_budget.py`](scripts/visit_budget.py).
+
+![Field-visit planner](docs/img/planner.png)
+
 ## Citizen science hook — proposed integration, not built
 
 A monitoring coordinator could review a watch, then route a site-specific follow-up to a trained volunteer through an agreed integration with the [OAH Citizen Science App](https://www.oneaquahealth.eu/citizen-science-project/). The volunteer would record an observation and, where trained, equipped and authorised, confirm temperature and dissolved oxygen. An expert would review the returned evidence and decide whether biological sampling is appropriate.
@@ -147,8 +155,9 @@ For real-data reconstruction, use a separate worktree and output root, preserve 
 
 ## Next steps
 
+- **Feed latency is the operational blocker.** When checked on 2026-09-30, the public Hub'eau temperature API still ended on **2025-08-21** for the primary station, and the network stations also stop in August 2025. A live early-warning service therefore needs a direct producer feed, not only the public archive.
 - Confirm source-clock and publication latency with the data producer; then test a scheduled fresh-feed pilot with failure monitoring and a responsible field team.
-- Evaluate alert usefulness against persistence at a matched field-visit budget on new data.
+- Repeat the field-visit budget comparison as a pre-registered test on new data (the current one is post-hoc).
 - Trial low-cost loggers on small urban streams. Each site needs sensor QA, adequate history, local calibration, independent validation and agreed access; the pipeline can be reused, the Garonne skill cannot.
 - Investigate discharge and locally appropriate watch thresholds in a separately specified future evaluation.
 

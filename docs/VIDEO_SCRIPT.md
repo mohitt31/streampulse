@@ -20,6 +20,12 @@ Editorial plan: aim for a narrated demo within the hackathon's required duration
 
 > At day three, mean absolute error is point seven nine degrees, versus one point two zero for persistence: thirty-four percent skill, on two hundred twenty-four paired days. All six frozen gate criteria passed. Validation skill was thirteen point six percent; future performance is not bounded by those results. The watch has eighty-percent precision but forty-three-percent recall. Persistence catches more exceedances, with lower precision. Better temperature accuracy does not prove better field decisions. This cooling event shows a clear forecast miss. Discharge is not an input; we have not established the cause of that miss.
 
+## Network and visit planning
+
+**Screen:** Network tab. Drag the slider to 30 June 2025: every river turns to watch. Scroll to the field-visit planner, show 1 team, then the season table.
+
+> The same frozen method, with no re-tuning, was applied to every station that met a data rule we committed before downloading. Two hundred seventy-four screened, four qualified, all four beat persistence at day three, three of four pass the full gate. The one that fails is shown. In the late-June heatwave all four rivers are on watch, but a team can only go to one or two. The planner ranks them by how far each forecast is above that river's own line. Over the season, this visits about as many real exceedances as persistence, with fewer wasted trips. That comparison was done afterwards, so we label it exploratory.
+
 ## Field workflow and its boundary
 
 **Screen:** Acknowledge an alert using a fictional demo role. Point to the local-only explanation.
@@ -36,7 +42,7 @@ Editorial plan: aim for a narrated demo within the hackathon's required duration
 
 **Screen:** Method and data, then repository.
 
-> The next step is a supervised pilot: confirm data latency, connect a fresh feed, and test whether the watch improves field visits at a fixed budget. Small urban streams need local sensor checks, calibration and new validation. The pipeline is reusable; the Garonne skill does not automatically transfer. StreamPulse makes a narrow claim that can be checked, and makes its missing evidence visible.
+> The public temperature archive we used still stops in August 2025, so a live service needs a direct producer feed. The next step is a supervised pilot: connect that feed, and test whether the watch improves field visits at a fixed budget. Small urban streams need local sensor checks, calibration and new validation. The pipeline is reusable; the Garonne skill does not automatically transfer. StreamPulse makes a narrow claim that can be checked, and makes its missing evidence visible.
 
 ## Before recording
 

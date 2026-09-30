@@ -1,0 +1,146 @@
+{
+ "label": "EXPLORATORY, POST-HOC, NOT PRE-REGISTERED",
+ "note": "Uses frozen per-station 2025 forecasts only; no fitting, tuning or test reopening. Daily outcomes are serially correlated and the network has few stations: treat as descriptive.",
+ "generated_at": "2026-09-30T10:15:53Z",
+ "stations": [
+  {
+   "code": "05116650",
+   "name": "L'Auroue en amont de l'Isle-Bouzon"
+  },
+  {
+   "code": "05126000",
+   "name": "L'Aveyron \u00e0 Floirac"
+  },
+  {
+   "code": "05174000",
+   "name": "La Garonne en amont de l'Ari\u00e8ge"
+  },
+  {
+   "code": "06185900",
+   "name": "JAUR A OLARGUES 2"
+  }
+ ],
+ "rule": "Each day, rank stations by (forecast - seasonal p90) and visit the top K with margin >= 0. Persistence ranks by (yesterday's observation - p90 at the target date). A hit is a visit whose target day was observed at or above p90.",
+ "leads": {
+  "1": {
+   "paired_days": 198,
+   "station_days": 792,
+   "exceedance_station_days": 138,
+   "days_with_any_exceedance": 63,
+   "budgets": {
+    "1": {
+     "streampulse": {
+      "visits": 51,
+      "hits": 35,
+      "wasted": 16,
+      "hit_rate": 0.686,
+      "share_of_exceedances_visited": 0.254
+     },
+     "persistence": {
+      "visits": 55,
+      "hits": 33,
+      "wasted": 22,
+      "hit_rate": 0.6,
+      "share_of_exceedances_visited": 0.239
+     }
+    },
+    "2": {
+     "streampulse": {
+      "visits": 75,
+      "hits": 54,
+      "wasted": 21,
+      "hit_rate": 0.72,
+      "share_of_exceedances_visited": 0.391
+     },
+     "persistence": {
+      "visits": 87,
+      "hits": 53,
+      "wasted": 34,
+      "hit_rate": 0.609,
+      "share_of_exceedances_visited": 0.384
+     }
+    }
+   }
+  },
+  "2": {
+   "paired_days": 197,
+   "station_days": 788,
+   "exceedance_station_days": 138,
+   "days_with_any_exceedance": 63,
+   "budgets": {
+    "1": {
+     "streampulse": {
+      "visits": 43,
+      "hits": 25,
+      "wasted": 18,
+      "hit_rate": 0.581,
+      "share_of_exceedances_visited": 0.181
+     },
+     "persistence": {
+      "visits": 55,
+      "hits": 29,
+      "wasted": 26,
+      "hit_rate": 0.527,
+      "share_of_exceedances_visited": 0.21
+     }
+    },
+    "2": {
+     "streampulse": {
+      "visits": 65,
+      "hits": 42,
+      "wasted": 23,
+      "hit_rate": 0.646,
+      "share_of_exceedances_visited": 0.304
+     },
+     "persistence": {
+      "visits": 85,
+      "hits": 45,
+      "wasted": 40,
+      "hit_rate": 0.529,
+      "share_of_exceedances_visited": 0.326
+     }
+    }
+   }
+  },
+  "3": {
+   "paired_days": 196,
+   "station_days": 784,
+   "exceedance_station_days": 138,
+   "days_with_any_exceedance": 63,
+   "budgets": {
+    "1": {
+     "streampulse": {
+      "visits": 38,
+      "hits": 20,
+      "wasted": 18,
+      "hit_rate": 0.526,
+      "share_of_exceedances_visited": 0.145
+     },
+     "persistence": {
+      "visits": 52,
+      "hits": 22,
+      "wasted": 30,
+      "hit_rate": 0.423,
+      "share_of_exceedances_visited": 0.159
+     }
+    },
+    "2": {
+     "streampulse": {
+      "visits": 59,
+      "hits": 34,
+      "wasted": 25,
+      "hit_rate": 0.576,
+      "share_of_exceedances_visited": 0.246
+     },
+     "persistence": {
+      "visits": 81,
+      "hits": 35,
+      "wasted": 46,
+      "hit_rate": 0.432,
+      "share_of_exceedances_visited": 0.254
+     }
+    }
+   }
+  }
+ }
+}

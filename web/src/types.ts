@@ -89,4 +89,12 @@ export interface Network {
   not_sampled?: { code_station: string; name: string | null }[];
   origins: string[];
   replay: Record<string, (NetCell[] | null)[]>;
+  budget?: VisitBudget | null;
+}
+
+export interface BudgetPolicy { visits: number; hits: number; wasted: number; hit_rate: number | null; share_of_exceedances_visited: number | null }
+export interface VisitBudget {
+  label: string; note: string; rule: string;
+  leads: Record<string, { paired_days: number; station_days: number; exceedance_station_days: number;
+    budgets: Record<string, { streampulse: BudgetPolicy; persistence: BudgetPolicy }> }>;
 }

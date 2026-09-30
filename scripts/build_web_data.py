@@ -178,7 +178,13 @@ def main():
             slim.append(st)
         net = {"headline": summ["headline"], "rule": summ["rule"], "stations": slim,
                "excluded": summ["excluded"], "origins": origins,
-               "replay": {code: [series.get(o) for o in origins] for code, series in rep.items()}}
+               "replay": {code: [series.get(o) for o in origins] for code, series in rep.items()},
+               "budget": None}
+        vb = os.path.join(ROOT, "reports", "exploratory", "visit_budget.json")
+        if os.path.exists(vb):
+            with open(vb) as f:
+                b = json.load(f)
+            net["budget"] = {k: b[k] for k in ("label", "note", "rule", "leads")}
         with open(os.path.join(os.path.dirname(a.out), "network.json"), "w") as f:
             json.dump(net, f, separators=(",", ":"))
         out["network"] = {"headline": summ["headline"], "file": "network.json"}
