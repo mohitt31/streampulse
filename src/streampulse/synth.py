@@ -55,15 +55,16 @@ def generate(paths: Paths, cfg: dict, seed: int = 7, start: str = "2010-01-01") 
     # dirty cases
     y0 = min(recs_by_year)
     base = recs_by_year[y0]
+    nb = len(base)
     for j in range(40):
-        recs_by_year[y0].append(dict(base[100 + j]))                          # identical duplicate
+        recs_by_year[y0].append(dict(base[(100 + j) % nb]))                   # identical duplicate
     for j in range(8):
-        r = dict(base[500 + j]); r["resultat"] = r["resultat"] + 1.3          # conflicting duplicate
+        r = dict(base[(500 + j) % nb]); r["resultat"] = r["resultat"] + 1.3   # conflicting duplicate
         recs_by_year[y0].append(r)
     for j in range(5):
-        r = dict(base[900 + j]); r["code_qualification"] = "2"                # excluded code
-        base[900 + j] = r
-    base[1200]["resultat"] = 99.0                                              # implausible
+        r = dict(base[(900 + j) % nb]); r["code_qualification"] = "2"         # excluded code
+        base[(900 + j) % nb] = r
+    base[1200 % nb]["resultat"] = 99.0                                         # implausible
 
     for yr, recs in recs_by_year.items():
         (paths.raw_hubeau / f"chronique_{cfg['site']['station_id']}_{yr}.json").write_text(

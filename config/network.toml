@@ -1,0 +1,40 @@
+# StreamPulse network replication: PRE-REGISTERED before any network data was downloaded.
+#
+# Question: does the frozen single-station method (config/contract.toml) keep its skill
+# at other rivers around Toulouse, with NO re-design, NO extra tuning and the SAME gate?
+#
+# Everything not listed here is inherited unchanged from config/contract.toml:
+# QC rules, timing, splits (train 2010-2022, tune 2023, validate 2024, test 2025-01-01..2025-08-21),
+# features, alpha grid and per-station alpha selection on 2023, weather-correction selection on
+# 2024 (expanding window), intervals, watch rule, go/no-go gate thresholds and bootstrap settings.
+# Each station gets its own frozen_selection.json and test_lock.json, exactly like the primary site.
+
+[selection]
+# Candidate set: every Hub'eau water-temperature station within this radius of central Toulouse,
+# as returned by the Hub'eau station endpoint (latitude/longitude/distance query).
+center_name = "Toulouse (Capitole)"
+center_lat = 43.6045
+center_lon = 1.4440
+radius_km = 100
+source = "https://hubeau.eaufrance.fr/api/v1/temperature/station?latitude=43.6045&longitude=1.444&distance=100&size=500"
+
+[eligibility]
+# Applied mechanically after QC (same QC as the primary site). A station is analysed iff ALL hold.
+min_training_years = 3            # calendar years in 2010-2022 ...
+min_training_year_days = 300      # ... each with at least this many eligible (QC-passing) days
+min_tune_days_2023 = 300
+min_validation_days_2024 = 300
+min_test_days_2025 = 150          # eligible days in 2025-01-01..2025-08-21
+# Stations failing any rule are listed with the reason; none are silently dropped.
+
+[weather]
+# Same ECMWF IFS 00 UTC Single Runs as the primary site, requested at each station's coordinates.
+# Stations whose coordinates round to the same 0.05-degree cell share one download.
+share_cell_deg = 0.05
+
+[reporting]
+# Reported for every analysed station, whatever the outcome:
+#   day-1/2/3 MAE for all four methods, skill vs persistence, the 6-criterion gate, watch precision/recall.
+# Network headline = number of stations passing the gate and the median day-3 skill.
+# The primary station (05174000) keeps its original run; it is not re-run.
+primary_station = "05174000"

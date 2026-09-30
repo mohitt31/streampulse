@@ -11,3 +11,8 @@ vendor/*.jar
 web/dist-single/
 *.tsbuildinfo
 web/dist-single/
+data/network/_weather/
+data/network/*/data/raw/
+data/network/*/reports/forecasts.jsonl
+data/network/*/reports/test_predictions.csv
+data/network/*/data/processed/air_runs_daily.csv

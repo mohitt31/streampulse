@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import subprocess
 try:
     import tomllib
@@ -18,11 +19,17 @@ DEFAULT_CONTRACT = REPO_ROOT / "config" / "contract.toml"
 MODEL_IDS = ("water_ridge_v1", "weather_corr_v1", "persistence", "climatology")
 
 
-def load_contract(path: str | Path | None = None) -> dict:
+def load_contract(path: str | Path | None = None, site: dict | None = None) -> dict:
+    """Load the frozen contract. `site` (network replication) overrides only [site];
+    its values are folded into the hash so each station has its own contract identity."""
     p = Path(path) if path else DEFAULT_CONTRACT
     raw = p.read_bytes()
     cfg = tomllib.loads(raw.decode("utf-8"))
-    cfg["_sha256"] = hashlib.sha256(raw).hexdigest()
+    digest = hashlib.sha256(raw)
+    if site:
+        cfg["site"] = {**cfg["site"], **site}
+        digest.update(json.dumps(site, sort_keys=True).encode("utf-8"))
+    cfg["_sha256"] = digest.hexdigest()
     cfg["_path"] = str(p)
     return cfg
 
@@ -64,6 +71,7 @@ def code_version(root: Path | None = None) -> str:
 @dataclass(frozen=True)
 class Paths:
     root: Path = REPO_ROOT
+    runs_dir: Path | None = None   # network stations may share one weather download per grid cell
 
     @property
     def raw_hubeau(self) -> Path:
@@ -71,7 +79,7 @@ class Paths:
 
     @property
     def raw_runs(self) -> Path:
-        return self.root / "data" / "raw" / "single_runs"
+        return self.runs_dir if self.runs_dir is not None else self.root / "data" / "raw" / "single_runs"
 
     @property
     def processed(self) -> Path:
@@ -109,6 +117,6 @@ class Paths:
         return self.synthetic_marker.exists()
 
     def ensure(self) -> "Paths":
-        for p in (self.raw_hubeau, self.raw_runs, self.processed, self.manifests, self.reports):
+        for p in (self.raw_hubeau, self.processed, self.manifests, self.reports) + (() if self.runs_dir else (self.raw_runs,)):
             p.mkdir(parents=True, exist_ok=True)
         return self
