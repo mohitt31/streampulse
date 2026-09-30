@@ -43,9 +43,16 @@ def eligibility() -> dict:
     base = load_contract()
     t0, t1 = split(base, "test")
     out = {"rule": e, "eligible": [], "excluded": []}
+    pre_path = NET / "prescreen.json"
+    pre = json.loads(pre_path.read_text()) if pre_path.exists() else None
     for s in _stations():
         code = s["code_station"]
         root = NET / code
+        if pre and not pre["stations"].get(code, {}).get("pass", True):
+            n = pre["stations"][code]["readings_2025_test"]
+            out["excluded"].append({"code_station": code, "reason": f"2025 test window has {n} hourly readings "
+                                    f"(< {pre['threshold_readings']} needed for {e['min_test_days_2025']} eligible days)"})
+            continue
         try:
             readings = load_hubeau_raw(root / "data" / "raw" / "hubeau")
         except FileNotFoundError:

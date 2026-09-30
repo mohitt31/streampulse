@@ -3,7 +3,8 @@
 Hub'eau and Open-Meteo). The selection rule is fixed in config/network.toml.
 
     python3 scripts/network_fetch.py stations          # candidate list  -> data/network/stations.json
-    python3 scripts/network_fetch.py water             # Hub'eau history for every candidate
+    python3 scripts/network_fetch.py prescreen         # 2025 test-window reading count per candidate (1 request each)
+    python3 scripts/network_fetch.py water             # Hub'eau history for candidates that can still meet the rule
     python3 scripts/network_fetch.py weather           # ECMWF runs for stations in data/network/eligible.json
 
 Resumable: re-running skips files already downloaded (the per-station fetchers keep manifests).
@@ -73,6 +74,28 @@ def stations(c):
     print("candidates: %d (api count %s)" % (len(keep), js.get("count")))
 
 
+def prescreen(c, workers):
+    """One cheap request per candidate: hourly readings in the 2025 test window. A station needs at least
+    min_test_days_2025 eligible days, and an eligible day needs >= 18 readings, so fewer than 18 x min_test_days
+    readings means the pre-registered rule already excludes it; its full history is not downloaded."""
+    st = json.load(open(os.path.join(NET, "stations.json")))["stations"]
+    need = 18 * int(c["eligibility"]["min_test_days_2025"])
+
+    def one(s):
+        q = {"code_station": s["code_station"], "date_debut_mesure": "2025-01-01", "date_fin_mesure": "2025-08-21",
+             "size": 1, "fields": "code_station"}
+        js = get_json("https://hubeau.eaufrance.fr/api/v1/temperature/chronique?" + urllib.parse.urlencode(q))
+        return s["code_station"], int(js.get("count") or 0)
+
+    res = {}
+    with cf.ThreadPoolExecutor(workers) as ex:
+        for code, n in ex.map(one, st):
+            res[code] = {"readings_2025_test": n, "pass": n >= need}
+    json.dump({"threshold_readings": need, "stations": res}, open(os.path.join(NET, "prescreen.json"), "w"), indent=1)
+    print("prescreen: %d of %d candidates can still meet the 2025 rule (>= %d readings)"
+          % (sum(v["pass"] for v in res.values()), len(res), need))
+
+
 def run(cmd):
     p = subprocess.run(cmd, capture_output=True, text=True)
     return p.returncode, (p.stdout + p.stderr).strip().splitlines()[-1:] or [""]
@@ -80,6 +103,11 @@ def run(cmd):
 
 def water(workers):
     st = json.load(open(os.path.join(NET, "stations.json")))["stations"]
+    pre = os.path.join(NET, "prescreen.json")
+    if os.path.exists(pre):
+        ok = {k for k, v in json.load(open(pre))["stations"].items() if v["pass"]}
+        st = [s for s in st if s["code_station"] in ok]
+        print("downloading full history for %d prescreened stations" % len(st), flush=True)
 
     def one(s):
         code = s["code_station"]
@@ -115,13 +143,15 @@ def weather(workers, c):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("steps", nargs="+", choices=["stations", "water", "weather"])
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("steps", nargs="+", choices=["stations", "prescreen", "water", "weather"])
+    ap.add_argument("--workers", type=int, default=6)
     a = ap.parse_args()
     c = cfg()
     for s in a.steps:
         if s == "stations":
             stations(c)
+        elif s == "prescreen":
+            prescreen(c, a.workers)
         elif s == "water":
             water(a.workers)
         else:
