@@ -64,13 +64,14 @@ export interface Replay {
 }
 
 export interface NetworkHeadline {
-  candidates: number; eligible: number; analysed: number; gate_passed: number;
+  candidates: number; eligible: number; analysed: number; gate_passed: number; not_sampled?: number;
+  by_stage?: Record<string, { candidates: number; eligible: number; radius_km: number }>;
   beats_persistence_day3: number; median_skill_day3: number | null; skill_day3_range: [number, number] | null;
 }
 
 export interface NetworkStation {
   code_station: string; name: string | null; commune: string | null; river: string | null;
-  lat: number; lon: number; primary: boolean; status: "ok" | "failed" | "not run"; error?: string;
+  lat: number; lon: number; primary: boolean; status: "ok" | "failed" | "not run"; error?: string; stage?: number;
   counts?: Record<string, number | string>;
   product_model?: string; weather_selected?: string; gate_passed?: boolean;
   gate?: { id: number; passed: boolean }[];
@@ -84,7 +85,8 @@ export interface Network {
   headline: NetworkHeadline;
   rule: Record<string, number>;
   stations: NetworkStation[];
-  excluded: { code_station: string; reason: string }[];
+  excluded: { code_station: string; reason: string; stage?: number }[];
+  not_sampled?: { code_station: string; name: string | null }[];
   origins: string[];
   replay: Record<string, (NetCell[] | null)[]>;
 }

@@ -99,7 +99,12 @@ export function NetworkView({ v, originIdx, setOriginIdx, openPrimary }: Props) 
         <div className="card kpi">
           <div className="sub">Rivers analysed (pre-registered rule)</div>
           <div className="big num">{h.analysed}</div>
-          <div className="sub">{h.candidates} candidate stations within {net.rule ? "100 km" : ""} of Toulouse; {h.eligible} met the data rule</div>
+          <div className="sub">
+            {h.by_stage
+              ? Object.entries(h.by_stage).map(([k, b]) => `stage ${k}: ${b.eligible}/${b.candidates} within ${b.radius_km} km`).join(" · ")
+              : `${h.eligible}/${h.candidates} candidates met the data rule`}
+            {h.not_sampled ? ` · ${h.not_sampled} eligible not sampled` : ""}
+          </div>
         </div>
         <div className="card kpi">
           <div className="sub">Beat persistence at day 3</div>
@@ -162,7 +167,7 @@ export function NetworkView({ v, originIdx, setOriginIdx, openPrimary }: Props) 
         <h2>Every analysed river, 2025 test (day 3)</h2>
         <p className="small muted" style={{ marginTop: 0 }}>
           Each station was fitted and frozen on 2010–2024 with the primary site's exact method (<code>config/contract.toml</code>),
-          then its 2025 test was opened once. Station selection was fixed in <code>config/network.toml</code> before any of this data was downloaded.
+          then its 2025 test was opened once. Station selection was fixed in <code>config/network.toml</code> (stage 1) and <code>config/network_stage2.toml</code> (stage 2), each committed to GitHub before that stage's data was downloaded.
         </p>
         <div className="table-wrap">
           <table>
@@ -173,7 +178,7 @@ export function NetworkView({ v, originIdx, setOriginIdx, openPrimary }: Props) 
                 const prod = s.product_model ?? "weather_corr_v1";
                 return (
                   <tr key={s.code_station} aria-selected={s.code_station === sel} onClick={() => setSel(s.code_station)} style={{ cursor: "pointer", background: s.code_station === sel ? "var(--accent-soft)" : undefined }}>
-                    <td className="mono">{s.code_station}{s.primary ? " ★" : ""}</td>
+                    <td className="mono">{s.code_station}{s.primary ? " ★" : ""}{s.stage ? <div className="small muted">stage {s.stage}</div> : null}</td>
                     <td>{s.name}<div className="small muted">{[s.river, s.commune].filter(Boolean).join(" · ")}</div></td>
                     <td className="r num">{l?.n ?? "–"}</td>
                     <td className="r num">{l?.mae?.[prod]?.toFixed(2) ?? "–"}</td>
