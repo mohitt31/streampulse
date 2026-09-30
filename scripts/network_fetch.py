@@ -44,11 +44,13 @@ def cfg():
             out[sec] = {}
             continue
         k, v = [x.strip() for x in line.split("=", 1)]
-        v = v.strip('"')
-        try:
-            v = float(v) if "." in v else int(v)
-        except ValueError:
-            pass
+        if v.startswith('"'):
+            v = v.strip('"')            # quoted -> keep as string (station codes have leading zeros)
+        else:
+            try:
+                v = float(v) if "." in v else int(v)
+            except ValueError:
+                pass
         out[sec][k] = v
     return out
 
