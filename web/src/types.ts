@@ -58,6 +58,33 @@ export interface Replay {
     eligible_days: number; days: number; first_date: string; last_date: string;
     air_runs: { runs: number; first_run: string; last_run: string };
   };
+  network: null | { headline: NetworkHeadline; file: string };
   fhir: null | { errors: number; warnings: number; information: number; validator: string; fhir: string;
     positive_documents: number | null; negative_controls: Record<string, number>; generated_at: string };
+}
+
+export interface NetworkHeadline {
+  candidates: number; eligible: number; analysed: number; gate_passed: number;
+  beats_persistence_day3: number; median_skill_day3: number | null; skill_day3_range: [number, number] | null;
+}
+
+export interface NetworkStation {
+  code_station: string; name: string | null; commune: string | null; river: string | null;
+  lat: number; lon: number; primary: boolean; status: "ok" | "failed" | "not run"; error?: string;
+  counts?: Record<string, number | string>;
+  product_model?: string; weather_selected?: string; gate_passed?: boolean;
+  gate?: { id: number; passed: boolean }[];
+  leads?: Record<string, { n: number; episodes: number; mae: Record<string, number>; skill: number | null; watch: Contingency | null }>;
+}
+
+/** per issue date: [lead1, lead2, lead3], each [pred, p90, watch(0|1), observed|null] or null */
+export type NetCell = [number, number | null, number, number | null] | null;
+
+export interface Network {
+  headline: NetworkHeadline;
+  rule: Record<string, number>;
+  stations: NetworkStation[];
+  excluded: { code_station: string; reason: string }[];
+  origins: string[];
+  replay: Record<string, (NetCell[] | null)[]>;
 }

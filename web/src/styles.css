@@ -110,7 +110,7 @@ a { color: var(--accent); }
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
 
 /* header */
-.top { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.top { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
 .top .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; flex-wrap: wrap; }
 .brand h1 { font: inherit; margin: 0; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
@@ -232,3 +232,12 @@ td.r, th.r { text-align: right; }
 code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
 .hash { word-break: break-all; }
 footer { color: var(--faint); font-size: 12px; padding: 24px 0 40px; border-top: 1px solid var(--border); }
+
+/* network map */
+.netmap { height: 460px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2); z-index: 0; }
+@media (max-width: 640px) { .netmap { height: 340px; } }
+.leaflet-container { font: inherit; }
+.leaflet-control-attribution { font-size: 11px; }
+.leaflet-tooltip { font-size: 12px; }
+details summary { cursor: pointer; color: var(--muted); }
+tr[aria-selected="true"] td { background: var(--accent-soft); }

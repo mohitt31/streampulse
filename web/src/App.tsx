@@ -4,10 +4,11 @@ import { View, loadReplay } from "./lib/data";
 import { ReplayView } from "./components/ReplayView";
 import { EvaluationView } from "./components/EvaluationView";
 import { MethodView } from "./components/MethodView";
+import { NetworkView } from "./components/NetworkView";
 import type { Acks } from "./components/AlertPanel";
 
-type Tab = "replay" | "evaluation" | "method";
-const TABS: [Tab, string][] = [["replay", "Replay"], ["evaluation", "Evaluation"], ["method", "Method & data"]];
+type Tab = "replay" | "network" | "evaluation" | "method";
+const TABS: [Tab, string][] = [["replay", "Replay"], ["network", "Network"], ["evaluation", "Evaluation"], ["method", "Method & data"]];
 const ACK_KEY = "streampulse.acks.v1";
 
 function readAcks(): Acks {
@@ -103,6 +104,9 @@ export default function App() {
           {err && <div className="card"><b>Could not load data.</b> <span className="muted">{err}</span></div>}
           {!v && !err && <div className="card muted">Loading replay…</div>}
           {v && tab === "replay" && <ReplayView v={v} originIdx={originIdx} setOriginIdx={setOriginIdx} acks={acks} onAck={onAck} />}
+          {v && tab === "network" && (v.d.network
+            ? <NetworkView v={v} originIdx={originIdx} setOriginIdx={setOriginIdx} openPrimary={() => setTab("replay")} />
+            : <div className="card muted">Network replication results are not published yet.</div>)}
           {v && tab === "evaluation" && <EvaluationView v={v} />}
           {v && tab === "method" && <MethodView v={v} />}
         </div>

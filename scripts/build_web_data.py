@@ -162,6 +162,28 @@ def main():
             "generated_at": fs.get("generated_at"),
         }
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
+    # network replication (optional): written as a separate file, loaded by the Network tab
+    ns = os.path.join(ROOT, "reports", "network_summary.json")
+    nr = os.path.join(ROOT, "reports", "network_replay.json")
+    out["network"] = None
+    if os.path.exists(ns) and os.path.exists(nr):
+        with open(ns) as f:
+            summ = json.load(f)
+        with open(nr) as f:
+            rep = json.load(f)
+        slim = []
+        for st in summ["stations"]:
+            st = dict(st)
+            st.pop("frozen_sha256", None)
+            slim.append(st)
+        net = {"headline": summ["headline"], "rule": summ["rule"], "stations": slim,
+               "excluded": summ["excluded"], "origins": origins,
+               "replay": {code: [series.get(o) for o in origins] for code, series in rep.items()}}
+        with open(os.path.join(os.path.dirname(a.out), "network.json"), "w") as f:
+            json.dump(net, f, separators=(",", ":"))
+        out["network"] = {"headline": summ["headline"], "file": "network.json"}
+
+    os.makedirs(os.path.dirname(a.out), exist_ok=True)
     with open(a.out, "w") as f:
         json.dump(out, f, separators=(",", ":"))
     print(f"wrote {a.out}: {os.path.getsize(a.out) / 1e6:.2f} MB, {len(origins)} origins, {len(alerts)} alerts")

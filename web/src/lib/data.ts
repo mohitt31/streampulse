@@ -1,4 +1,4 @@
-import type { Cell, ModelId, Replay } from "../types";
+import type { Cell, ModelId, Network, Replay } from "../types";
 import { addDays, daysBetween, doy365 } from "./time";
 
 declare const __INLINE_DATA__: boolean;
@@ -11,6 +11,20 @@ export async function loadReplay(): Promise<Replay> {
   const res = await fetch("./data/replay.json", { cache: "no-cache" });
   if (!res.ok) throw new Error(`replay.json: HTTP ${res.status}`);
   return res.json();
+}
+
+export async function loadNetwork(): Promise<Network | null> {
+  if (__INLINE_DATA__) {
+    try {
+      const mods = import.meta.glob("../../public/data/network.json");
+      const key = Object.keys(mods)[0];
+      if (!key) return null;
+      const mod = (await mods[key]()) as { default: Network };
+      return mod.default;
+    } catch { return null; }
+  }
+  const res = await fetch("./data/network.json", { cache: "no-cache" });
+  return res.ok ? res.json() : null;
 }
 
 export class View {
