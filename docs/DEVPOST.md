@@ -22,7 +22,7 @@ This is a large-river proof of concept near an OAH research city. Official OAH s
 
 The **2025** replay uses simulated **12:00 UTC** issuance and enforces date-based chronology. Historical input publication times remain **UNVERIFIED**. Archived weather runs may include reprocessed hindcasts, so we call this a reforecast evaluation. The static Live view withholds a current forecast because the bundled history ends on **2025-08-21**; it is not a continuously polling service.
 
-Acknowledgements are browser-local demonstrations. The separate exporter can encode supplied acknowledgements as FHIR Communications; browser clicks are not automatically exported or sent to field staff.
+Acknowledgements are browser-local demonstrations. After acknowledgement, a field-check form accepts demonstration temperature, dissolved oxygen, optional saturation and a UTC measurement time. It downloads a FHIR collection Bundle linking the alert, acknowledgement, original forecasts, measurement Observations and provenance. Nothing is sent to field staff or a server; unsaved measurements leave memory when the view closes. A spot measurement versus daily-mean prediction is descriptive, not a new forecast-skill result. The browser-generated examples and missing-unit negative control are checked by the official HL7 validator in CI.
 
 ## How we built it
 
@@ -34,11 +34,16 @@ FHIR export uses OAH Location and indicator Observation profiles, a locally deri
 
 ## Results and their limits
 
+**Primary site (Garonne at Portet-sur-Garonne):**
 - **Day-3 MAE: 0.79 °C**, versus **1.20 °C** for persistence and **1.75 °C** for climatology: **34% skill** on **224** paired days. The frozen gate passed all **6** criteria.
 - **Day-1 and day-2 skill:** **28%** and **31%**, on **226** and **225** paired days respectively.
 - **Day-3 watch:** **80% precision, 43% recall**. Persistence gives **59% precision, 54% recall**: the model's higher precision comes with lower recall. Improved MAE does not establish improved field decisions.
 - **Validation skill: 13.6%** on the expanding-window **2024** assessment. This and the test result do not bound future performance.
 - Nominal **90%** intervals covered **95–98%**. Only **10** observed exceedance episodes underpin the watch rates.
+
+**Network replication (pre-registered, 2-stage):**
+
+The same frozen method — no re-design, no re-tuning — was applied to every Hub'eau river station within 300 km of Toulouse that met the pre-registered data-quality rule. Station selection was committed to the repository ([`config/network.toml`](../config/network.toml) for stage 1, [`config/network_stage2.toml`](../config/network_stage2.toml) for stage 2) **before any network data was downloaded**, with the commit timestamps on GitHub as evidence. Results are shown in the **Network** tab of the dashboard, including a regional early-warning map replayed across every 2025 date. Skill and gate results across the network are shown there once the pipeline runs complete.
 
 Sources: [test_metrics.json](../reports/test_metrics.json), [gate.json](../reports/gate.json), [frozen_selection.json](../reports/frozen_selection.json), [qc_summary.json](../reports/qc_summary.json), and the [FHIR summary](../reports/fhir-validation/summary.json). Exact keys are in [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md).
 
@@ -60,4 +65,4 @@ Confirm source availability, establish a supervised fresh-feed pilot, and measur
 
 ## Built with
 
-Python · NumPy · pandas · React · TypeScript · Vite · SVG · HL7 FHIR · SUSHI · Hub'eau · Open-Meteo · ECMWF · GitHub Actions · GitHub Pages
+Python · NumPy · pandas · React · TypeScript · Vite · SVG · Leaflet · HL7 FHIR · SUSHI · Hub'eau · Open-Meteo · ECMWF · GitHub Actions · GitHub Pages
