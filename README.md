@@ -107,7 +107,17 @@ The same frozen method — no re-design, no re-tuning, no model changes — was 
 - **Stage 1** (0–100 km): [`config/network.toml`](config/network.toml), committed at `1222ce8`.
 - **Stage 2** (100–300 km, seeded sample ≤ 15, seed 20261004): [`config/network_stage2.toml`](config/network_stage2.toml), committed at `f4a570d`.
 
-GitHub commit timestamps serve as the pre-registration evidence. The **Network** tab of the dashboard shows per-station skill and a regional early-warning map replayed across every 2025 date, using the identical frozen coefficients.
+GitHub commit timestamps serve as the pre-registration evidence.
+
+| | Result |
+|---|---|
+| Candidate stations screened | 274 (62 stage 1, 212 stage 2) |
+| Met the pre-registered data rule | 4 (3 stage 1 incl. primary, 1 stage 2) |
+| Beat persistence at day 3 | 4 / 4 |
+| Day-3 skill vs persistence | median 38%, range 19–65% |
+| Passed the full 6-criterion gate | 3 / 4 (06185900 Jaur à Olargues: NO-GO) |
+
+Source: [network_summary.json](reports/network_summary.json). Four stations is a small sample; it shows the frozen method transfers within this region, not beyond it. The **Network** tab shows per-station results and a regional watch map replayed across every 2025 date.
 
 ## Citizen science hook — proposed integration, not built
 
