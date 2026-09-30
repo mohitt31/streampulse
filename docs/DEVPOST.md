@@ -10,6 +10,16 @@
 - Code: https://github.com/mohitt31/streampulse
 - Video: recording link pending
 
+## For judges: evidence by criterion
+
+| Criterion | Where to look |
+|---|---|
+| **Impact & Alignment** | Toulouse is an OAH research city. Each watch becomes one field task (confirm temperature, measure dissolved oxygen) with the oxygen ceiling at the forecast temperature. Against the Garonne's published **24 °C** salmon limit, the day-3 forecast reached 24 °C on 13 of 24 such days with **0** false calls (persistence: 16, with 7 false calls). |
+| **Innovation & Creativity** | Pre-registered, 2-stage regional replication (station rules committed to GitHub before any data download). Warm-day skill holds where a published deep-learning study found persistence was better. A field-visit planner turns forecasts into "which river gets today's team". |
+| **Architecture** | Frozen six-criterion gate, gap-aware block bootstrap, chronology assertions, 61 Python and 5 Node tests, and four CI workflows (tests, official HL7 FHIR validation, browser and axe accessibility, Pages). |
+| **UX** | Replay with the outcome hidden until revealed, missing-weather and stale-feed states, regional map with date slider, planner, field-check form that downloads a FHIR Bundle, and axe WCAG 2 AA checks in CI. |
+| **Scale** | The same frozen method ran on 274 candidate stations with one config change per site. OAH-profiled FHIR R4, with an official sandbox round-trip. Honest blocker: the public temperature archive lags by more than a year, so a pilot needs a producer feed. |
+
 ## Inspiration
 
 A river monitoring team has limited time for field visits. Temperature can help prioritise a follow-up, but it cannot establish low dissolved oxygen, biological damage or health risk. StreamPulse asks when unusual warmth might justify a trained team's temperature and oxygen check. This proposed decision rule draws on the measurements supported by the [OAH Health Assessment Framework](https://www.oneaquahealth.eu/health-assessment-framework-for-urban-aquatic-ecosystems/); it is not a prescribed OAH alert threshold.
@@ -47,6 +57,8 @@ The same frozen method — no re-design, no re-tuning — was applied to every H
 
 **Field-visit planner (exploratory, post-hoc, not pre-registered):** with a fixed number of visits per day across the four rivers, ranking rivers by forecast margin above each river's watch line visits about as many real exceedances as ranking by persistence, with fewer wasted trips. At day 3 with two visits a day: **34** exceedance visits from **59** trips (**25** wasted) versus **35** from **81** (**46** wasted). At day 1 with one visit a day: **35** from **51** (**16** wasted) versus **33** from **55** (**22** wasted). Computed afterwards from the frozen 2025 forecasts, with no fitting or tuning; days are correlated and four rivers is small, so this is descriptive. Source: [visit_budget.json](../reports/exploratory/visit_budget.json).
 
+**Warm days and an outside threshold (exploratory, post-hoc):** on days above **18 °C**, day-3 MAE is **0.78 °C** versus **1.27 °C** for persistence (**39%** skill, 68 days). A multi-site deep-learning study found persistence was better above 18 °C ([Zwart et al. 2023](https://doi.org/10.3389/frwa.2023.1184992)); different rivers and methods, so this is context, not a head-to-head. For the Garonne, [Larnier et al. 2010](https://doi.org/10.1051/kmae/2010031) give **24 °C** as the upper limit for Atlantic salmon migration. On the 24 target days that reached it, the day-3 forecast also reached 24 °C on **13** with **0** false calls on cooler days; persistence reached it on **16** with **7** false calls. Strata split on the observed value; not a biological validation. Source: [context.json](../reports/exploratory/context.json).
+
 Sources: [test_metrics.json](../reports/test_metrics.json), [gate.json](../reports/gate.json), [frozen_selection.json](../reports/frozen_selection.json), [qc_summary.json](../reports/qc_summary.json), and the [FHIR summary](../reports/fhir-validation/summary.json). Exact keys are in [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md).
 
 ## Challenges and lessons
@@ -68,5 +80,7 @@ The adapter would link site, alert, assignment and returned evidence. App APIs, 
 Secure a direct fresh feed from the producer (the public archive lags by more than a year), establish a supervised fresh-feed pilot, and measure whether alerts improve visit decisions at a fixed sampling budget. Extend to low-cost loggers on small urban streams only after sensor QA, sufficient local history, site-specific calibration and new validation. Environmental or health benefits and cross-site skill remain **UNVERIFIED**.
 
 ## Built with
+
+References: Zwart et al. 2023, *Frontiers in Water* 5:1184992 · Larnier et al. 2010, *Knowl. Managt. Aquatic Ecosyst.* 398:04 · Benson & Krause 1984, *Limnol. Oceanogr.* 29:620 (oxygen solubility).
 
 Python · NumPy · pandas · React · TypeScript · Vite · SVG · Leaflet · HL7 FHIR · SUSHI · Hub'eau · Open-Meteo · ECMWF · GitHub Actions · GitHub Pages

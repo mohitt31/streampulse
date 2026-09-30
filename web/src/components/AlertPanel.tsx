@@ -3,6 +3,7 @@ import { FieldCheckPanel } from "./FieldCheckPanel";
 import type { Alert } from "../types";
 import { View, fmtC } from "../lib/data";
 import { fmtDay } from "../lib/time";
+import { doSaturation } from "../lib/oxygen";
 
 export type Acks = Record<string, { by: string; at: string; note: string }>;
 
@@ -95,6 +96,20 @@ function AlertBox({ v, a, ack, onAck, product }: {
           );
         })}
       </div>
+      {(() => {
+        const temps = a.target_dates.map((t) => {
+          const h = Math.round((Date.parse(t) - Date.parse(a.origin_date)) / 86400000);
+          return v.cell(product as never, i, h)?.[0];
+        }).filter((x): x is number => x != null);
+        if (!temps.length) return null;
+        const tMax = Math.max(...temps);
+        return (
+          <div className="small">
+            <b>Oxygen ceiling:</b> at {fmtC(tMax)}, fully saturated river water holds at most <b className="num">{doSaturation(tMax).toFixed(1)} mg/L</b> of dissolved oxygen
+            (vs {doSaturation(15).toFixed(1)} mg/L at 15 °C). Solubility physics (Benson &amp; Krause 1984), not a DO forecast: the field reading tells you how far below this the river actually is.
+          </div>
+        );
+      })()}
       <div className="small">
         <b>Follow-up:</b> Confirm temperature and measure dissolved oxygen with a trained monitoring team. Biological sampling is an expert decision. This is a proposed follow-up, not an OAH-prescribed alert trigger.
       </div>

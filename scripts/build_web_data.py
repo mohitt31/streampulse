@@ -161,6 +161,12 @@ def main():
             "negative_controls": {k: v.get("counts", {}).get("error", 0) for k, v in negs.items()},
             "generated_at": fs.get("generated_at"),
         }
+    ctx = os.path.join(ROOT, "reports", "exploratory", "context.json")
+    out["context"] = None
+    if os.path.exists(ctx):
+        with open(ctx) as f:
+            c = json.load(f)
+        out["context"] = {k: c[k] for k in ("label", "note", "salmon_threshold_c", "references", "leads")}
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     # network replication (optional): written as a separate file, loaded by the Network tab
     ns = os.path.join(ROOT, "reports", "network_summary.json")

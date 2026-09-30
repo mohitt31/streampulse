@@ -1,0 +1,159 @@
+{
+ "label": "EXPLORATORY, POST-HOC, NOT PRE-REGISTERED",
+ "note": "Frozen primary-site 2025 test predictions only; no fitting or tuning. Warm-day strata split on the observed value.",
+ "generated_at": "2026-09-30T10:34:18Z",
+ "salmon_threshold_c": 24.0,
+ "references": {
+  "zwart2023": "Zwart et al. 2023, Frontiers in Water, doi:10.3389/frwa.2023.1184992",
+  "larnier2010": "Larnier et al. 2010, Knowl. Managt. Aquatic Ecosyst. 398:04, doi:10.1051/kmae/2010031"
+ },
+ "leads": {
+  "1": {
+   "strata": {
+    "all": {
+     "n": 226,
+     "weather_corr_v1": {
+      "mae": 0.53,
+      "rmse": 0.672
+     },
+     "persistence": {
+      "mae": 0.738,
+      "rmse": 0.975
+     }
+    },
+    "above_18": {
+     "n": 68,
+     "weather_corr_v1": {
+      "mae": 0.462,
+      "rmse": 0.557
+     },
+     "persistence": {
+      "mae": 0.803,
+      "rmse": 1.051
+     }
+    },
+    "above_20": {
+     "n": 60,
+     "weather_corr_v1": {
+      "mae": 0.457,
+      "rmse": 0.556
+     },
+     "persistence": {
+      "mae": 0.709,
+      "rmse": 0.919
+     }
+    }
+   },
+   "salmon": {
+    "hot_days": 25,
+    "cooler_days": 201,
+    "weather_corr_v1": {
+     "reached_on_hot_days": 17,
+     "reached_on_cooler_days": 1
+    },
+    "persistence": {
+     "reached_on_hot_days": 18,
+     "reached_on_cooler_days": 7
+    }
+   }
+  },
+  "2": {
+   "strata": {
+    "all": {
+     "n": 225,
+     "weather_corr_v1": {
+      "mae": 0.675,
+      "rmse": 0.823
+     },
+     "persistence": {
+      "mae": 0.973,
+      "rmse": 1.284
+     }
+    },
+    "above_18": {
+     "n": 68,
+     "weather_corr_v1": {
+      "mae": 0.63,
+      "rmse": 0.729
+     },
+     "persistence": {
+      "mae": 1.059,
+      "rmse": 1.435
+     }
+    },
+    "above_20": {
+     "n": 60,
+     "weather_corr_v1": {
+      "mae": 0.637,
+      "rmse": 0.734
+     },
+     "persistence": {
+      "mae": 0.945,
+      "rmse": 1.281
+     }
+    }
+   },
+   "salmon": {
+    "hot_days": 24,
+    "cooler_days": 201,
+    "weather_corr_v1": {
+     "reached_on_hot_days": 15,
+     "reached_on_cooler_days": 0
+    },
+    "persistence": {
+     "reached_on_hot_days": 17,
+     "reached_on_cooler_days": 7
+    }
+   }
+  },
+  "3": {
+   "strata": {
+    "all": {
+     "n": 224,
+     "weather_corr_v1": {
+      "mae": 0.791,
+      "rmse": 0.941
+     },
+     "persistence": {
+      "mae": 1.199,
+      "rmse": 1.514
+     }
+    },
+    "above_18": {
+     "n": 68,
+     "weather_corr_v1": {
+      "mae": 0.775,
+      "rmse": 0.904
+     },
+     "persistence": {
+      "mae": 1.269,
+      "rmse": 1.704
+     }
+    },
+    "above_20": {
+     "n": 60,
+     "weather_corr_v1": {
+      "mae": 0.788,
+      "rmse": 0.917
+     },
+     "persistence": {
+      "mae": 1.15,
+      "rmse": 1.578
+     }
+    }
+   },
+   "salmon": {
+    "hot_days": 24,
+    "cooler_days": 200,
+    "weather_corr_v1": {
+     "reached_on_hot_days": 13,
+     "reached_on_cooler_days": 0
+    },
+    "persistence": {
+     "reached_on_hot_days": 16,
+     "reached_on_cooler_days": 7
+    }
+   }
+  }
+ }
+}

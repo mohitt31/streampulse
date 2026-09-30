@@ -149,6 +149,8 @@ export function EvaluationView({ v }: { v: View }) {
         <MonthlyChart rows={mon} />
       </div>
 
+      {v.d.context && <WarmDays ctx={v.d.context} />}
+
       <div className="card">
         <h2>Limits we report, not hide</h2>
         <ul className="notes small">
@@ -263,6 +265,70 @@ function MonthlyChart({ rows }: { rows: Replay["monthly"] }) {
           );
         })}
       </svg>
+    </div>
+  );
+}
+
+function WarmDays({ ctx }: { ctx: NonNullable<View["d"]["context"]> }) {
+  const leads = ["1", "2", "3"];
+  const thr = ctx.salmon_threshold_c;
+  return (
+    <div className="card">
+      <h2>Warm days, and a threshold we did not choose <span className="chip">exploratory · post-hoc</span></h2>
+      <p className="small muted" style={{ marginTop: 0 }}>
+        The watch line is statistical (unusual for the season). Two checks against outside evidence, computed afterwards from the frozen 2025 forecasts with no fitting or tuning.
+      </p>
+      <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))" }}>
+        <div>
+          <h3>Error when the river is warm</h3>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Lead</th><th className="r">Days &gt; 18 °C</th><th className="r">StreamPulse MAE</th><th className="r">Persistence MAE</th><th className="r">Skill</th></tr></thead>
+              <tbody>
+                {leads.map((h) => {
+                  const s = ctx.leads[h]?.strata?.above_18;
+                  const a = s?.weather_corr_v1?.mae, b = s?.persistence?.mae;
+                  return (
+                    <tr key={h}>
+                      <td>+{h}</td><td className="r num">{s?.n ?? "–"}</td>
+                      <td className="r num"><b>{a?.toFixed(2) ?? "–"}</b></td><td className="r num">{b?.toFixed(2) ?? "–"}</td>
+                      <td className="r num">{a != null && b ? pct(1 - a / b) : "–"}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="small faint">
+            A multi-site deep-learning study found persistence was better above 18 °C (Zwart et al. 2023, Frontiers in Water). Here the advantage holds on warm days.
+            Different rivers and methods, so this is context, not a head-to-head. Strata split on the observed value.
+          </p>
+        </div>
+        <div>
+          <h3>Garonne salmon limit: {thr} °C</h3>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Lead</th><th className="r">Days ≥ {thr} °C</th><th className="r">Forecast reached {thr}</th><th className="r">False calls</th><th className="r">Persistence reached</th><th className="r">False calls</th></tr></thead>
+              <tbody>
+                {leads.map((h) => {
+                  const s = ctx.leads[h]?.salmon;
+                  return (
+                    <tr key={h}>
+                      <td>+{h}</td><td className="r num">{s?.hot_days}</td>
+                      <td className="r num"><b>{s?.weather_corr_v1.reached_on_hot_days}</b></td><td className="r num"><b>{s?.weather_corr_v1.reached_on_cooler_days}</b></td>
+                      <td className="r num">{s?.persistence.reached_on_hot_days}</td><td className="r num">{s?.persistence.reached_on_cooler_days}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="small faint">
+            Larnier et al. (2010, Knowl. Managt. Aquatic Ecosyst.) give {thr} °C as the upper limit for Atlantic salmon migration on the Garonne, where most recorded salmon mortalities occurred.
+            StreamPulse almost never calls {thr} °C when the river stays below it; persistence catches a few more hot days with more false calls. Not a biological validation.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

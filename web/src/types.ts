@@ -59,6 +59,13 @@ export interface Replay {
     air_runs: { runs: number; first_run: string; last_run: string };
   };
   network: null | { headline: NetworkHeadline; file: string };
+  context?: null | {
+    label: string; note: string; salmon_threshold_c: number; references: Record<string, string>;
+    leads: Record<string, {
+      strata: Record<string, { n: number; weather_corr_v1: CtxErr | null; persistence: CtxErr | null }>;
+      salmon: { hot_days: number; cooler_days: number; weather_corr_v1: CtxDet; persistence: CtxDet };
+    }>;
+  };
   fhir: null | { errors: number; warnings: number; information: number; validator: string; fhir: string;
     positive_documents: number | null; negative_controls: Record<string, number>; generated_at: string };
 }
@@ -98,3 +105,6 @@ export interface VisitBudget {
   leads: Record<string, { paired_days: number; station_days: number; exceedance_station_days: number;
     budgets: Record<string, { streampulse: BudgetPolicy; persistence: BudgetPolicy }> }>;
 }
+
+export interface CtxErr { mae: number; rmse: number }
+export interface CtxDet { reached_on_hot_days: number; reached_on_cooler_days: number }

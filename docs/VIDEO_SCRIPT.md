@@ -26,6 +26,12 @@ Editorial plan: aim for a narrated demo within the hackathon's required duration
 
 > The same frozen method, with no re-tuning, was applied to every station that met a data rule we committed before downloading. Two hundred seventy-four screened, four qualified, all four beat persistence at day three, three of four pass the full gate. The one that fails is shown. In the late-June heatwave all four rivers are on watch, but a team can only go to one or two. The planner ranks them by how far each forecast is above that river's own line. Over the season, this visits about as many real exceedances as persistence, with fewer wasted trips. That comparison was done afterwards, so we label it exploratory.
 
+## Warm days and the salmon limit
+
+**Screen:** Evaluation tab, the "threshold we did not choose" card, then an alert's oxygen ceiling.
+
+> The watch line is statistical, so we checked it against outside evidence. On the Garonne, published work puts the salmon migration limit at twenty-four degrees. On the days the river reached it, our day-three forecast reached it thirteen times with zero false calls; persistence reached it sixteen times with seven false calls. On warm days the skill holds at about forty percent. Each alert also shows the most oxygen water can hold at that temperature, which is why the task is a dissolved-oxygen check. These checks were computed afterwards, so they are labelled exploratory.
+
 ## Field workflow and its boundary
 
 **Screen:** Acknowledge an alert using a fictional demo role. Point to the local-only explanation.

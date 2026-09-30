@@ -121,6 +121,12 @@ GitHub commit timestamps serve as the pre-registration evidence.
 
 Source: [network_summary.json](reports/network_summary.json). Four stations is a small sample; it shows the frozen method transfers within this region, not beyond it. The **Network** tab shows per-station results and a regional watch map replayed across every 2025 date.
 
+### Warm days and an outside threshold (exploratory)
+
+Not pre-registered. on days above **18 °C**, day-3 MAE is **0.78 °C** versus **1.27 °C** for persistence (**39%** skill, 68 days). A multi-site deep-learning study found persistence was better above 18 °C ([Zwart et al. 2023](https://doi.org/10.3389/frwa.2023.1184992)); different rivers and methods, so this is context, not a head-to-head. For the Garonne, [Larnier et al. 2010](https://doi.org/10.1051/kmae/2010031) give **24 °C** as the upper limit for Atlantic salmon migration. On the 24 target days that reached it, the day-3 forecast also reached 24 °C on **13** with **0** false calls on cooler days; persistence reached it on **16** with **7** false calls. Strata split on the observed value; not a biological validation. Source: [context.json](reports/exploratory/context.json). Script: [`scripts/context_metrics.py`](scripts/context_metrics.py).
+
+Each alert also shows the **oxygen ceiling** at the forecast temperature (fresh-water solubility, Benson & Krause 1984): at 25 °C saturated water holds at most 8.3 mg/L versus 10.1 mg/L at 15 °C. It is physics, not a DO forecast; the field measurement shows how far below it the river is.
+
 ### Field-visit planner (exploratory)
 
 Not pre-registered. with a fixed number of visits per day across the four rivers, ranking rivers by forecast margin above each river's watch line visits about as many real exceedances as ranking by persistence, with fewer wasted trips. At day 3 with two visits a day: **34** exceedance visits from **59** trips (**25** wasted) versus **35** from **81** (**46** wasted). At day 1 with one visit a day: **35** from **51** (**16** wasted) versus **33** from **55** (**22** wasted). Computed afterwards from the frozen 2025 forecasts, with no fitting or tuning; days are correlated and four rivers is small, so this is descriptive. Source: [visit_budget.json](reports/exploratory/visit_budget.json). Script: [`scripts/visit_budget.py`](scripts/visit_budget.py).
