@@ -161,7 +161,8 @@ def weather(workers, c):
     for name in ("eligible.json", "eligible_s2.json"):
         p = os.path.join(NET, name)
         if os.path.exists(p):
-            todo += [s for s in json.load(open(p))["eligible"] if s.get("sampled", True)]
+            todo += [s for s in json.load(open(p))["eligible"] if s.get("sampled", True)
+                     and s["code_station"] != str(c["reporting"].get("primary_station", ""))]  # primary already has its runs
     el = {"eligible": todo}
     cell = float(c["weather"]["share_cell_deg"])
     cells = {}
