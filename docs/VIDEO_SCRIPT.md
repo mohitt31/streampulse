@@ -24,7 +24,7 @@ Editorial plan: aim for a narrated demo within the hackathon's required duration
 
 **Screen:** Acknowledge an alert using a fictional demo role. Point to the local-only explanation.
 
-> The proposed follow-up is to confirm temperature and measure dissolved oxygen with a trained team. OAH supports these measurements; our watch is not an OAH-prescribed trigger. Biological sampling stays an expert decision. This acknowledgement is stored only in this browser. A separate Python exporter encodes supplied acknowledgements as linked Communications. No notification or field visit is claimed. A proposed future adapter could route a coordinator-approved check through the OAH Citizen Science App, but that integration is not built.
+> The proposed follow-up is to confirm temperature and measure dissolved oxygen with a trained team. OAH supports these measurements; our watch is not an OAH-prescribed trigger. Biological sampling stays an expert decision. This acknowledgement is stored only in this browser. The browser can now download the acknowledgement and demonstration measurements as linked FHIR resources. No notification or field visit is claimed. A proposed future adapter could route a coordinator-approved check through the OAH Citizen Science App, but that integration is not built.
 
 ## Interoperability evidence
 
@@ -45,3 +45,7 @@ Editorial plan: aim for a narrated demo within the hackathon's required duration
 - Show a local-only acknowledgement and an actual negative-control failure.
 - Use the committed sandbox evidence; if the server is unavailable during recording, say this is a recorded round-trip.
 - Keep the source-clock, reforecast and missing-weather limitations in the narration.
+
+**Field-check beat — approximately 15 seconds:** Open “Log field check”, enter demonstration readings and a UTC time, then download the Bundle.
+
+> Now I log demonstration temperature and oxygen readings. The browser links them to this alert and forecast in a validator-tested FHIR file. Nothing is sent. A spot reading is not a daily-mean forecast-error test.

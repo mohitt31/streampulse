@@ -1,0 +1,47 @@
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+import fs from 'node:fs/promises';
+
+test('acknowledge → field check → downloadable FHIR, accessible and never sent', async ({ page }, testInfo) => {
+  const writes = [];
+  page.on('request', request => { if (!['GET', 'HEAD'].includes(request.method())) writes.push(request.url()); });
+  const audit = async state => {
+    const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'best-practice']).analyze();
+    await testInfo.attach(`axe-${state}.json`, { body: JSON.stringify({ state, violations: results.violations }, null, 2), contentType: 'application/json' });
+    expect(results.violations).toEqual([]);
+  };
+  await page.goto('/?d=2025-06-20#replay');
+  await page.getByLabel('Acknowledge as').fill('Demo field technician');
+  await page.getByRole('button', { name: 'Acknowledge alert', exact: true }).click();
+  await page.getByRole('button', { name: 'Log field check', exact: true }).click();
+  await audit('form');
+  await page.getByLabel('Measured water temperature (°C)', { exact: true }).fill('23.1');
+  await page.getByLabel('Dissolved oxygen (mg/L)', { exact: true }).fill('7.4');
+  await page.getByLabel('DO saturation (%) — optional', { exact: true }).fill('104');
+  await page.getByLabel('Measurement time (UTC, historical demo)', { exact: true }).fill('2025-06-01T10:30');
+  await page.getByLabel('Field check note — optional', { exact: true }).fill('Synthetic demo reading; no field sampling.');
+  await page.getByRole('button', { name: 'Save demo field check', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('Measurement calendar day must match');
+  await expect(page.getByRole('button', { name: 'Download FHIR Bundle' })).toHaveCount(0);
+  await audit('error');
+  await page.getByLabel('Measurement time (UTC, historical demo)', { exact: true }).fill('2025-06-21T10:30');
+  await page.getByRole('button', { name: 'Save demo field check', exact: true }).click();
+  await expect(page.getByLabel('Field check saved', { exact: true })).toBeVisible();
+  await expect(page.getByText('Entered spot temperature', { exact: true })).toBeVisible();
+  await expect(page.getByText('Spot minus forecast (not a forecast error)', { exact: true })).toBeVisible();
+  await audit('result');
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Download FHIR Bundle', exact: true }).click()]);
+  const bundle = JSON.parse(await fs.readFile(await download.path(), 'utf8'));
+  expect(bundle.type).toBe('collection');
+  const resources = bundle.entry.map(e => e.resource);
+  const fields = resources.filter(r => r.meta?.profile?.some(p => p.endsWith('/streampulse-field-check-observation')));
+  expect(fields).toHaveLength(3);
+  expect(fields.find(r => r.valueQuantity.code === 'Cel').valueQuantity.value).toBe(23.1);
+  expect(fields.find(r => r.valueQuantity.code === 'mg/L').valueQuantity.value).toBe(7.4);
+  expect(fields.find(r => r.valueQuantity.code === '%').valueQuantity.value).toBe(104);
+  expect(fields.every(r => r.effectiveDateTime === '2025-06-21T10:30:00Z')).toBe(true);
+  expect(resources.some(r => r.resourceType === 'Communication' && r.inResponseTo)).toBe(true);
+  expect(resources.some(r => r.resourceType === 'Provenance')).toBe(true);
+  expect(writes).toEqual([]);
+  await testInfo.attach('field-check-result.png', { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' });
+});

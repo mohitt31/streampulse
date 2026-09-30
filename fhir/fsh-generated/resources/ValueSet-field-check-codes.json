@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "StreamPulseFieldCheckCodes",
+  "id": "field-check-codes",
+  "title": "Field check measurements",
+  "description": "Independent spot measurements recorded in the local demonstration workflow.",
+  "url": "https://mohitt31.github.io/streampulse/fhir/ValueSet/field-check-codes",
+  "compose": {
+    "include": [
+      {
+        "system": "https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse",
+        "concept": [
+          {
+            "code": "field-water-temperature"
+          },
+          {
+            "code": "field-dissolved-oxygen"
+          },
+          {
+            "code": "field-do-saturation"
+          }
+        ]
+      }
+    ]
+  }
+}

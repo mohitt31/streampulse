@@ -34,6 +34,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "ValueSet/field-check-codes"
+        },
+        "name": "Field check measurements",
+        "description": "Independent spot measurements recorded in the local demonstration workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/forecast-origin"
         },
         "name": "Forecast origin",
@@ -46,6 +54,14 @@
         },
         "name": "Run mode",
         "description": "Distinguishes reconstructed historical forecasts from operational results.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/streampulse-field-check-observation"
+        },
+        "name": "StreamPulse demonstration field check",
+        "description": "One independent spot measurement per Observation. Context links in notes do not imply a reading was derived from a forecast. Demo only; no external delivery or authenticated operator claim.",
         "exampleBoolean": false
       },
       {

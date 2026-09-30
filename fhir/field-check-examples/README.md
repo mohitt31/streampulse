@@ -1,0 +1,1 @@
+These browser-built examples use real replay forecasts and explicitly synthetic field measurements. No field visit is asserted. `missing-unit.json` is intentionally invalid: DO has no required Quantity.unit. Regenerate using the commands in docs/INTERFACE_NOTES.md.

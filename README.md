@@ -145,3 +145,9 @@ For real-data reconstruction, use a separate worktree and output root, preserve 
 ## Licence
 
 MIT for project code. Hub'eau data retain the Etalab Open Licence; Open-Meteo data retain CC BY attribution requirements. Third-party FHIR definitions retain their upstream terms.
+
+### Browser field-check demo
+
+Acknowledge a replay watch, choose **Log field check**, enter temperature, dissolved oxygen, optional oxygen saturation and the measurement time in UTC, then download the FHIR Bundle. The file includes the alert, acknowledgement, original forecast resources, separate measurement Observations and provenance. Readings are demonstration inputs held in memory; nothing is sent to a server or volunteer. Download before leaving the view. The displayed spot reading versus daily-mean forecast difference is **not a forecast-error or skill evaluation**.
+
+The local field-check profile derives from the pinned OAH indicator profile. CI validates browser-built examples and a missing-unit negative control with the official HL7 validator. See [interface notes](docs/INTERFACE_NOTES.md) and [examples](fhir/field-check-examples/).

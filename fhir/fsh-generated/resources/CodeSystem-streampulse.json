@@ -99,9 +99,25 @@
     {
       "code": "synthetic-fixture",
       "display": "Synthetic forecast fixture"
+    },
+    {
+      "code": "field-water-temperature",
+      "display": "Field water temperature"
+    },
+    {
+      "code": "field-dissolved-oxygen",
+      "display": "Field dissolved oxygen concentration"
+    },
+    {
+      "code": "field-do-saturation",
+      "display": "Field dissolved oxygen saturation"
+    },
+    {
+      "code": "field-check-demo",
+      "display": "Demonstration field check; no external delivery"
     }
   ],
   "caseSensitive": true,
   "experimental": true,
-  "count": 23
+  "count": 27
 }

@@ -1,7 +1,9 @@
-Output File                                                Name                            Type        FSH File         Lines
-CodeSystem-streampulse.json                                StreamPulseCodes                CodeSystem  streampulse.fsh  4 - 33
-StructureDefinition-forecast-origin.json                   StreamPulseForecastOrigin       Extension   streampulse.fsh  42 - 48
-StructureDefinition-run-mode.json                          StreamPulseRunMode              Extension   streampulse.fsh  50 - 57
-StructureDefinition-streampulse-forecast-observation.json  StreamPulseForecastObservation  Profile     streampulse.fsh  64 - 106
-StructureDefinition-streampulse-model-device.json          StreamPulseModelDevice          Profile     streampulse.fsh  108 - 116
-ValueSet-run-modes.json                                    StreamPulseRunModes             ValueSet    streampulse.fsh  35 - 40
+Output File                                                   Name                              Type        FSH File         Lines
+CodeSystem-streampulse.json                                   StreamPulseCodes                  CodeSystem  streampulse.fsh  4 - 37
+StructureDefinition-forecast-origin.json                      StreamPulseForecastOrigin         Extension   streampulse.fsh  46 - 52
+StructureDefinition-run-mode.json                             StreamPulseRunMode                Extension   streampulse.fsh  54 - 61
+StructureDefinition-streampulse-field-check-observation.json  StreamPulseFieldCheckObservation  Profile     streampulse.fsh  140 - 158
+StructureDefinition-streampulse-forecast-observation.json     StreamPulseForecastObservation    Profile     streampulse.fsh  68 - 110
+StructureDefinition-streampulse-model-device.json             StreamPulseModelDevice            Profile     streampulse.fsh  112 - 120
+ValueSet-field-check-codes.json                               StreamPulseFieldCheckCodes        ValueSet    streampulse.fsh  122 - 128
+ValueSet-run-modes.json                                       StreamPulseRunModes               ValueSet    streampulse.fsh  39 - 44

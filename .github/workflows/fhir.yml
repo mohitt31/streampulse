@@ -45,6 +45,18 @@ jobs:
             PYTHONPATH=src python scripts/fhir_real_demo.py
             bash scripts/validate_fhir.sh
           fi
+      - name: Browser field-check builder, UUID parity and input contract tests
+        run: node --experimental-strip-types --test web/tests/fhirFieldCheck.test.mjs
+      - name: Build and validate browser field-check Bundles
+        run: |
+          python scripts/pack_field_check_context.py --demo --output artifacts/field-check-context.json
+          node --experimental-strip-types scripts/build_field_check_demo.mjs artifacts/field-check-context.json artifacts/field-check
+          bash scripts/validate_fhir.sh --field-check artifacts/field-check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-field-check-validation
+          path: artifacts/field-check/
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -31,6 +31,10 @@ Description: "Project-defined codes; not official OAH, HL7 or clinical terminolo
 * #forecast-generation "Forecast generation"
 * #source-url "Source request URL"
 * #synthetic-fixture "Synthetic forecast fixture"
+* #field-water-temperature "Field water temperature"
+* #field-dissolved-oxygen "Field dissolved oxygen concentration"
+* #field-do-saturation "Field dissolved oxygen saturation"
+* #field-check-demo "Demonstration field check; no external delivery"
 
 ValueSet: StreamPulseRunModes
 Id: run-modes
@@ -114,3 +118,41 @@ Description: "Software identity and source-code revision; not a medical-device a
 * deviceName 1..*
 * version 1..*
 * version.value 1..1
+
+ValueSet: StreamPulseFieldCheckCodes
+Id: field-check-codes
+Title: "Field check measurements"
+Description: "Independent spot measurements recorded in the local demonstration workflow."
+* StreamPulseCodes#field-water-temperature
+* StreamPulseCodes#field-dissolved-oxygen
+* StreamPulseCodes#field-do-saturation
+
+Invariant: sp-field-unit
+Description: "Field measurement codes require their declared UCUM unit (Cel, mg/L or %)."
+Severity: #error
+Expression: "(code.coding.where(system = 'https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse' and code = 'field-water-temperature').exists() and value.ofType(Quantity).code = 'Cel') or (code.coding.where(system = 'https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse' and code = 'field-dissolved-oxygen').exists() and value.ofType(Quantity).code = 'mg/L') or (code.coding.where(system = 'https://mohitt31.github.io/streampulse/fhir/CodeSystem/streampulse' and code = 'field-do-saturation').exists() and value.ofType(Quantity).code = '%')"
+
+Invariant: sp-field-time
+Description: "A field check records a measurement time, not just a date."
+Severity: #error
+Expression: "effective.toString().contains('T')"
+
+Profile: StreamPulseFieldCheckObservation
+Parent: http://hl7.eu/fhir/ig/oah/StructureDefinition/observation-indicators-oah
+Id: streampulse-field-check-observation
+Title: "StreamPulse demonstration field check"
+Description: "One independent spot measurement per Observation. Context links in notes do not imply a reading was derived from a forecast. Demo only; no external delivery or authenticated operator claim."
+* ^experimental = true
+* code from StreamPulseFieldCheckCodes (required)
+* effective[x] only dateTime
+* value[x] 1..1
+* value[x] only Quantity
+* valueQuantity.value 1..1
+* valueQuantity.comparator 0..0
+* valueQuantity.system 1..1
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code 1..1
+* valueQuantity.unit 1..1
+* component 0..0
+* note 1..*
+* obeys sp-field-unit and sp-field-time
