@@ -94,8 +94,7 @@ export default function App() {
       )}
       <div className="ribbon">
         <div className="wrap">
-          Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse. Forecasts are replayed as they
-          would have been issued in 2025; the station feed ends in August 2025.
+          Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse. This is a 2025 reforecast evaluation with simulated issuance; historical input availability is unverified. The bundled station history ends in August 2025.
         </div>
       </div>
       </section>

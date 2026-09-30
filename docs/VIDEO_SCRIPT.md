@@ -1,63 +1,47 @@
-# StreamPulse video script (4:30)
+# StreamPulse recording script
 
-Record at 1280×800 or larger. Browser zoom 110%. Use the deployed Pages site. Deep links: `?d=YYYY-MM-DD#replay`.
+Editorial plan: aim for a narrated demo within the hackathon's required duration. These are recording instructions, not measured results. The numeric result claims below come from the JSON keys listed in [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md). Do not recompute or reopen the test for the video.
 
-Every number spoken below comes from `reports/gate.json`, `reports/test_metrics.json` or `reports/frozen_selection.json`. If a number changes, change the script.
+## Problem and scope
 
-Target: about 130 words per minute. Each block lists its word budget.
+**Screen:** Replay, then the stale-input view. Use the deployed version only after this PR is merged and Pages is green.
 
----
+> A river monitoring team cannot visit every site every morning. StreamPulse asks when unusual warmth could justify a temperature and dissolved-oxygen check. This is a historical proof of concept on the Garonne near Toulouse, not a live warning service. The bundled feed is stale, so this view withholds a current forecast. We use archived weather runs and simulated issuance: historical input availability remains unverified. This is a reforecast evaluation.
 
-## 0:00–0:25 · Problem and user (Impact, 30%) · ~50 words
+## Replay
 
-**Screen:** title card, then the Replay tab on `?d=2025-06-20`.
+**Screen:** Open the June warm-anomaly example from the alert list. Switch off “What actually happened”, explain the forecast, then reveal the outcome. Show baselines.
 
-> Warm rivers hold less oxygen. In a heatwave, a monitoring team has to decide where to send people each morning. StreamPulse answers one question for them: will this river run unusually warm in the next three days, and should someone go out and measure oxygen?
+> The model forecasts daily mean water temperature for the next three days. The watch line is the seasonal ninetieth percentile from the training history. Crossing it means unusually warm for this site and season, not unsafe water. The shaded band is a nominal ninety-percent prediction interval. Here the observed temperatures crossed the watch line too. The model combines water history with a fitted correction from archived air-temperature forecasts. The useful contribution is the auditable path from prediction to a proposed field check.
 
-## 0:25–0:55 · Scope and trust (Feasibility) · ~65 words
+## Results and a failure
 
-**Screen:** point at the yellow ribbon and the "REPLAY · simulated issuance" chip. Switch to **Live (today)** to show the stale banner, then back to replay.
+**Screen:** Evaluation tab, frozen gate, then the cooling failure shown in the README screenshot.
 
-> This is a historical proof of concept on the Garonne near Toulouse, using the public Hub'eau sensor. The feed stopped in August 2025. So in live mode StreamPulse refuses to forecast and says why. It does not invent a number. Everything you'll see is replayed exactly as it would have been issued on that day.
+> At day three, mean absolute error is point seven nine degrees, versus one point two zero for persistence: thirty-four percent skill, on two hundred twenty-four paired days. All six frozen gate criteria passed. Validation skill was thirteen point six percent; future performance is not bounded by those results. The watch has eighty-percent precision but forty-three-percent recall. Persistence catches more exceedances, with lower precision. Better temperature accuracy does not prove better field decisions. This cooling event shows a clear forecast miss. Discharge is not an input; we have not established the cause of that miss.
 
-## 0:55–1:45 · Main interaction (UX + Innovation) · ~105 words
+## Field workflow and its boundary
 
-**Screen:** `?d=2025-06-20`. Hover the chart. Point at the three lead cards, the 90% range and the dashed watch line. Tick "What actually happened". Press ▶ for about 3 seconds.
+**Screen:** Acknowledge an alert using a fictional demo role. Point to the local-only explanation.
 
-> Twentieth of June 2025, noon. The model has water observations up to yesterday and this morning's ECMWF air-temperature forecast. It predicts 22.5, 22.7 and 22.6 degrees for the next three days. All three are above the watch line, the ninetieth percentile for this time of year. The shaded band is the 90% range. Now reveal what happened: 22.8, 23.3, 23.7. The watch was right on all three days. The innovation is small but physical: correct a water-history model with the air temperature the river is about to feel.
+> The proposed follow-up is to confirm temperature and measure dissolved oxygen with a trained team. OAH supports these measurements; our watch is not an OAH-prescribed trigger. Biological sampling stays an expert decision. This acknowledgement is stored only in this browser. A separate Python exporter encodes supplied acknowledgements as linked Communications. No notification or field visit is claimed. A proposed future adapter could route a coordinator-approved check through the OAH Citizen Science App, but that integration is not built.
 
-## 1:45–2:25 · Evaluation (Technical implementation) · ~85 words
+## Interoperability evidence
 
-**Screen:** Evaluation tab: the KPI row, the MAE-by-lead chart, the gate table. Then Replay at `?d=2025-05-31` for the failure case.
+**Screen:** Real Bundle, FHIR CI, then `reports/fhir-validation/sandbox_roundtrip.json`. Describe only its recorded outcome; do not call a failed or incomplete read-back a success.
 
-> Is it better than just saying tomorrow equals today? We fixed every rule before looking at 2025, then opened it once. At day three the error is 0.79 degrees against 1.20 for persistence: 34% better, all six pre-registered checks passed. On 2024 validation it was 13.5%, and in February it lost to persistence, so we report that range honestly. And here is a miss: on 31 May it forecast 18.4. The river dropped to 15.6. Flow isn't an input yet.
+> The site and measurements use OAH profiles. Forecasts use a local derived Observation profile, with the interval and simulated origin separated from actual generation time. A Device identifies the model; Provenance links the inputs. The recorded validator fixture suite has zero errors and zero warnings, and deliberately broken examples fail. CI separately validates a real replay Bundle. This sandbox evidence records the transaction and resource read-back checks. Server storage and profile validation are separate tests, neither an OAH endorsement nor proof of deployment.
 
-## 2:25–3:10 · Decision workflow (UX + Impact) · ~90 words
+## Close
 
-**Screen:** back to `?d=2025-06-20`. In the Thermal watch panel, read the follow-up, type "Field technician – Portet", add a note, click **Acknowledge alert**. Point at the issuance line (inputs through 19 Jun, ECMWF run 20 Jun 00 UTC) and at the alert list.
+**Screen:** Method and data, then repository.
 
-> A watch isn't just a red badge. It carries the OneAquaHealth field protocol step: confirm the temperature and measure dissolved oxygen. Whether to add biological sampling stays an expert decision. The technician acknowledges it, and the acknowledgement is linked to the alert. Every forecast shows exactly which days of data it used and which weather run. That makes it auditable.
+> The next step is a supervised pilot: confirm data latency, connect a fresh feed, and test whether the watch improves field visits at a fixed budget. Small urban streams need local sensor checks, calibration and new validation. The pipeline is reusable; the Garonne skill does not automatically transfer. StreamPulse makes a narrow claim that can be checked, and makes its missing evidence visible.
 
-## 3:10–3:50 · Interoperability (Track 7) · ~80 words
+## Before recording
 
-**Screen:** repository `fhir/`. Show the example Bundle (Location, Observation, forecast Observation, Communication, Provenance, Device). Terminal: validator output with 0 errors. One negative control failing as expected.
-
-> Everything is exported as FHIR R4 using the OneAquaHealth implementation guide. The site is an OAH Location, and measurements are OAH indicator observations in UCUM degrees Celsius. Forecasts use a profile derived from them, carrying the interval and the forecast origin. The alert is a Communication, with provenance to the exact model version. The official HL7 validator reports zero errors. Broken examples are rejected, as they should be.
-
-*(Fill in the exact validator line and the name of the negative control once the FHIR workstream is merged.)*
-
-## 3:50–4:30 · Next steps (Feasibility + Scalability) · ~80 words
-
-**Screen:** Method & data tab: the pipeline, the leakage-safe timeline, the data-quality table and the DST finding. End on the repository README.
-
-> Going live needs one thing: a fresh sensor feed. The pipeline already runs daily. A new station needs a code, coordinates and its own climatology. Next come river flow as an input, and watch lines tuned with local ecologists. It's all open source under MIT, and every download and result is hashed. StreamPulse: forecasts you can check, alerts you can act on.
-
----
-
-## Shot checklist
-
-- [ ] Pages site deployed; `?d=` links work
-- [ ] Light theme for recording (◐ button → ☀)
-- [ ] Clear the demo acknowledgement before recording (DevTools → Application → Local Storage → `streampulse.acks.v1`)
-- [ ] FHIR validator output ready in a terminal
-- [ ] Final numbers checked against `reports/gate.json`
+- Replace the pending video link after upload; do not leave a placeholder link in the submission.
+- Confirm that the deployed site includes the reviewed wording and the report-derived validation skill.
+- Show a local-only acknowledgement and an actual negative-control failure.
+- Use the committed sandbox evidence; if the server is unavailable during recording, say this is a recorded round-trip.
+- Keep the source-clock, reforecast and missing-weather limitations in the narration.

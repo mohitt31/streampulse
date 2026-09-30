@@ -2,7 +2,7 @@ import { View, pct } from "../lib/data";
 import { fmtDay } from "../lib/time";
 
 const STEPS = [
-  ["Hub'eau hourly sensor", "Station 05174000, 2010 → Aug 2025, French local clock"],
+  ["Hub'eau hourly sensor", "Station 05174000, 2010 → Aug 2025, source clock unverified"],
   ["Quality control", "≥18 hours, all four 6-h quarters, conflicting duplicates quarantined, no gap filling"],
   ["Daily mean", "Mean of hourly means on the source calendar day"],
   ["Trailing features", "Last value, 3- and 7-day means, 3-day change, season, climatology gap"],
@@ -19,10 +19,10 @@ export function MethodView({ v }: { v: View }) {
       <div className="card">
         <h2>What StreamPulse does</h2>
         <p style={{ marginTop: 0 }}>
-          Every day at 12:00 UTC it forecasts the daily mean water temperature of the Garonne for the next three days,
+          At a simulated 12:00 UTC issuance, this replay forecasts the daily mean water temperature of the Garonne for the next three days,
           flags days likely to run warmer than 90% of past years at that time of year, and turns each flag into a concrete
-          field task: <b>confirm the temperature and measure dissolved oxygen</b>, the OneAquaHealth field protocol step for thermal stress.
-          Everything is recorded as HL7 FHIR resources that follow the OneAquaHealth implementation guide.
+          field task: <b>confirm the temperature and measure dissolved oxygen</b>, a proposed follow-up using measurements supported by the OAH framework; not an OAH-prescribed thermal trigger.
+          The separate exporter produces FHIR resources using OAH and local profiles. Browser acknowledgements are local demonstrations.
         </p>
         <div className="pipeline">
           {STEPS.map(([t, d], i) => (
@@ -53,7 +53,7 @@ export function MethodView({ v }: { v: View }) {
             <li>Features use observations up to the day before issuance, never after.</li>
             <li>Climatology and the watch line use 2010–2023 only.</li>
             <li>Weather correction chosen on 2024 with an expanding window: each month is forecast with coefficients fitted only on earlier, already-observed targets.</li>
-            <li>2025 opened once: frozen {fmtDay(v.d.frozen_at.slice(0, 10), true)} {v.d.frozen_at.slice(11, 16)} UTC, test opened {v.d.test_opened_at.slice(11, 16)} UTC. The CLI refuses to re-tune afterwards.</li>
+            <li>2025 opened once: frozen {fmtDay(v.d.frozen_at.slice(0, 10), true)} {v.d.frozen_at.slice(11, 16)} UTC, test opened {v.d.test_opened_at.slice(11, 16)} UTC. The CLI blocks re-tuning by default; local timestamps are not independent preregistration.</li>
           </ul>
         </div>
         <div className="card">
@@ -87,7 +87,7 @@ export function MethodView({ v }: { v: View }) {
           </div>
           <p className="small faint">
             {v.d.qc.eligible_days} usable days of {v.d.qc.days}. {v.d.qc.conflicting_duplicates_quarantined} conflicting readings quarantined.
-            They all fall on the spring daylight-saving night (02:00 missing, 03:00 doubled), which shows the source clock is French local time.
+            Daylight-saving-shaped anomalies suggest a civil-time convention. Producer timezone and historical publication latency remain UNVERIFIED; chronology checks do not establish actual input availability.
           </p>
         </div>
         <div className="card">
@@ -102,7 +102,7 @@ export function MethodView({ v }: { v: View }) {
           {v.d.fhir ? (
             <>
               <p className="small" style={{ marginTop: 0 }}>
-                Official HL7 validator {v.d.fhir.validator}, FHIR {v.d.fhir.fhir}, against the pinned OneAquaHealth IG:{" "}
+                Official HL7 validator {v.d.fhir.validator}, FHIR {v.d.fhir.fhir}, on the recorded fixture suite against pinned OAH and local profiles:{" "}
                 <b className={v.d.fhir.errors === 0 ? "pass" : "fail"}>{v.d.fhir.errors} errors, {v.d.fhir.warnings} warnings</b>
                 {v.d.fhir.positive_documents ? ` on ${v.d.fhir.positive_documents} documents` : ""}.
               </p>
@@ -133,7 +133,7 @@ export function MethodView({ v }: { v: View }) {
               <tr><th>Evaluation contract sha256</th><td className="mono hash">{v.d.hashes.contract}</td></tr>
               <tr><th>Frozen selection sha256</th><td className="mono hash">{v.d.hashes.frozen}</td></tr>
               <tr><th>Daily water data sha256</th><td className="mono hash">{v.d.hashes.daily_water}</td></tr>
-              <tr><th>Rebuild</th><td className="mono">python3 scripts/fetch_hubeau.py &amp;&amp; python3 scripts/fetch_single_runs.py &amp;&amp; streampulse all</td></tr>
+              <tr><th>Rebuild</th><td className="mono">See README: preserve the frozen checkout; reconstruct in an isolated workspace.</td></tr>
             </tbody>
           </table>
         </div>

@@ -1,60 +1,54 @@
-# StreamPulse FHIR workstream handoff
+# StreamPulse FHIR evidence
 
-This package adds a Python 3.11 standard-library exporter, an experimental local FHIR R4 IG derived from the pinned OAH IG, standalone examples, official-validator checks and negative controls, CI, and three reproducible data audits. It does not modify Claude's ingestion/model/UI contract.
+The exporter creates a self-contained FHIR R4 collection Bundle: OAH-profiled Location and input Observations, locally derived forecast Observations, model Devices, prepared-alert Communications, demonstration acknowledgement Communications and Provenance. Forecast origin is a simulated time; `issued` and Provenance record actual generation. Source-calendar dates retain date precision. Source timezone and historical publication latency remain UNVERIFIED.
 
-## Pasteable README section
+This is an experimental local implementation, not HL7/OAH endorsement. No Patient, clinical RiskAssessment, field visit or delivered alert is fabricated. Browser-local acknowledgements are not automatically connected to the Python exporter.
 
-StreamPulse exports a self-contained FHIR R4 collection Bundle: OAH Locations and input Observations, locally profiled forecast Observations, versioned model Devices, preparation-state alert Communications, demo acknowledgement Communications, and Provenance. Replay origin and actual publication time are separate. Dates retain source-calendar precision. (Hub'eau does not document its timezone; the data later showed it is Europe/Paris civil time, see reports/audit_timestamp.md.) No RiskAssessment, patient cohort, clinical risk, actual authority integration, or delivered alert is fabricated. The local definitions are experimental project artifacts; no HL7/OAH endorsement is implied.
+## Real demo versus fixtures
 
-The OAH source is pinned to `b907cf0869b59d82d9138b3d147fca66f333d911`; SUSHI is pinned to `3.20.1`; the official HL7 validator is pinned to `6.10.4` and its release SHA-256 is checked. Validation uses FHIR `4.0.1`, compiled OAH and local profiles, and the online terminology server. CI rejects errors, unresolved claimed profiles, unreviewed warnings, and negative controls that fail for the wrong reason. See `reports/fhir-validation/summary.json` and `WARNINGS.md` for measured results.
+- `reports/fhir/bundle.json` is the **real replay demo**, selected from the frozen replay by `scripts/fhir_real_demo.py`, with a clearly labelled demonstration acknowledgement. Its predictions and model versions are not synthetic placeholders.
+- `tests/fixtures/fhir/bundle.json` and `fhir/examples/` are explicit validator fixtures; their synthetic predictions and fixture model marker must not be described as real model output.
+- `reports/fhir-validation/summary.json` is the recorded **fixture** result. The GitHub FHIR conformance workflow additionally validates a real demo generated in its disposable checkout. The summary does not certify every forecast ever produced.
 
-## Install and reproduce
+## Official sandbox round-trip
 
-Prerequisites: Python 3.11, Node 22/npm, Java 21, git, curl, and internet for dependency/terminology retrieval. Run from repository root. Java must be on PATH, or set `SP_JAVA` to its executable. Set `SP_PYTHON` if your Python 3.11 executable has a different name.
+Endpoint: `https://sandbox.hl7europe.eu/oneaquahealth/fhir`, published in the [official OAH webinar slides](https://www.oneaquahealth.eu/app/uploads/2026/09/OneAquaHealth_hackathon_session_4_Aug27-2026.pdf).
+
+[Saved evidence](reports/fhir-validation/sandbox_roundtrip.json) records a successful transaction and matching reads of every created resource. The initial read timed out; the subsequent read-only resume retained that failure and completed the checks. No second POST was used. The source Bundle hash is recorded, and the checked-in source was unchanged.
+
+The transaction uses POST entries and server-assigned IDs, retaining intra-Bundle `urn:uuid` references for server rewriting. Copies carry a project demo tag. Only transport metadata and tags are added; forecast values are unchanged. No existing sandbox resource is overwritten. No credentials were supplied or stored. Resource IDs are retained for traceability; this script does not delete shared sandbox data.
 
 ```bash
-export SP_PYTHON=python3.11
+python3 scripts/sandbox_roundtrip.py                # dry run; no network writes
+# Explicitly creates a NEW set of tagged demo resources; do not repeat just for a demo:
+python3 scripts/sandbox_roundtrip.py --write --output /tmp/new-roundtrip.json
+# If a read failed after the write, retry only reads using the same evidence:
+python3 scripts/sandbox_roundtrip.py --resume-read --output /tmp/new-roundtrip.json
+```
+
+The script refuses to overwrite existing evidence on a write run and never automatically retries POST. It reads the committed real Bundle; it does not run a model or regenerate reports. Read-back comparison excludes only server identity/version metadata and equivalent internal reference forms. Server acceptance establishes storage/transport, not server-side enforcement of the local IG or a deployed app integration.
+
+## Reproduce conformance checks
+
+The OAH source, SUSHI and official HL7 validator are pinned in `fhir/tool-versions.json` and the build scripts. The validator release checksum is checked. Online terminology validation is enabled; required profile resolution and negative-control failure reasons are checked.
+
+**Run report-producing commands only in a disposable copy/worktree.** They regenerate validation evidence and may generate a new demo acknowledgement time; the frozen review checkout must remain unchanged.
+
+```bash
 bash scripts/build_fhir.sh
-python3.11 scripts/make_fhir_examples.py
+python3 scripts/make_fhir_examples.py
 bash scripts/validate_fhir.sh --fixtures
-python3.11 -m unittest discover -s tests/fhir -v
-```
-
-Export **Claude's actual files**, then validate them:
-
-```bash
-PYTHONPATH=src python3.11 -m streampulse.fhir_export
+python3 -m unittest discover -s tests/fhir -v
+PYTHONPATH=src python3 scripts/fhir_real_demo.py
 bash scripts/validate_fhir.sh
 ```
 
-Defaults are the unchanged contract paths: `data/processed/daily_water.csv`, `reports/forecasts.jsonl`, `reports/alerts.jsonl`; output `reports/fhir/bundle.json`. `--station-metadata` defaults to the included verified station metadata. CLI flags can select different input/output locations. References are deterministic `urn:uuid` values with an in-Bundle closure; no FHIR server is required.
+Python, Node/npm, Java, git, curl and network access are required. `SP_PYTHON` and `SP_JAVA` can choose interpreter executables. See [FHIR conformance CI](https://github.com/mohitt31/streampulse/actions/workflows/fhir.yml) for the tested environment.
 
-Reproduce the included **explicitly synthetic forecast demonstration** without actual modelling outputs:
+To rebuild the real demo without replacing the committed Bundle, use `--out-dir /tmp/streampulse-fhir-demo`. The full exporter also accepts `--output` for an alternate output file.
 
-```bash
-PYTHONPATH=src python3.11 -m streampulse.fhir_export \
-  --daily tests/fixtures/fhir/daily_water.csv \
-  --forecasts tests/fixtures/fhir/forecasts.jsonl \
-  --alerts tests/fixtures/fhir/alerts.jsonl \
-  --demo-fixture
-bash scripts/validate_fhir.sh
-```
+Canonical URL hosting and an OAH Citizen Science App connection remain UNVERIFIED. Local canonical URLs are identifiers, not proof of a published implementation guide. Original handoff reports are retained as historical records; current integration status is described here.
 
-The checked-in demo Bundle contains real source-derived daily inputs but synthetic prediction values and a synthetic acknowledgement. The all-zero model version is deliberately a fixture marker, not an asserted real model commit. `make_fhir_examples.py` does not overwrite the actual `reports/fhir/bundle.json`; it writes a separate fixture Bundle. Inspect `reports/INTERFACE_NOTES.md` before integration, especially alert delivery, watch policy, timestamp precision, model identity and weather provenance.
+## Licensing
 
-Re-run network audits (about 76 weekly weather samples plus a pre-boundary probe, and 16 water years; raw evidence is included):
-
-```bash
-python3.11 scripts/audit_data.py --only both
-python3.11 scripts/audit_timestamp.py
-```
-
-The recorded August 7 weather recheck is additional evidence from the delivered run; the main audit reproduces the full weekly sweep. Network data can change; retain the delivered request logs and hashes to compare snapshots.
-
-## Integration and licences
-
-Unzip into the repository root after reviewing overlapping paths. No root `pyproject.toml`, application code, or model-pipeline code is replaced. This is delivered as files; the remote repository was not accessible anonymously during this run and no commit/push was performed. GitHub Actions configuration was exercised through its local commands; execution on GitHub itself is UNVERIFIED.
-
-Add `vendor/`, `tools/`, and `fhir/node_modules/` to the repository's existing ignore rules as appropriate. The build script fetches the exact OAH commit. Its cache package contains unchanged compiled upstream conformance definitions and carries the pinned source identity. It is a local dependency package, not an official OAH publication. Public hosting of the user's canonical URLs is not required for these local checks; canonical deployment is UNVERIFIED.
-
-Our code/FSH is supplied under the MIT licence in `LICENSE_FHIR.txt`. OAH definitions, source documentation, Hub'eau and Open-Meteo data keep their original licences/attributions. The ZIP includes an OAH-derived package strictly as dependency evidence; do not relabel it MIT. Exact upstream redistribution/licence terms should be retained and checked before republishing third-party artifacts. See `THIRD_PARTY_FHIR.md`.
+Project code and local FSH use the project licence. Compiled OAH definitions are rebuilt from their pinned upstream source for validation; no new claim about their redistribution rights is made. See [THIRD_PARTY_FHIR.md](THIRD_PARTY_FHIR.md).

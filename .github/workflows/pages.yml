@@ -3,11 +3,11 @@ on:
   push:
     branches: [main]
     paths: ["web/**", ".github/workflows/pages.yml"]
+  pull_request:
+    paths: ["web/**", "scripts/build_web_data.py", ".github/workflows/pages.yml"]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency: { group: pages, cancel-in-progress: true }
 jobs:
   build:
@@ -23,6 +23,10 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with: { path: web/dist }
   deploy:
+    permissions:
+      pages: write
+      id-token: write
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
