@@ -46,6 +46,15 @@ def cfg():
     return out
 
 
+def check_network():
+    import socket
+    for host in ("hubeau.eaufrance.fr", "single-runs-api.open-meteo.com"):
+        try:
+            socket.getaddrinfo(host, 443)
+        except OSError as e:
+            sys.exit("Cannot resolve %s (%s). Your internet/DNS is down: check Wi-Fi, then retry." % (host, e))
+
+
 def get_json(url):
     for i in range(5):
         try:
@@ -84,16 +93,29 @@ def prescreen(c, workers):
     def one(s):
         q = {"code_station": s["code_station"], "date_debut_mesure": "2025-01-01", "date_fin_mesure": "2025-08-21",
              "size": 1, "fields": "code_station"}
-        js = get_json("https://hubeau.eaufrance.fr/api/v1/temperature/chronique?" + urllib.parse.urlencode(q))
-        return s["code_station"], int(js.get("count") or 0)
+        try:
+            js = get_json("https://hubeau.eaufrance.fr/api/v1/temperature/chronique?" + urllib.parse.urlencode(q))
+            return s["code_station"], int(js.get("count") or 0), None
+        except Exception as e:  # noqa: BLE001 - keep going, re-run later
+            return s["code_station"], None, str(e)[-160:]
 
-    res = {}
+    old = {}
+    pre = os.path.join(NET, "prescreen.json")
+    if os.path.exists(pre):
+        old = json.load(open(pre)).get("stations", {})
+    todo = [s for s in st if old.get(s["code_station"], {}).get("readings_2025_test") is None]
+    res = {k: v for k, v in old.items() if v.get("readings_2025_test") is not None}
     with cf.ThreadPoolExecutor(workers) as ex:
-        for code, n in ex.map(one, st):
-            res[code] = {"readings_2025_test": n, "pass": n >= need}
+        for code, n, err in ex.map(one, todo):
+            res[code] = {"readings_2025_test": n, "pass": None if n is None else n >= need}
+            if err:
+                res[code]["error"] = err
+                print("  %s: request failed (%s)" % (code, err), flush=True)
     json.dump({"threshold_readings": need, "stations": res}, open(os.path.join(NET, "prescreen.json"), "w"), indent=1)
-    print("prescreen: %d of %d candidates can still meet the 2025 rule (>= %d readings)"
-          % (sum(v["pass"] for v in res.values()), len(res), need))
+    failed = sum(1 for v in res.values() if v["pass"] is None)
+    print("prescreen: %d of %d candidates can still meet the 2025 rule (>= %d readings); %d requests failed%s"
+          % (sum(1 for v in res.values() if v["pass"]), len(res), need, failed,
+             " -> run 'prescreen' again" if failed else ""))
 
 
 def run(cmd):
@@ -147,6 +169,7 @@ def main():
     ap.add_argument("--workers", type=int, default=6)
     a = ap.parse_args()
     c = cfg()
+    check_network()
     for s in a.steps:
         if s == "stations":
             stations(c)
