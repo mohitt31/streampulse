@@ -8,7 +8,7 @@ def issues(value):
     raise ValueError('Expected OperationOutcome or Bundle of outcomes')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('path');p.add_argument('--negative',choices=['missing-performer','wrong-subject-type','missing-run-mode']);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('path');p.add_argument('--negative',choices=['missing-performer','wrong-subject-type','missing-run-mode','field-check-missing-unit']);a=p.parse_args()
     data=json.loads(pathlib.Path(a.path).read_text());all_i=issues(data)
     errors=[i for i in all_i if i.get('severity') in ('error','fatal')]
     warnings=[i for i in all_i if i.get('severity')=='warning']
@@ -20,7 +20,7 @@ def main():
             raise SystemExit('Unresolved conformance/reference evidence: '+msg)
     if a.negative:
         text='\n'.join(json.dumps(i) for i in errors)
-        patterns={'missing-performer':r'performer','wrong-subject-type':r'(subject|Location|location-oah)','missing-run-mode':r'(runMode|run-mode)'}
+        patterns={'missing-performer':r'performer','wrong-subject-type':r'(subject|Location|location-oah)','missing-run-mode':r'(runMode|run-mode)','field-check-missing-unit':r'Observation\.value\[x\]\.unit: minimum required = 1, but only found 0'}
         if not errors or not re.search(patterns[a.negative],text,re.I):
             raise SystemExit('Negative control did not fail for intended reason: '+a.negative)
     elif errors:

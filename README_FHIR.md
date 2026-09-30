@@ -2,7 +2,7 @@
 
 The exporter creates a self-contained FHIR R4 collection Bundle: OAH-profiled Location and input Observations, locally derived forecast Observations, model Devices, prepared-alert Communications, demonstration acknowledgement Communications and Provenance. Forecast origin is a simulated time; `issued` and Provenance record actual generation. Source-calendar dates retain date precision. Source timezone and historical publication latency remain UNVERIFIED.
 
-This is an experimental local implementation, not HL7/OAH endorsement. No Patient, clinical RiskAssessment, field visit or delivered alert is fabricated. Browser-local acknowledgements are not automatically connected to the Python exporter.
+This is an experimental local implementation, not HL7/OAH endorsement. No Patient, clinical RiskAssessment, field visit or delivered alert is fabricated. The browser field-check builder reuses the original Python-exported forecast resources and their dependencies, then adds the local acknowledgement and demonstration measurements for download. See [interface notes](docs/INTERFACE_NOTES.md).
 
 ## Real demo versus fixtures
 

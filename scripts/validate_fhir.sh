@@ -17,6 +17,26 @@ actual=hashlib.sha256(pathlib.Path('tools/validator_cli.jar').read_bytes()).hexd
 assert actual==sys.argv[1], f'Validator checksum mismatch: {actual}'
 PY
 [[ -f fhir/fsh-generated/resources/StructureDefinition-streampulse-forecast-observation.json ]] || { echo 'Run scripts/build_fhir.sh first' >&2; exit 1; }
+# Browser field-check validation is isolated from every frozen report.
+if [[ "${1:-}" == '--field-check' ]]; then
+  SP_FIELD_DIR="${2:-artifacts/field-check}"
+  SP_FIELD_OUT="$SP_FIELD_DIR/validation"
+  mkdir -p "$SP_FIELD_OUT"
+  SP_ARGS=(-version 4.0.1 -ig fhir/packages/oah-pinned.tgz -ig fhir/fsh-generated/resources -tx https://tx.fhir.org/r4)
+  "$SP_PYTHON" - "$SP_FIELD_OUT" <<'PYCLEAN'
+import pathlib,sys
+for name in ['positive.json','missing-unit.json']:
+    (pathlib.Path(sys.argv[1])/name).unlink(missing_ok=True)
+PYCLEAN
+  "$SP_JAVA" -Xmx2g -jar tools/validator_cli.jar "$SP_FIELD_DIR/bundle.json" "$SP_FIELD_DIR/without-saturation.json" "${SP_ARGS[@]}" \
+    -output "$SP_FIELD_OUT/positive.json" > "$SP_FIELD_OUT/positive.log" 2>&1
+  "$SP_PYTHON" scripts/check_validation.py "$SP_FIELD_OUT/positive.json"
+  SP_STATUS=0
+  "$SP_JAVA" -Xmx2g -jar tools/validator_cli.jar "$SP_FIELD_DIR/missing-unit.json" "${SP_ARGS[@]}" \
+    -output "$SP_FIELD_OUT/missing-unit.json" > "$SP_FIELD_OUT/missing-unit.log" 2>&1 || SP_STATUS=$?
+  "$SP_PYTHON" scripts/check_validation.py "$SP_FIELD_OUT/missing-unit.json" --negative field-check-missing-unit
+  exit 0
+fi
 SP_BUNDLE=reports/fhir/bundle.json
 if [[ "${1:-}" == '--fixtures' ]]; then SP_BUNDLE=tests/fixtures/fhir/bundle.json; fi
 [[ -f "$SP_BUNDLE" ]] || { echo "Missing $SP_BUNDLE; export actual pipeline inputs or use --fixtures" >&2; exit 1; }

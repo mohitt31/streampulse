@@ -5,46 +5,62 @@
     "fshType": "CodeSystem",
     "fshFile": "streampulse.fsh",
     "startLine": 4,
-    "endLine": 33
+    "endLine": 37
   },
   {
     "outputFile": "StructureDefinition-forecast-origin.json",
     "fshName": "StreamPulseForecastOrigin",
     "fshType": "Extension",
     "fshFile": "streampulse.fsh",
-    "startLine": 42,
-    "endLine": 48
+    "startLine": 46,
+    "endLine": 52
   },
   {
     "outputFile": "StructureDefinition-run-mode.json",
     "fshName": "StreamPulseRunMode",
     "fshType": "Extension",
     "fshFile": "streampulse.fsh",
-    "startLine": 50,
-    "endLine": 57
+    "startLine": 54,
+    "endLine": 61
+  },
+  {
+    "outputFile": "StructureDefinition-streampulse-field-check-observation.json",
+    "fshName": "StreamPulseFieldCheckObservation",
+    "fshType": "Profile",
+    "fshFile": "streampulse.fsh",
+    "startLine": 140,
+    "endLine": 158
   },
   {
     "outputFile": "StructureDefinition-streampulse-forecast-observation.json",
     "fshName": "StreamPulseForecastObservation",
     "fshType": "Profile",
     "fshFile": "streampulse.fsh",
-    "startLine": 64,
-    "endLine": 106
+    "startLine": 68,
+    "endLine": 110
   },
   {
     "outputFile": "StructureDefinition-streampulse-model-device.json",
     "fshName": "StreamPulseModelDevice",
     "fshType": "Profile",
     "fshFile": "streampulse.fsh",
-    "startLine": 108,
-    "endLine": 116
+    "startLine": 112,
+    "endLine": 120
+  },
+  {
+    "outputFile": "ValueSet-field-check-codes.json",
+    "fshName": "StreamPulseFieldCheckCodes",
+    "fshType": "ValueSet",
+    "fshFile": "streampulse.fsh",
+    "startLine": 122,
+    "endLine": 128
   },
   {
     "outputFile": "ValueSet-run-modes.json",
     "fshName": "StreamPulseRunModes",
     "fshType": "ValueSet",
     "fshFile": "streampulse.fsh",
-    "startLine": 35,
-    "endLine": 40
+    "startLine": 39,
+    "endLine": 44
   }
 ]

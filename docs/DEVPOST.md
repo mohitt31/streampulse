@@ -22,7 +22,7 @@ This is a large-river proof of concept near an OAH research city. Official OAH s
 
 The **2025** replay uses simulated **12:00 UTC** issuance and enforces date-based chronology. Historical input publication times remain **UNVERIFIED**. Archived weather runs may include reprocessed hindcasts, so we call this a reforecast evaluation. The static Live view withholds a current forecast because the bundled history ends on **2025-08-21**; it is not a continuously polling service.
 
-Acknowledgements are browser-local demonstrations. The separate exporter can encode supplied acknowledgements as FHIR Communications; browser clicks are not automatically exported or sent to field staff.
+Acknowledgements are browser-local demonstrations. After acknowledgement, a field-check form accepts demonstration temperature, dissolved oxygen, optional saturation and a UTC measurement time. It downloads a FHIR collection Bundle linking the alert, acknowledgement, original forecasts, measurement Observations and provenance. Nothing is sent to field staff or a server; unsaved measurements leave memory when the view closes. A spot measurement versus daily-mean prediction is descriptive, not a new forecast-skill result. The browser-generated examples and missing-unit negative control are checked by the official HL7 validator in CI.
 
 ## How we built it
 

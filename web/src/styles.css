@@ -241,3 +241,10 @@ footer { color: var(--faint); font-size: 12px; padding: 24px 0 40px; border-top:
 .leaflet-tooltip { font-size: 12px; }
 details summary { cursor: pointer; color: var(--muted); }
 tr[aria-selected="true"] td { background: var(--accent-soft); }
+
+.field-check { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.field-check h4 { margin: 0; }
+.field-check-result { margin-top: 12px; padding: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+.field-check-result:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field-check-result dl { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; }
+.field-check-result dd { margin: 0; font-variant-numeric: tabular-nums; }

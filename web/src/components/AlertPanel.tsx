@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FieldCheckPanel } from "./FieldCheckPanel";
 import type { Alert } from "../types";
 import { View, fmtC } from "../lib/data";
 import { fmtDay } from "../lib/time";
@@ -39,7 +40,7 @@ export function AlertPanel({ v, originIdx, acks, onAck, onPick, disabled }: Prop
             </p>
           </div>
         ) : alert ? (
-          <AlertBox v={v} a={alert} ack={acks[alert.alert_id]} onAck={onAck} product={product} />
+          <AlertBox key={alert.alert_id} v={v} a={alert} ack={acks[alert.alert_id]} onAck={onAck} product={product} />
         ) : (
           <div className="alert-box off">
             <h3><span aria-hidden="true">●</span> No watch for days +1 to +3</h3>
@@ -81,7 +82,7 @@ function AlertBox({ v, a, ack, onAck, product }: {
   const [note, setNote] = useState("");
   const i = v.d.origins.indexOf(a.origin_date);
   return (
-    <div className="alert-box on" role="status">
+    <div className="alert-box on">
       <h3><span aria-hidden="true">▲</span> Watch: warm anomaly expected</h3>
       <div className="small">
         {a.target_dates.map((t) => {
@@ -99,7 +100,10 @@ function AlertBox({ v, a, ack, onAck, product }: {
       </div>
       <div className="small muted mono">{a.alert_id}</div>
       {ack ? (
-        <div className="chip ok">✓ Acknowledged by {ack.by} · {new Date(ack.at).toLocaleString()}</div>
+        <>
+          <div className="chip ok">✓ Acknowledged by {ack.by} · {new Date(ack.at).toLocaleString()}</div>
+          <FieldCheckPanel alert={a} ack={ack} modelVersion={v.d.model_version} />
+        </>
       ) : (
         <form
           className="form"
@@ -113,7 +117,7 @@ function AlertBox({ v, a, ack, onAck, product }: {
           <input id="ackby" placeholder="Name / role (e.g. field technician)" value={by} onChange={(e) => setBy(e.target.value)} />
           <textarea rows={2} placeholder="Note (optional): e.g. DO probe scheduled 07:00" value={note} onChange={(e) => setNote(e.target.value)} aria-label="Acknowledgement note" />
           <button className="btn primary" type="submit" disabled={!by.trim()}>Acknowledge alert</button>
-          <span className="faint small">Demo acknowledgement, kept in this browser only; not sent or automatically exported. The separate FHIR exporter can encode supplied acknowledgements as linked Communications.</span>
+          <span className="faint small">Demo acknowledgement, kept in this browser only. After acknowledgement, log a demo field check and download its FHIR Bundle; nothing is sent to a server.</span>
         </form>
       )}
     </div>

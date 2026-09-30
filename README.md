@@ -19,7 +19,7 @@ The [OAH Health Assessment Framework](https://www.oneaquahealth.eu/health-assess
 - A historical **1–3 day** daily-mean water-temperature reforecast, with nominal **90%** prediction intervals.
 - A watch when the forecast reaches the seasonal **90th percentile**, using **2010–2023** and a **±15-day** window. This measures unusual warmth relative to the site's history, not a biological safety limit.
 - A replay dashboard with baseline comparisons, observed outcomes, missing-weather fallback and a stale-input state.
-- Browser-local demonstration acknowledgements. They are not dispatched to a technician or synchronised with a server. The separate Python FHIR exporter represents supplied acknowledgements as linked Communications.
+- Browser-local demonstration acknowledgements. They are not dispatched to a technician or synchronised with a server. After acknowledgement, the browser can record demonstration measurements and download a linked FHIR collection Bundle.
 - A real replay Bundle validated in CI, plus an official OAH sandbox round-trip described below.
 
 The replay uses a simulated **12:00 UTC** issuance. It enforces observation-date and model-fitting chronology. Historical source publication times and exact source timezone remain **UNVERIFIED**; the archive does not prove that every input was obtainable at that simulated instant. The weather archive may include reprocessed hindcasts, so this is a **reforecast evaluation**, not a record of live-issued forecasts.
@@ -135,3 +135,9 @@ For real-data reconstruction, use a separate worktree and output root, preserve 
 ## Licence
 
 MIT for project code. Hub'eau data retain the Etalab Open Licence; Open-Meteo data retain CC BY attribution requirements. Third-party FHIR definitions retain their upstream terms.
+
+### Browser field-check demo
+
+Acknowledge a replay watch, choose **Log field check**, enter temperature, dissolved oxygen, optional oxygen saturation and the measurement time in UTC, then download the FHIR Bundle. The file includes the alert, acknowledgement, original forecast resources, separate measurement Observations and provenance. Readings are demonstration inputs held in memory; nothing is sent to a server or volunteer. Download before leaving the view. The displayed spot reading versus daily-mean forecast difference is **not a forecast-error or skill evaluation**.
+
+The local field-check profile derives from the pinned OAH indicator profile. CI validates browser-built examples and a missing-unit negative control with the official HL7 validator. See [interface notes](docs/INTERFACE_NOTES.md) and [examples](fhir/field-check-examples/).
