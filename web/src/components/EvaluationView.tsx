@@ -38,10 +38,10 @@ export function EvaluationView({ v }: { v: View }) {
         <div className="card kpi">
           <div className="sub">Day-3 skill vs persistence</div>
           <div className="big num">{pct(p[prod]!.skill)}</div>
-          <div className="sub">2024 validation: {pct(valSkill, 1)} · honest range {pct(valSkill, 1)}–{pct(p[prod]!.skill)}</div>
+          <div className="sub">2024 validation: {pct(valSkill, 1)} · future skill is unverified</div>
         </div>
         <div className="card kpi">
-          <div className="sub">Go/no-go gate (pre-registered)</div>
+          <div className="sub">Go/no-go gate (frozen)</div>
           <div className={`big ${v.d.gate.passed ? "pass" : "fail"}`}>{v.d.gate.passed ? "GO" : "NO-GO"}</div>
           <div className="sub">{nPass}/{v.d.gate.criteria.length} criteria passed</div>
         </div>
@@ -56,7 +56,7 @@ export function EvaluationView({ v }: { v: View }) {
         <div className="card">
           <h2>Mean absolute error by lead time, 2025 test</h2>
           <p className="small muted" style={{ marginTop: 0 }}>
-            All four methods scored on the same paired days. Lower is better. Days 4–7 are exploratory and were not used for any decision.
+            All four methods scored on the same paired days within each lead. Lower is better. Days 4–7 are exploratory and were not used for any decision.
           </p>
           <SkillChart v={v} />
         </div>
@@ -66,13 +66,13 @@ export function EvaluationView({ v }: { v: View }) {
             <li><b>Persistence</b> says tomorrow equals yesterday. It is hard to beat for a large river with thermal inertia.</li>
             <li><b>Water-only</b> ridge learns from the last 7 days and the seasonal cycle (trained 2010–2023).</li>
             <li><b>StreamPulse</b> adds one physical signal: ECMWF's forecast air temperature for the target window, relative to today's water temperature.</li>
-            <li>2025 was opened <b>once</b>, after every choice was frozen in <code>frozen_selection.json</code>.</li>
+            <li>The recorded 2025 test opening follows <code>frozen_selection.json</code>. These local records are not independent preregistration.</li>
           </ul>
         </div>
       </div>
 
       <div className="card">
-        <h2>Pre-registered go/no-go gate (lead {v.d.gate.primary_lead}, product <code>{v.d.gate.product_model}</code>)</h2>
+        <h2>Frozen go/no-go gate (lead {v.d.gate.primary_lead}, product <code>{v.d.gate.product_model}</code>)</h2>
         <div className="table-wrap">
           <table>
             <thead><tr><th>#</th><th>Criterion</th><th>Result</th><th>Pass</th></tr></thead>
@@ -153,14 +153,14 @@ export function EvaluationView({ v }: { v: View }) {
         <h2>Limits we report, not hide</h2>
         <ul className="notes small">
           <li>One station, one river. This is a historical proof of concept, not a validated operational service.</li>
-          <li>Skill on 2025 ({pct(p[prod]!.skill)}) is higher than on 2024 validation ({pct(valSkill, 1)}){swing}. Expect year-to-year variation within roughly that validation–test range, not {pct(p[prod]!.skill)} every year.</li>
-          <li>Recall of the watch is modest ({pct(w.recall)} at day 3): it catches fewer than half of warm-anomaly days but rarely cries wolf.</li>
+          <li>Skill on 2025 ({pct(p[prod]!.skill)}) is higher than on 2024 validation ({pct(valSkill, 1)}){swing}. These periods do not bound future performance.</li>
+          <li>Recall of the watch is modest ({pct(w.recall)} at day 3): it catches fewer than half of warm-anomaly days. Persistence recall is {pct(p.persistence!.watch.recall)} with precision {pct(p.persistence!.watch.precision)}; improved temperature MAE does not establish better field decisions.</li>
           <li>ECMWF inputs are archived runs from the Open-Meteo Single Runs API (early coverage may be reprocessed hindcasts), so this is a reforecast evaluation.</li>
           <li>Station record has a gap from Aug 2018 to Jan 2021 and ends on {v.d.qc.last_date}. Gaps are never interpolated.</li>
           <li>With a 24-hour data delay the day-3 skill stays at {pct(v.d.delay1[prod]?.skill)}.</li>
         </ul>
       </div>
-      <p className="small faint">Selected on validation: <code>{val.selected}</code> weather correction (day-3 MAE {val.mae.full} °C vs water-only {val.mae.water_only}, intercept-only {val.mae.intercept_only}, persistence {val.mae.persistence}; {val.rows} rows, folds {val.folds[0]} → {val.folds[val.folds.length - 1]}). Models: {ORDER.map((m) => MODEL_LABEL[m]).join(" · ")}.</p>
+      <p className="small faint">Selected on validation: <code>{val.selected}</code> weather correction (day-3 MAE {val.mae.full?.toFixed(3)} °C vs water-only {val.mae.water_only?.toFixed(3)}, intercept-only {val.mae.intercept_only?.toFixed(3)}, persistence {val.mae.persistence?.toFixed(3)}; {val.rows} rows, folds {val.folds[0]} → {val.folds[val.folds.length - 1]}). Models: {ORDER.map((m) => MODEL_LABEL[m]).join(" · ")}.</p>
     </div>
   );
 }

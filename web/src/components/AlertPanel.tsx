@@ -95,7 +95,7 @@ function AlertBox({ v, a, ack, onAck, product }: {
         })}
       </div>
       <div className="small">
-        <b>Follow-up:</b> {v.d.followup.action_text}
+        <b>Follow-up:</b> Confirm temperature and measure dissolved oxygen with a trained monitoring team. Biological sampling is an expert decision. This is a proposed follow-up, not an OAH-prescribed alert trigger.
       </div>
       <div className="small muted mono">{a.alert_id}</div>
       {ack ? (
@@ -113,7 +113,7 @@ function AlertBox({ v, a, ack, onAck, product }: {
           <input id="ackby" placeholder="Name / role (e.g. field technician)" value={by} onChange={(e) => setBy(e.target.value)} />
           <textarea rows={2} placeholder="Note (optional): e.g. DO probe scheduled 07:00" value={note} onChange={(e) => setNote(e.target.value)} aria-label="Acknowledgement note" />
           <button className="btn primary" type="submit" disabled={!by.trim()}>Acknowledge alert</button>
-          <span className="faint small">Demo acknowledgement, kept in this browser only. In FHIR it becomes a Communication with inResponseTo.</span>
+          <span className="faint small">Demo acknowledgement, kept in this browser only; not sent or automatically exported. The separate FHIR exporter can encode supplied acknowledgements as linked Communications.</span>
         </form>
       )}
     </div>

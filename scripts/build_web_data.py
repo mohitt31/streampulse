@@ -84,8 +84,8 @@ def main():
     for h, e in runs.items():
         metrics[h] = {"n": e["n_paired"], "n_may_aug": e["n_paired_may_aug"],
                       "episodes": e["observed_exceedance_episodes"],
-                      "models": {m: {"mae": r3(v["mae"]), "rmse": r3(v["rmse"]), "bias": r3(v["bias"]),
-                                     "skill": r3(v.get("skill_vs_persistence")),
+                      "models": {m: {"mae": v["mae"], "rmse": v["rmse"], "bias": v["bias"],
+                                     "skill": v.get("skill_vs_persistence"),
                                      "coverage": r3(v["interval90"]["coverage"]),
                                      "width": r3(v["interval90"]["mean_width"]), "watch": v["watch"]}
                                  for m, v in e["models"].items()}}
@@ -135,11 +135,11 @@ def main():
         "metrics": metrics,
         "validation": {"lead": int(ph), "rows": p["weather"]["n_expanding_rows_primary"],
                        "folds": ew.get("folds", []),
-                       "mae": {k: r3(v["mae"]) for k, v in ew.items() if isinstance(v, dict)},
+                       "mae": {k: v["mae"] for k, v in ew.items() if isinstance(v, dict)},
                        "selected": p["weather"]["selected_variant"],
                        "coef": p["weather"]["coef"].get(ph, {}).get("full")},
         "monthly": monthly,
-        "delay1": {m: {"mae": r3(v["mae"]), "skill": r3(v.get("skill_vs_persistence"))} for m, v in d1.items()},
+        "delay1": {m: {"mae": r3(v["mae"]), "skill": v.get("skill_vs_persistence")} for m, v in d1.items()},
         "gate": gate, "chronology": chron,
         "qc": {"per_year": qc["per_year"], "dropped": qc["dropped"],
                "conflicting_duplicates_quarantined": qc["conflicting_duplicates_quarantined"],
