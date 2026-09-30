@@ -1,0 +1,253 @@
+{
+ "threshold_readings": 2700,
+ "stations": {
+  "06178865": {
+   "readings_2025_test": 2702,
+   "pass": true
+  },
+  "06178800": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06178000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06177959": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05181800": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05181600": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05181200": {
+   "readings_2025_test": 4373,
+   "pass": true
+  },
+  "05181000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05180850": {
+   "readings_2025_test": 2750,
+   "pass": true
+  },
+  "05180700": {
+   "readings_2025_test": 2746,
+   "pass": true
+  },
+  "05180550": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05180295": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05178200": {
+   "readings_2025_test": 5256,
+   "pass": true
+  },
+  "05176900": {
+   "readings_2025_test": 5256,
+   "pass": true
+  },
+  "05176850": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05176150": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05176100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05175100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05174000": {
+   "readings_2025_test": 5584,
+   "pass": true
+  },
+  "05173400": {
+   "readings_2025_test": 2990,
+   "pass": true
+  },
+  "05172800": {
+   "readings_2025_test": 5256,
+   "pass": true
+  },
+  "05172350": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05170900": {
+   "readings_2025_test": 2416,
+   "pass": false
+  },
+  "05170800": {
+   "readings_2025_test": 5256,
+   "pass": true
+  },
+  "05168100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05167950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05167010": {
+   "readings_2025_test": 2414,
+   "pass": false
+  },
+  "05165900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05165850": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05165255": {
+   "readings_2025_test": 611,
+   "pass": false
+  },
+  "05158200": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05154500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05154400": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05154250": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05153000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05152000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05143000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05141000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05140000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05135100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05133100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05131000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05129070": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05126000": {
+   "readings_2025_test": 4786,
+   "pass": true
+  },
+  "05125000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05121350": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05121320": {
+   "readings_2025_test": 1839,
+   "pass": false
+  },
+  "05121000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05120085": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05120010": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05120000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05119050": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05119000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05118893": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05117500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05117000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05116650": {
+   "readings_2025_test": 5590,
+   "pass": true
+  },
+  "05116100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05115600": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05111650": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05110000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05106350": {
+   "readings_2025_test": 0,
+   "pass": false
+  }
+ }
+}

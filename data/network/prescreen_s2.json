@@ -1,0 +1,853 @@
+{
+ "threshold_readings": 2700,
+ "stations": {
+  "06710043": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06594900": {
+   "readings_2025_test": 36,
+   "pass": false
+  },
+  "06580238": {
+   "readings_2025_test": 1164,
+   "pass": false
+  },
+  "06300400": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06195500": {
+   "readings_2025_test": 4232,
+   "pass": true
+  },
+  "06192000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06189500": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06185900": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06184980": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06184800": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06184000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06182062": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06182045": {
+   "readings_2025_test": 5591,
+   "pass": true
+  },
+  "06181945": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06181910": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06180900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06179615": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06178023": {
+   "readings_2025_test": 3493,
+   "pass": true
+  },
+  "06178006": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06175645": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06175517": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06175400": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06175000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06173650": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06173460": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06172930": {
+   "readings_2025_test": 1230,
+   "pass": false
+  },
+  "06172880": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06170000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06169880": {
+   "readings_2025_test": 5534,
+   "pass": true
+  },
+  "06168000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06167000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06166990": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06166000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06165050": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06131550": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06130500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06129950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06128720": {
+   "readings_2025_test": 3537,
+   "pass": true
+  },
+  "06128620": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06128000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06127050": {
+   "readings_2025_test": 3901,
+   "pass": true
+  },
+  "06123700": {
+   "readings_2025_test": 5590,
+   "pass": true
+  },
+  "06123500": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06122510": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06121500": {
+   "readings_2025_test": 5591,
+   "pass": true
+  },
+  "06119950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06118550": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06118500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06117220": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06115700": {
+   "readings_2025_test": 31,
+   "pass": false
+  },
+  "06115090": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06115080": {
+   "readings_2025_test": 2518,
+   "pass": false
+  },
+  "06114800": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06114450": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06114295": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06114155": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06113500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06113270": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06109100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06106940": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "06106935": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "06105568": {
+   "readings_2025_test": 1518,
+   "pass": false
+  },
+  "06101905": {
+   "readings_2025_test": 1525,
+   "pass": false
+  },
+  "05236100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05234290": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05234020": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05234015": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05234000": {
+   "readings_2025_test": 4666,
+   "pass": true
+  },
+  "05233000": {
+   "readings_2025_test": 926,
+   "pass": false
+  },
+  "05230500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05230000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05229200": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05228000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05223000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05220950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05218700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05218000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05204000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05202950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05201055": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05200050": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05192320": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05192100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05192014": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05191900": {
+   "readings_2025_test": 1548,
+   "pass": false
+  },
+  "05184900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05184000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05183930": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05151150": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05151100": {
+   "readings_2025_test": 4406,
+   "pass": true
+  },
+  "05151050": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05150900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05149520": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05148200": {
+   "readings_2025_test": 5461,
+   "pass": true
+  },
+  "05148000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05147000": {
+   "readings_2025_test": 4182,
+   "pass": true
+  },
+  "05145700": {
+   "readings_2025_test": 5593,
+   "pass": true
+  },
+  "05145600": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05145440": {
+   "readings_2025_test": 4184,
+   "pass": true
+  },
+  "05145410": {
+   "readings_2025_test": 4186,
+   "pass": true
+  },
+  "05144000": {
+   "readings_2025_test": 4069,
+   "pass": true
+  },
+  "05128050": {
+   "readings_2025_test": 4214,
+   "pass": true
+  },
+  "05128000": {
+   "readings_2025_test": 4214,
+   "pass": true
+  },
+  "05127000": {
+   "readings_2025_test": 4255,
+   "pass": true
+  },
+  "05125860": {
+   "readings_2025_test": 4215,
+   "pass": true
+  },
+  "05106820": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05104500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05104000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05101000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05099170": {
+   "readings_2025_test": 4211,
+   "pass": true
+  },
+  "05099120": {
+   "readings_2025_test": 4211,
+   "pass": true
+  },
+  "05099000": {
+   "readings_2025_test": 5219,
+   "pass": true
+  },
+  "05098850": {
+   "readings_2025_test": 4210,
+   "pass": true
+  },
+  "05097750": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05096400": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05096050": {
+   "readings_2025_test": 5220,
+   "pass": true
+  },
+  "05096000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05095000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05094810": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05092200": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05090000": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05089090": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05084000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05083700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05081000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05079100": {
+   "readings_2025_test": 1527,
+   "pass": false
+  },
+  "05078900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05069250": {
+   "readings_2025_test": 5198,
+   "pass": true
+  },
+  "05068950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05068850": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05068645": {
+   "readings_2025_test": 5591,
+   "pass": true
+  },
+  "05068640": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05068160": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05068020": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05066000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05065500": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05064000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05061950": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05061942": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05061500": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05061240": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "05059000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05057150": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05056900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05055600": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05055550": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05051500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05050800": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05050000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05049950": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05048000": {
+   "readings_2025_test": 692,
+   "pass": false
+  },
+  "05047500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05047000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05038000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05035000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05033700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05027010": {
+   "readings_2025_test": 1502,
+   "pass": false
+  },
+  "05025600": {
+   "readings_2025_test": 1425,
+   "pass": false
+  },
+  "05025000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05024300": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05022400": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05019930": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05018000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05015900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05011730": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05010000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05008000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05007600": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "05006880": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04093800": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04092800": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04088000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04076420": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04076100": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04075887": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04075882": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04075865": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04075700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04057200": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04057000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04041780": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04041760": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04041750": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04041700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04041675": {
+   "readings_2025_test": 5200,
+   "pass": true
+  },
+  "04039000": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04037900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04036300": {
+   "readings_2025_test": 5196,
+   "pass": true
+  },
+  "04034650": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04033300": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04030020": {
+   "readings_2025_test": 5197,
+   "pass": true
+  },
+  "04029700": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04029050": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04028500": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04028450": {
+   "readings_2025_test": 5366,
+   "pass": true
+  },
+  "04027810": {
+   "readings_2025_test": 8668,
+   "pass": true
+  },
+  "04027740": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04027650": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04027350": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04027210": {
+   "readings_2025_test": 4672,
+   "pass": true
+  },
+  "04026500": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04026420": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04009350": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04003900": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04003645": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04003355": {
+   "readings_2025_test": 0,
+   "pass": false
+  },
+  "04003340": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04002870": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04001600": {
+   "readings_2025_test": 4236,
+   "pass": true
+  },
+  "04000948": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04000600": {
+   "readings_2025_test": 5592,
+   "pass": true
+  },
+  "04000100": {
+   "readings_2025_test": 5592,
+   "pass": true
+  }
+ }
+}

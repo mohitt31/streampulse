@@ -1,0 +1,958 @@
+{
+ "rule": {
+  "min_training_years": 3,
+  "min_training_year_days": 300,
+  "min_tune_days_2023": 300,
+  "min_validation_days_2024": 300,
+  "min_test_days_2025": 150
+ },
+ "eligible": [
+  {
+   "code_station": "06185900",
+   "libelle_station": "JAUR A OLARGUES 2",
+   "libelle_commune": "Olargues",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le Jaur",
+   "latitude": 43.560448998,
+   "longitude": 2.912019551,
+   "date_maj_infos": "2025-09-22",
+   "counts": {
+    "training_years": 4,
+    "days_2023": 365,
+    "days_2024": 366,
+    "days_2025_test": 233,
+    "eligible_days_total": 2710,
+    "first_date": "2010-01-01",
+    "last_date": "2025-08-29"
+   }
+  }
+ ],
+ "excluded": [
+  {
+   "code_station": "06710043",
+   "reason": "training years 1 < 3; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 1,
+    "days_2023": 319,
+    "days_2024": 366,
+    "days_2025_test": 0,
+    "eligible_days_total": 1039,
+    "first_date": "2022-01-11",
+    "last_date": "2024-12-31"
+   }
+  },
+  {
+   "code_station": "06594900",
+   "reason": "2025 test window has 36 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06580238",
+   "reason": "2025 test window has 1164 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06300400",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06195500",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 3,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 1084,
+    "first_date": "2010-01-01",
+    "last_date": "2012-12-20"
+   }
+  },
+  {
+   "code_station": "06192000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06189500",
+   "reason": "2023 days 198 < 300",
+   "counts": {
+    "training_years": 5,
+    "days_2023": 198,
+    "days_2024": 366,
+    "days_2025_test": 233,
+    "eligible_days_total": 3308,
+    "first_date": "2013-03-13",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "06184980",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 4,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 1617,
+    "first_date": "2010-01-01",
+    "last_date": "2014-06-06"
+   }
+  },
+  {
+   "code_station": "06184800",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 8,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 3010,
+    "first_date": "2010-01-01",
+    "last_date": "2018-12-31"
+   }
+  },
+  {
+   "code_station": "06184000",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 4,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 1461,
+    "first_date": "2010-01-01",
+    "last_date": "2013-12-31"
+   }
+  },
+  {
+   "code_station": "06182062",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 5,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 2033,
+    "first_date": "2010-01-01",
+    "last_date": "2015-12-31"
+   }
+  },
+  {
+   "code_station": "06182045",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 3,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 1306,
+    "first_date": "2013-06-04",
+    "last_date": "2016-12-31"
+   }
+  },
+  {
+   "code_station": "06181945",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06181910",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06180900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06179615",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06178023",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 0 < 150",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 0,
+    "eligible_days_total": 231,
+    "first_date": "2010-01-01",
+    "last_date": "2010-12-31"
+   }
+  },
+  {
+   "code_station": "06178006",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06175645",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06175517",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06175400",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06175000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06173650",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06173460",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06172930",
+   "reason": "2025 test window has 1230 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06172880",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06170000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06169880",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06168000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06167000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06166990",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06166000",
+   "reason": "no readings 2010-2025"
+  },
+  {
+   "code_station": "06165050",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06131550",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06130500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06129950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06128720",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06128620",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06128000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06127050",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06123700",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06123500",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06122510",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06121500",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06119950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06118550",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06118500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06117220",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06115700",
+   "reason": "2025 test window has 31 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06115090",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06115080",
+   "reason": "2025 test window has 2518 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06114800",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06114450",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06114295",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06114155",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06113500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06113270",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06109100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06106940",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06106935",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "06105568",
+   "reason": "2025 test window has 1518 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06101905",
+   "reason": "2025 test window has 1525 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05236100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05234290",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05234020",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05234015",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05234000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05233000",
+   "reason": "2025 test window has 926 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05230500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05230000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05229200",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05228000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05223000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05220950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05218700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05218000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05204000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05202950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05201055",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05200050",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05192320",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05192100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05192014",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05191900",
+   "reason": "2025 test window has 1548 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05184900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05184000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05183930",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05151150",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05151100",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05151050",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05150900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05149520",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05148200",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05148000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05147000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05145700",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05145600",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05145440",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05145410",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05144000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05128050",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05128000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05127000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05125860",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05106820",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05104500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05104000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05101000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05099170",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05099120",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05099000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05098850",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05097750",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05096400",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05096050",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05096000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05095000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05094810",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05092200",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05090000",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05089090",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05084000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05083700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05081000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05079100",
+   "reason": "2025 test window has 1527 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05078900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05069250",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05068950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05068850",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05068645",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05068640",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05068160",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05068020",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05066000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05065500",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05064000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05061950",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05061942",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05061500",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05061240",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "05059000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05057150",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05056900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05055600",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05055550",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05051500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05050800",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05050000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05049950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05048000",
+   "reason": "2025 test window has 692 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05047500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05047000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05038000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05035000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05033700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05027010",
+   "reason": "2025 test window has 1502 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05025600",
+   "reason": "2025 test window has 1425 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05025000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05024300",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05022400",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05019930",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05018000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05015900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05011730",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05010000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05008000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05007600",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05006880",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04093800",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04092800",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04088000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04076420",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04076100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04075887",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04075882",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04075865",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04075700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04057200",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04057000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04041780",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04041760",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04041750",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04041700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04041675",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04039000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04037900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04036300",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04034650",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04033300",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04030020",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04029700",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04029050",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04028500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04028450",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04027810",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04027740",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04027650",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04027350",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04027210",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04026500",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04026420",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04009350",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04003900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04003645",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04003355",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "04003340",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04002870",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04001600",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04000948",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04000600",
+   "reason": "not downloaded"
+  },
+  {
+   "code_station": "04000100",
+   "reason": "not downloaded"
+  }
+ ],
+ "stage": 2
+}

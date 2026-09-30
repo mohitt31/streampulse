@@ -1,0 +1,154 @@
+{
+ "entries": {
+  "2010": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2010.json",
+   "retrieved_at": "2026-09-30T07:34:12Z",
+   "rows": 0,
+   "sha256": "17b8e77ce63b343a92cb214f87d0b89e10e28bc43e1721b1e19b3e12f833d30f",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2010-01-01&date_fin_mesure=2010-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2011": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2011.json",
+   "retrieved_at": "2026-09-30T07:34:13Z",
+   "rows": 0,
+   "sha256": "d487782c80e301c556deb294897fb71cb36b535641f09a19b2f940e95dd51aab",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2011-01-01&date_fin_mesure=2011-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2012": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2012.json",
+   "retrieved_at": "2026-09-30T07:34:14Z",
+   "rows": 0,
+   "sha256": "8732ca27e59688a91ec09727c2d5c5655a419ea699fa2031647a1ee8750dfa97",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2012-01-01&date_fin_mesure=2012-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2013": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2013.json",
+   "retrieved_at": "2026-09-30T07:34:15Z",
+   "rows": 0,
+   "sha256": "c1caceced99206959526089b043a51e85f2c5719b00d7a60ffa3b6b1b9ba98fe",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2013-01-01&date_fin_mesure=2013-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2014": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2014.json",
+   "retrieved_at": "2026-09-30T07:34:17Z",
+   "rows": 0,
+   "sha256": "cf6e822409314adb89d960f4f0c36c5d285797ef1403e4789a8eccf144509c6d",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2014-01-01&date_fin_mesure=2014-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2015": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2015.json",
+   "retrieved_at": "2026-09-30T07:34:18Z",
+   "rows": 0,
+   "sha256": "0e19ac6b7dcb97f0de8a220db78914ecd14a58c167ce8c5e4b9ac4fb68b67ffe",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2015-01-01&date_fin_mesure=2015-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2016": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2016.json",
+   "retrieved_at": "2026-09-30T07:34:19Z",
+   "rows": 0,
+   "sha256": "bc41ed55373af389205b0f62a2070a91b2bda247e8efb46c6093068da9dc6d50",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2016-01-01&date_fin_mesure=2016-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2017": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2017.json",
+   "retrieved_at": "2026-09-30T07:34:20Z",
+   "rows": 0,
+   "sha256": "863a69066e0096b6946c00150d5a0fc186fc420da834e6d2c5099775a13df2a2",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2017-01-01&date_fin_mesure=2017-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2018": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2018.json",
+   "retrieved_at": "2026-09-30T07:34:21Z",
+   "rows": 0,
+   "sha256": "496d1be8dd706d3dd5e039cbf70597fd1a9203fbced48a91e6845c58f0a8db58",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2018-01-01&date_fin_mesure=2018-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2019": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2019.json",
+   "retrieved_at": "2026-09-30T07:34:22Z",
+   "rows": 0,
+   "sha256": "93a8230cc1c15df15313bfea49e00ddf7286e545045369bff62b0d7c779bc6dd",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2019-01-01&date_fin_mesure=2019-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2020": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2020.json",
+   "retrieved_at": "2026-09-30T07:34:23Z",
+   "rows": 0,
+   "sha256": "9399d6e244cfa068a47cee4102c1bca40479c3231af43c918e316258c882cfb0",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2020-01-01&date_fin_mesure=2020-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2021": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2021.json",
+   "retrieved_at": "2026-09-30T07:34:24Z",
+   "rows": 0,
+   "sha256": "e7ca6024565050d73ef1cd3692fbe6c959fc71709812d47ad32c91c7ed0e179e",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2021-01-01&date_fin_mesure=2021-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2022": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2022.json",
+   "retrieved_at": "2026-09-30T07:34:25Z",
+   "rows": 0,
+   "sha256": "a49f6b164178610d621a723d55f87a404e7e1c9522fd44e41b826ef9223b6b31",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2022-01-01&date_fin_mesure=2022-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2023": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2023.json",
+   "retrieved_at": "2026-09-30T07:36:28Z",
+   "rows": 0,
+   "sha256": "a81102303907f7fa8bb64a86dbdb78df48ae92a19a93c0ac57aa5bc7e898d860",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2023-01-01&date_fin_mesure=2023-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2024": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2024.json",
+   "retrieved_at": "2026-09-30T07:36:29Z",
+   "rows": 0,
+   "sha256": "64bf47182f8b35bc021f923d6fc966d1d5e719760ec2365c7452b76de9e6e27c",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2024-01-01&date_fin_mesure=2024-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  },
+  "2025": {
+   "api_count": 8424,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_05172800_2025.json",
+   "retrieved_at": "2026-09-30T07:36:36Z",
+   "rows": 8424,
+   "sha256": "219adee3f06faca0cf5054f580abba0dc9ee124a8ccbb561a2e4a8be4795eb75",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=05172800&date_debut_mesure=2025-01-01&date_fin_mesure=2025-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  }
+ },
+ "source": "hubeau temperature chronique",
+ "station_meta": {
+  "retrieved_at": "2026-09-30T07:34:11Z",
+  "sha256": "ff7a1917e1c959d8c42c4cdba125ba3b5ff6979db83ebcef312676bf3b5cb8ac",
+  "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=05172800&size=1"
+ }
+}

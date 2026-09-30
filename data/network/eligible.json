@@ -1,0 +1,387 @@
+{
+ "rule": {
+  "min_training_years": 3,
+  "min_training_year_days": 300,
+  "min_tune_days_2023": 300,
+  "min_validation_days_2024": 300,
+  "min_test_days_2025": 150
+ },
+ "eligible": [
+  {
+   "code_station": "05174000",
+   "libelle_station": "La Garonne en amont de l'Ariège",
+   "libelle_commune": "Portet-sur-Garonne",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.512148118,
+   "longitude": 1.387766337,
+   "date_maj_infos": "2023-09-04",
+   "counts": {
+    "training_years": 9,
+    "days_2023": 365,
+    "days_2024": 366,
+    "days_2025_test": 232,
+    "eligible_days_total": 4527,
+    "first_date": "2010-01-01",
+    "last_date": "2025-08-21"
+   }
+  },
+  {
+   "code_station": "05126000",
+   "libelle_station": "L'Aveyron à Floirac",
+   "libelle_commune": "Monteils",
+   "code_departement": "12",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.285613077,
+   "longitude": 2.001092635,
+   "date_maj_infos": "2018-04-20",
+   "counts": {
+    "training_years": 6,
+    "days_2023": 365,
+    "days_2024": 366,
+    "days_2025_test": 199,
+    "eligible_days_total": 4080,
+    "first_date": "2010-01-01",
+    "last_date": "2025-07-19"
+   }
+  },
+  {
+   "code_station": "05116650",
+   "libelle_station": "L'Auroue en amont de l'Isle-Bouzon",
+   "libelle_commune": "L'Isle-Bouzon",
+   "code_departement": "32",
+   "libelle_cours_eau": "Rivière de l'Auroue",
+   "latitude": 43.908690337,
+   "longitude": 0.729260457,
+   "date_maj_infos": "2018-04-13",
+   "counts": {
+    "training_years": 11,
+    "days_2023": 365,
+    "days_2024": 366,
+    "days_2025_test": 233,
+    "eligible_days_total": 5344,
+    "first_date": "2010-01-01",
+    "last_date": "2025-12-31"
+   }
+  }
+ ],
+ "excluded": [
+  {
+   "code_station": "06178865",
+   "reason": "training years 2 < 3; 2023 days 0 < 300; 2024 days 283 < 300; 2025 test days 112 < 150",
+   "counts": {
+    "training_years": 2,
+    "days_2023": 0,
+    "days_2024": 283,
+    "days_2025_test": 112,
+    "eligible_days_total": 1477,
+    "first_date": "2010-08-12",
+    "last_date": "2025-04-23"
+   }
+  },
+  {
+   "code_station": "06178800",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06178000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "06177959",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05181800",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05181600",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05181200",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 182,
+    "eligible_days_total": 314,
+    "first_date": "2025-02-20",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05181000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05180850",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 114 < 150",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 114,
+    "eligible_days_total": 225,
+    "first_date": "2025-01-15",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05180700",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 114 < 150",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 114,
+    "eligible_days_total": 114,
+    "first_date": "2025-01-15",
+    "last_date": "2025-05-09"
+   }
+  },
+  {
+   "code_station": "05180550",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05180295",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05178200",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 219,
+    "eligible_days_total": 351,
+    "first_date": "2025-01-15",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05176900",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 219,
+    "eligible_days_total": 351,
+    "first_date": "2025-01-15",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05176850",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05176150",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05176100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05175100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05173400",
+   "reason": "2023 days 0 < 300; 2024 days 0 < 300; 2025 test days 124 < 150",
+   "counts": {
+    "training_years": 3,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 124,
+    "eligible_days_total": 1776,
+    "first_date": "2010-07-27",
+    "last_date": "2025-05-19"
+   }
+  },
+  {
+   "code_station": "05172800",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 219,
+    "eligible_days_total": 351,
+    "first_date": "2025-01-15",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05172350",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05170900",
+   "reason": "2025 test window has 2416 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05170800",
+   "reason": "training years 0 < 3; 2023 days 0 < 300; 2024 days 0 < 300",
+   "counts": {
+    "training_years": 0,
+    "days_2023": 0,
+    "days_2024": 0,
+    "days_2025_test": 219,
+    "eligible_days_total": 351,
+    "first_date": "2025-01-15",
+    "last_date": "2025-12-31"
+   }
+  },
+  {
+   "code_station": "05168100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05167950",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05167010",
+   "reason": "2025 test window has 2414 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05165900",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05165850",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05165255",
+   "reason": "2025 test window has 611 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05158200",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05154500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05154400",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05154250",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05153000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05152000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05143000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05141000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05140000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05135100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05133100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05131000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05129070",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05125000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05121350",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05121320",
+   "reason": "2025 test window has 1839 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05121000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05120085",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05120010",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05120000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05119050",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05119000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05118893",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05117500",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05117000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05116100",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05115600",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05111650",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05110000",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  },
+  {
+   "code_station": "05106350",
+   "reason": "2025 test window has 0 hourly readings (< 2700 needed for 150 eligible days)"
+  }
+ ]
+}

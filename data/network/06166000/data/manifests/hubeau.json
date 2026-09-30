@@ -1,0 +1,19 @@
+{
+ "entries": {
+  "2010": {
+   "api_count": 0,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_06166000_2010.json",
+   "retrieved_at": "2026-09-30T07:52:20Z",
+   "rows": 0,
+   "sha256": "bc8ad977eb88ffca38c1fd7b4df69ed109d93a519bb75dea28fc71a19d7de2f0",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=06166000&date_debut_mesure=2010-01-01&date_fin_mesure=2010-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  }
+ },
+ "source": "hubeau temperature chronique",
+ "station_meta": {
+  "retrieved_at": "2026-09-30T07:52:16Z",
+  "sha256": "7c0c64d895eb0f329c0aaedb9f3080b4fb1861afe411bd2f7c2322124b968b9c",
+  "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=06166000&size=1"
+ }
+}

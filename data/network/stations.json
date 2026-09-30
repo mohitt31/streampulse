@@ -1,0 +1,627 @@
+{
+ "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?latitude=43.6045&longitude=1.444&distance=100&size=500&format=json",
+ "retrieved_at": "2026-09-30T07:20:18Z",
+ "api_count": 62,
+ "stations": [
+  {
+   "code_station": "06178865",
+   "libelle_station": "RIEUTORD A LABASTIDE-ESPARBAIRENQUE ",
+   "libelle_commune": "Labastide-Esparbairenque",
+   "code_departement": "11",
+   "libelle_cours_eau": "Le Rieutort",
+   "latitude": 43.384096826,
+   "longitude": 2.395539088,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06178800",
+   "libelle_station": "ORBIEL A LES-MARTYS",
+   "libelle_commune": "Les Martys",
+   "code_departement": "11",
+   "libelle_cours_eau": "L'Orbiel",
+   "latitude": 43.437376607,
+   "longitude": 2.305702561,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06178000",
+   "libelle_station": "AUDE A TREBES ",
+   "libelle_commune": "Berriac",
+   "code_departement": "11",
+   "libelle_cours_eau": "L'Aude",
+   "latitude": 43.213343327,
+   "longitude": 2.42143105,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06177959",
+   "libelle_station": "LAMPY A ALZONNE ",
+   "libelle_commune": "Alzonne",
+   "code_departement": "11",
+   "libelle_cours_eau": "Le Lampy",
+   "latitude": 43.255452529,
+   "longitude": 2.179879315,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "05181800",
+   "libelle_station": "La Garonne à Valentine",
+   "libelle_commune": "Saint-Gaudens",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.097693069,
+   "longitude": 0.706309886,
+   "date_maj_infos": "2020-02-28"
+  },
+  {
+   "code_station": "05181600",
+   "libelle_station": "Le Ger à Boutx",
+   "libelle_commune": "Boutx",
+   "code_departement": "31",
+   "libelle_cours_eau": "Le Ger",
+   "latitude": 42.917018719,
+   "longitude": 0.804923152,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05181200",
+   "libelle_station": "Le Job au droit de Juzet d'Izaut",
+   "libelle_commune": "Cazaunous",
+   "code_departement": "31",
+   "libelle_cours_eau": "Le Job",
+   "latitude": 42.981999128,
+   "longitude": 0.740996546,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05181000",
+   "libelle_station": "La Garonne à Labarthe Inard",
+   "libelle_commune": "Montespan",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.094456213,
+   "longitude": 0.841394789,
+   "date_maj_infos": "2020-02-28"
+  },
+  {
+   "code_station": "05180850",
+   "libelle_station": "Le Salat en amont de Couflens",
+   "libelle_commune": "Couflens",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Salat",
+   "latitude": 42.750603008,
+   "longitude": 1.184663924,
+   "date_maj_infos": "2019-06-04"
+  },
+  {
+   "code_station": "05180700",
+   "libelle_station": "Le Garbet en amont d'Aulus les Bains",
+   "libelle_commune": "Aulus-les-Bains",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Garbet",
+   "latitude": 42.776351064,
+   "longitude": 1.376866325,
+   "date_maj_infos": "2018-07-19"
+  },
+  {
+   "code_station": "05180550",
+   "libelle_station": "L'Arac à Biert",
+   "libelle_commune": "Biert",
+   "code_departement": "09",
+   "libelle_cours_eau": "L'Arac",
+   "latitude": 42.897536664,
+   "longitude": 1.31495054,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05180295",
+   "libelle_station": "Le Nert en aval de Rivèrenert",
+   "libelle_commune": "Encourtiech",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Nert",
+   "latitude": 42.956800285,
+   "longitude": 1.197705399,
+   "date_maj_infos": "2024-06-10"
+  },
+  {
+   "code_station": "05178200",
+   "libelle_station": "Le Lens en amont de Tourtouze",
+   "libelle_commune": "Tourtouse",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Lens",
+   "latitude": 43.086735445,
+   "longitude": 1.120698324,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05176900",
+   "libelle_station": "Le Volp en amont de Contrazy",
+   "libelle_commune": "Contrazy",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Volp",
+   "latitude": 43.044596766,
+   "longitude": 1.186840623,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05176850",
+   "libelle_station": "Le Volp au Plan",
+   "libelle_commune": "Le Plan",
+   "code_departement": "31",
+   "libelle_cours_eau": "Le Volp",
+   "latitude": 43.17017534,
+   "longitude": 1.11771413,
+   "date_maj_infos": "2024-03-21"
+  },
+  {
+   "code_station": "05176150",
+   "libelle_station": "L'Arize au Mas d'Azil",
+   "libelle_commune": "Le Mas-d'Azil",
+   "code_departement": "09",
+   "libelle_cours_eau": "L'Arize",
+   "latitude": 43.084018782,
+   "longitude": 1.373930444,
+   "date_maj_infos": "2018-05-09"
+  },
+  {
+   "code_station": "05176100",
+   "libelle_station": "Le Montbrun en amont de Montbrun Bocage",
+   "libelle_commune": "Montbrun-Bocage",
+   "code_departement": "31",
+   "libelle_cours_eau": "Ruisseau de Montbrun",
+   "latitude": 43.104881447,
+   "longitude": 1.247176815,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05175100",
+   "libelle_station": "La Louge à l'aval du Fousseret",
+   "libelle_commune": "Marignac-Lasclares",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Louge",
+   "latitude": 43.303074173,
+   "longitude": 1.133384155,
+   "date_maj_infos": "2017-06-19"
+  },
+  {
+   "code_station": "05174000",
+   "libelle_station": "La Garonne en amont de l'Ariège",
+   "libelle_commune": "Portet-sur-Garonne",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.512148118,
+   "longitude": 1.387766337,
+   "date_maj_infos": "2023-09-04"
+  },
+  {
+   "code_station": "05173400",
+   "libelle_station": "L'Ariège en aval d'Ax les Thermes",
+   "libelle_commune": "Perles-et-Castelet",
+   "code_departement": "09",
+   "libelle_cours_eau": "L'Ariège",
+   "latitude": 42.738056158,
+   "longitude": 1.793430488,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05172800",
+   "libelle_station": "Le ruisseau de Lauzate en amont de St-Paul-de-Jarrat",
+   "libelle_commune": "Saint-Paul-de-Jarrat",
+   "code_departement": "09",
+   "libelle_cours_eau": "Ruisseau de Labat",
+   "latitude": 42.894920658,
+   "longitude": 1.666355261,
+   "date_maj_infos": "2022-11-29"
+  },
+  {
+   "code_station": "05172350",
+   "libelle_station": "Le Ruisseau de Roques à Brassac",
+   "libelle_commune": "Brassac",
+   "code_departement": "09",
+   "libelle_cours_eau": "Ruisseau de Roques",
+   "latitude": 42.9189937,
+   "longitude": 1.500323854,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05170900",
+   "libelle_station": "L'Ariège au Vernet",
+   "libelle_commune": "Le Vernet",
+   "code_departement": "09",
+   "libelle_cours_eau": "L'Ariège",
+   "latitude": 43.183619401,
+   "longitude": 1.599169092,
+   "date_maj_infos": "2019-10-03"
+  },
+  {
+   "code_station": "05170800",
+   "libelle_station": "Le Crieu à Ventenac",
+   "libelle_commune": "Ventenac",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Crieu",
+   "latitude": 43.01791274,
+   "longitude": 1.729007645,
+   "date_maj_infos": "2023-08-07"
+  },
+  {
+   "code_station": "05168100",
+   "libelle_station": "Le Touyre à Montferrier",
+   "libelle_commune": "Montferrier",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Touyre",
+   "latitude": 42.894446288,
+   "longitude": 1.793543669,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05167950",
+   "libelle_station": "Le Touyre en amont de l'Hers",
+   "libelle_commune": "Lagarde",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Touyre",
+   "latitude": 43.040627859,
+   "longitude": 1.932144706,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05167010",
+   "libelle_station": "Le Grand Hers à Vals",
+   "libelle_commune": "Les Pujols",
+   "code_departement": "09",
+   "libelle_cours_eau": "Le Grand Hers",
+   "latitude": 43.09806599,
+   "longitude": 1.744972207,
+   "date_maj_infos": "2022-10-10"
+  },
+  {
+   "code_station": "05165900",
+   "libelle_station": "L'Ariège à Cintegabelle",
+   "libelle_commune": "Cintegabelle",
+   "code_departement": "31",
+   "libelle_cours_eau": "L'Ariège",
+   "latitude": 43.310764293,
+   "longitude": 1.532947423,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05165850",
+   "libelle_station": "L'Ariège à Clermont-le-Fort",
+   "libelle_commune": "Clermont-le-Fort",
+   "code_departement": "31",
+   "libelle_cours_eau": "L'Ariège",
+   "latitude": 43.460528595,
+   "longitude": 1.420603568,
+   "date_maj_infos": "2023-09-04"
+  },
+  {
+   "code_station": "05165255",
+   "libelle_station": "La Lèze à Lézat-sur-Lèze",
+   "libelle_commune": "Lézat-sur-Lèze",
+   "code_departement": "09",
+   "libelle_cours_eau": "La Lèze",
+   "latitude": 43.280639713,
+   "longitude": 1.352968736,
+   "date_maj_infos": "2017-06-19"
+  },
+  {
+   "code_station": "05158200",
+   "libelle_station": "La Vendinelle à Loubens-Lauragais",
+   "libelle_commune": "La Salvetat-Lauragais",
+   "code_departement": "31",
+   "libelle_cours_eau": "Ruisseau de la Vendinelle",
+   "latitude": 43.546455286,
+   "longitude": 1.799080259,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05154500",
+   "libelle_station": "La Garonne à Verdun-sur-Garonne",
+   "libelle_commune": "Verdun-sur-Garonne",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.853893154,
+   "longitude": 1.242985923,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05154400",
+   "libelle_station": "Le Lambon à St-Sardos",
+   "libelle_commune": "Bouillac",
+   "code_departement": "82",
+   "libelle_cours_eau": "Le Lambon",
+   "latitude": 43.879196926,
+   "longitude": 1.145636111,
+   "date_maj_infos": "2019-12-18"
+  },
+  {
+   "code_station": "05154250",
+   "libelle_station": "La Garonne à Bourret",
+   "libelle_commune": "Bourret",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 43.952915897,
+   "longitude": 1.171936814,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05153000",
+   "libelle_station": "La Gimone à Lafitte",
+   "libelle_commune": "Cordes-Tolosannes",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Gimone",
+   "latitude": 43.972484074,
+   "longitude": 1.120824999,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05152000",
+   "libelle_station": "La Garonne à St-Aignan",
+   "libelle_commune": "Castelsarrasin",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 44.02253852,
+   "longitude": 1.079399006,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05143000",
+   "libelle_station": "Le Rance à Plaisance",
+   "libelle_commune": "Curvalle",
+   "code_departement": "81",
+   "libelle_cours_eau": "Le Rance",
+   "latitude": 43.926214483,
+   "longitude": 2.544500156,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05141000",
+   "libelle_station": "Le Tarn en aval de Rabastens",
+   "libelle_commune": "Coufouleux",
+   "code_departement": "81",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 43.796049982,
+   "longitude": 1.693817666,
+   "date_maj_infos": "2023-02-15"
+  },
+  {
+   "code_station": "05140000",
+   "libelle_station": "L'Agout à St-Agnan",
+   "libelle_commune": "Le Bez",
+   "code_departement": "81",
+   "libelle_cours_eau": "L'Agout",
+   "latitude": 43.639132261,
+   "longitude": 2.480223013,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05135100",
+   "libelle_station": "Le Thoré à Labruguière",
+   "libelle_commune": "Labruguière",
+   "code_departement": "81",
+   "libelle_cours_eau": "Le Thoré",
+   "latitude": 43.54026079,
+   "longitude": 2.264755717,
+   "date_maj_infos": "2022-04-25"
+  },
+  {
+   "code_station": "05133100",
+   "libelle_station": "Le Dadou à Larroque",
+   "libelle_commune": "Arifat",
+   "code_departement": "81",
+   "libelle_cours_eau": "Le Dadou",
+   "latitude": 43.76627867,
+   "longitude": 2.316885583,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05131000",
+   "libelle_station": "L'Agout à St-Sulpice",
+   "libelle_commune": "Coufouleux",
+   "code_departement": "81",
+   "libelle_cours_eau": "L'Agout",
+   "latitude": 43.776631492,
+   "longitude": 1.688112674,
+   "date_maj_infos": "2023-09-13"
+  },
+  {
+   "code_station": "05129070",
+   "libelle_station": "Le Tescou en aval de Saint Nauphary",
+   "libelle_commune": "Montauban",
+   "code_departement": "82",
+   "libelle_cours_eau": "Le Tescou",
+   "latitude": 43.989029897,
+   "longitude": 1.390547037,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05126000",
+   "libelle_station": "L'Aveyron à Floirac",
+   "libelle_commune": "Monteils",
+   "code_departement": "12",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.285613077,
+   "longitude": 2.001092635,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05125000",
+   "libelle_station": "Le Viaur à Lagarde Viaur",
+   "libelle_commune": "Montirat",
+   "code_departement": "81",
+   "libelle_cours_eau": "Le Viaur",
+   "latitude": 44.175317977,
+   "longitude": 2.059514224,
+   "date_maj_infos": "2022-04-25"
+  },
+  {
+   "code_station": "05121350",
+   "libelle_station": "La Seye à La Rouquette",
+   "libelle_commune": "Ginals",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Seye",
+   "latitude": 44.221783751,
+   "longitude": 1.853066882,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05121320",
+   "libelle_station": "Le Fonpeyrouse au droit de Caylus",
+   "libelle_commune": "Caylus",
+   "code_departement": "82",
+   "libelle_cours_eau": "Ruisseau de Fonpeyrouse",
+   "latitude": 44.231727719,
+   "longitude": 1.839907687,
+   "date_maj_infos": "2022-08-12"
+  },
+  {
+   "code_station": "05121000",
+   "libelle_station": "L'Aveyron à Féneyrols",
+   "libelle_commune": "Féneyrols",
+   "code_departement": "82",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.129249137,
+   "longitude": 1.819439991,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05120085",
+   "libelle_station": "La Vère en aval de Castelnau de Montmiral",
+   "libelle_commune": "Castelnau-de-Montmiral",
+   "code_departement": "81",
+   "libelle_cours_eau": "La Vère",
+   "latitude": 43.973045934,
+   "longitude": 1.791714814,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05120010",
+   "libelle_station": "La Lère à Réalville",
+   "libelle_commune": "Réalville",
+   "code_departement": "82",
+   "libelle_cours_eau": "Rivière la Lère",
+   "latitude": 44.118306439,
+   "longitude": 1.472825554,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05120000",
+   "libelle_station": "L'Aveyron à Loubéjac",
+   "libelle_commune": "L'Honor-de-Cos",
+   "code_departement": "82",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.082827476,
+   "longitude": 1.348030494,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05119050",
+   "libelle_station": "Le Lemboulas à Lunel",
+   "libelle_commune": "Lafrançaise",
+   "code_departement": "82",
+   "libelle_cours_eau": "Le Lemboulas",
+   "latitude": 44.136734896,
+   "longitude": 1.203829773,
+   "date_maj_infos": "2017-10-24"
+  },
+  {
+   "code_station": "05119000",
+   "libelle_station": "Le Tarn à Moissac",
+   "libelle_commune": "Moissac",
+   "code_departement": "82",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 44.091354789,
+   "longitude": 1.102034196,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05118893",
+   "libelle_station": "Le Camezon au lieu dit Lamarion",
+   "libelle_commune": "Lachapelle",
+   "code_departement": "82",
+   "libelle_cours_eau": "Ruisseau de Cameson",
+   "latitude": 43.977373862,
+   "longitude": 0.853446689,
+   "date_maj_infos": "2018-04-13"
+  },
+  {
+   "code_station": "05117500",
+   "libelle_station": "La Barguelonne à Fourquet",
+   "libelle_commune": "Castelsagrat",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Barguelonne",
+   "latitude": 44.169251315,
+   "longitude": 0.996797487,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05117000",
+   "libelle_station": "La Garonne à Lamagistère",
+   "libelle_commune": "Donzac",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 44.123429432,
+   "longitude": 0.817934051,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05116650",
+   "libelle_station": "L'Auroue en amont de l'Isle-Bouzon",
+   "libelle_commune": "L'Isle-Bouzon",
+   "code_departement": "32",
+   "libelle_cours_eau": "Rivière de l'Auroue",
+   "latitude": 43.908690337,
+   "longitude": 0.729260457,
+   "date_maj_infos": "2018-04-13"
+  },
+  {
+   "code_station": "05116100",
+   "libelle_station": "La Séoune à Montjoi",
+   "libelle_commune": "Montjoi",
+   "code_departement": "82",
+   "libelle_cours_eau": "La Séoune",
+   "latitude": 44.193144779,
+   "longitude": 0.916412984,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05115600",
+   "libelle_station": "Le Gers en aval d'Aries-Espénan",
+   "libelle_commune": "Aries-Espénan",
+   "code_departement": "65",
+   "libelle_cours_eau": "Le Gers",
+   "latitude": 43.283505043,
+   "longitude": 0.542102913,
+   "date_maj_infos": "2023-02-15"
+  },
+  {
+   "code_station": "05111650",
+   "libelle_station": "Le Bourbon à Laugnac",
+   "libelle_commune": "Foulayronnes",
+   "code_departement": "47",
+   "libelle_cours_eau": "Ruisseau de Bourbon",
+   "latitude": 44.28711827,
+   "longitude": 0.643023413,
+   "date_maj_infos": "2023-02-21"
+  },
+  {
+   "code_station": "05110000",
+   "libelle_station": "La Petite Baïse à Puntous",
+   "libelle_commune": "Puntous",
+   "code_departement": "65",
+   "libelle_cours_eau": "La Baïse",
+   "latitude": 43.298656317,
+   "longitude": 0.465526088,
+   "date_maj_infos": "2017-06-19"
+  },
+  {
+   "code_station": "05106350",
+   "libelle_station": "L'Osse à Monclar",
+   "libelle_commune": "Monclar-sur-Losse",
+   "code_departement": "32",
+   "libelle_cours_eau": "L'Osse",
+   "latitude": 43.530565537,
+   "longitude": 0.335757933,
+   "date_maj_infos": "2023-04-03"
+  }
+ ]
+}

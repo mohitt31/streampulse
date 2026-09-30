@@ -1,0 +1,15 @@
+date,time,value,qual,unit,reason
+2010-03-28,03:00:00,9.632,4,°C,conflicting_duplicate
+2010-03-28,03:00:00,9.731,4,°C,conflicting_duplicate
+2014-03-30,03:01:30,10.5159997940063,4,°C,conflicting_duplicate
+2014-03-30,03:01:30,10.4670000076294,4,°C,conflicting_duplicate
+2015-03-29,03:01:30,10.5900001525879,4,°C,conflicting_duplicate
+2015-03-29,03:01:30,10.4919996261597,4,°C,conflicting_duplicate
+2016-03-27,03:01:30,11.2239999771118,4,°C,conflicting_duplicate
+2016-03-27,03:01:30,11.1750001907349,4,°C,conflicting_duplicate
+2023-03-26,03:46:00,11.710000038147,4,°C,conflicting_duplicate
+2023-03-26,03:46:00,11.8800001144409,4,°C,conflicting_duplicate
+2024-03-31,03:46:00,11.7829999923706,4,°C,conflicting_duplicate
+2024-03-31,03:46:00,11.6129999160767,4,°C,conflicting_duplicate
+2025-03-30,03:46:00,9.03999996185303,4,°C,conflicting_duplicate
+2025-03-30,03:46:00,9.1879997253418,4,°C,conflicting_duplicate

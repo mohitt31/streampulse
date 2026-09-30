@@ -1,0 +1,2128 @@
+{
+ "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?latitude=43.6045&longitude=1.444&distance=300&size=500&format=json",
+ "retrieved_at": "2026-09-30T07:45:53Z",
+ "api_count": 274,
+ "excluded_stage1": 62,
+ "stations": [
+  {
+   "code_station": "06710043",
+   "libelle_station": "BRAS DES ARMENIERS A SORGUES ",
+   "libelle_commune": "Sorgues",
+   "code_departement": "84",
+   "libelle_cours_eau": null,
+   "latitude": 44.022555842,
+   "longitude": 4.844246337,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06594900",
+   "libelle_station": "BAUME A ST-ALBAN-AURIOLLES 2",
+   "libelle_commune": "Saint-Alban-Auriolles",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Baume",
+   "latitude": 44.448588626,
+   "longitude": 4.308786959,
+   "date_maj_infos": "2025-11-27"
+  },
+  {
+   "code_station": "06580238",
+   "libelle_station": "BAUME A ROSIERES 1",
+   "libelle_commune": "Rosières",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Baume",
+   "latitude": 44.482650787,
+   "longitude": 4.239175391,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06300400",
+   "libelle_station": "SALAISON A MAUGUIO 2",
+   "libelle_commune": "Mauguio",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le Salaison",
+   "latitude": 43.608159904,
+   "longitude": 4.003845405,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06195500",
+   "libelle_station": "ARC (13) A BERRE-L'ETANG ",
+   "libelle_commune": "Berre-l'Étang",
+   "code_departement": "13",
+   "libelle_cours_eau": "L'Arc",
+   "latitude": 43.504846268,
+   "longitude": 5.132242834,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06192000",
+   "libelle_station": "VIDOURLE A ST-LAURENT-D'AIGOUZE ",
+   "libelle_commune": "Marsillargues",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le Vidourle",
+   "latitude": 43.639126355,
+   "longitude": 4.190816711,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06189500",
+   "libelle_station": "LEZ A LATTES 2",
+   "libelle_commune": "Lattes",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le lez",
+   "latitude": 43.570521935,
+   "longitude": 3.897772699,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06185900",
+   "libelle_station": "JAUR A OLARGUES 2",
+   "libelle_commune": "Olargues",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le Jaur",
+   "latitude": 43.560448998,
+   "longitude": 2.912019551,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06184980",
+   "libelle_station": "MARE A HEREPIAN ",
+   "libelle_commune": "Hérépian",
+   "code_departement": "34",
+   "libelle_cours_eau": "La Mare",
+   "latitude": 43.594453494,
+   "longitude": 3.122163642,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06184800",
+   "libelle_station": "ORB A LE-BOUSQUET-D'ORB 1",
+   "libelle_commune": "Le Bousquet-d'Orb",
+   "code_departement": "34",
+   "libelle_cours_eau": "L'Orb",
+   "latitude": 43.723006875,
+   "longitude": 3.130887454,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06184000",
+   "libelle_station": "HERAULT A FLORENSAC",
+   "libelle_commune": "Florensac",
+   "code_departement": "34",
+   "libelle_cours_eau": "L'Hérault",
+   "latitude": 43.38405324,
+   "longitude": 3.446648719,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06182062",
+   "libelle_station": "BUEGES A PEGAIROLLES-DE-BUEGES ",
+   "libelle_commune": "Saint-Jean-de-Buèges",
+   "code_departement": "34",
+   "libelle_cours_eau": "La Buèges",
+   "latitude": 43.814147113,
+   "longitude": 3.601787428,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06182045",
+   "libelle_station": "LAMALOU A LE-ROUET ",
+   "libelle_commune": "Rouet",
+   "code_departement": "34",
+   "libelle_cours_eau": "Le Lamalou",
+   "latitude": 43.823198274,
+   "longitude": 3.798373003,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06181945",
+   "libelle_station": "VIS A BLANDAS ",
+   "libelle_commune": "Blandas",
+   "code_departement": "30",
+   "libelle_cours_eau": "La Vis",
+   "latitude": 43.897967612,
+   "longitude": 3.490172551,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06181910",
+   "libelle_station": "HERAULT A VALLERAUGUE 2",
+   "libelle_commune": "Val-d'Aigoual",
+   "code_departement": "30",
+   "libelle_cours_eau": "L'Hérault",
+   "latitude": 44.087323861,
+   "longitude": 3.604576261,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06180900",
+   "libelle_station": "AUDE A SALLES-D'AUDE ",
+   "libelle_commune": "Salles-d'Aude",
+   "code_departement": "11",
+   "libelle_cours_eau": "L'Aude",
+   "latitude": 43.247300194,
+   "longitude": 3.111018702,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06179615",
+   "libelle_station": "ORBIEU A VIGNEVIEILLE ",
+   "libelle_commune": "Vignevieille",
+   "code_departement": "11",
+   "libelle_cours_eau": "L'Orbieu",
+   "latitude": 43.004459142,
+   "longitude": 2.521181,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06178023",
+   "libelle_station": "VIDOURLE A LIOUC ",
+   "libelle_commune": "Quissac",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Vidourle",
+   "latitude": 43.895300305,
+   "longitude": 4.006691246,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06178006",
+   "libelle_station": "ILOUVRE A BABEAU-BOULDOUX ",
+   "libelle_commune": "Babeau-Bouldoux",
+   "code_departement": "34",
+   "libelle_cours_eau": "Ruisseau d'Ilouvre",
+   "latitude": 43.447050373,
+   "longitude": 2.91200774,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06175645",
+   "libelle_station": "REBENTY A CAILLA ",
+   "libelle_commune": "Cailla",
+   "code_departement": "11",
+   "libelle_cours_eau": "Le Rebenty",
+   "latitude": 42.8165583,
+   "longitude": 2.200728027,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06175517",
+   "libelle_station": "GALBE A FRONTRABIOUSE ",
+   "libelle_commune": "Fontrabiouse",
+   "code_departement": "66",
+   "libelle_cours_eau": "el Galba",
+   "latitude": 42.634951414,
+   "longitude": 2.056011406,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06175400",
+   "libelle_station": "AUDE A LES-ANGLES 2",
+   "libelle_commune": "Les Angles",
+   "code_departement": "66",
+   "libelle_cours_eau": "L'Aude",
+   "latitude": 42.552065832,
+   "longitude": 2.068295342,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06175000",
+   "libelle_station": "AGLY A ST-LAURENT-DE-LA-SALANQUE ",
+   "libelle_commune": "Saint-Laurent-de-la-Salanque",
+   "code_departement": "66",
+   "libelle_cours_eau": "L'Agly",
+   "latitude": 42.763966316,
+   "longitude": 2.987101297,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06173650",
+   "libelle_station": "VERDOUBLE A TAUTAVEL 2",
+   "libelle_commune": "Tautavel",
+   "code_departement": "66",
+   "libelle_cours_eau": "Le Verdouble",
+   "latitude": 42.79818445,
+   "longitude": 2.720334572,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06173460",
+   "libelle_station": "DESIX A ANSIGNAN 2",
+   "libelle_commune": "Ansignan",
+   "code_departement": "66",
+   "libelle_cours_eau": "La Desix",
+   "latitude": 42.757480764,
+   "longitude": 2.516367839,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06172930",
+   "libelle_station": "BOULZANE A MONTFORT-SUR-BOULZANE ",
+   "libelle_commune": "Montfort-sur-Boulzane",
+   "code_departement": "11",
+   "libelle_cours_eau": "La Boulzane",
+   "latitude": 42.727605898,
+   "longitude": 2.303335051,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06172880",
+   "libelle_station": "AGLY A CAMPS-SUR-L'AGLY ",
+   "libelle_commune": "Camps-sur-l'Agly",
+   "code_departement": "11",
+   "libelle_cours_eau": "L'Agly",
+   "latitude": 42.861259251,
+   "longitude": 2.43718566,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06170000",
+   "libelle_station": "TET A EUS",
+   "libelle_commune": "Eus",
+   "code_departement": "66",
+   "libelle_cours_eau": "La Têt",
+   "latitude": 42.644164764,
+   "longitude": 2.483659289,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06169880",
+   "libelle_station": "TET A SAUTO ",
+   "libelle_commune": "Sauto",
+   "code_departement": "66",
+   "libelle_cours_eau": "La Têt",
+   "latitude": 42.503781032,
+   "longitude": 2.149167399,
+   "date_maj_infos": "2025-12-08"
+  },
+  {
+   "code_station": "06168000",
+   "libelle_station": "TECH A ELNE ",
+   "libelle_commune": "Elne",
+   "code_departement": "66",
+   "libelle_cours_eau": "Le Tech",
+   "latitude": 42.585624693,
+   "longitude": 2.985401004,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06167000",
+   "libelle_station": "TECH A REYNES 1",
+   "libelle_commune": "Reynès",
+   "code_departement": "66",
+   "libelle_cours_eau": "Le Tech",
+   "latitude": 42.494656733,
+   "longitude": 2.718410153,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06166990",
+   "libelle_station": "RIU FERRER A ARLES-SUR-TECH ",
+   "libelle_commune": "Arles-sur-Tech",
+   "code_departement": "66",
+   "libelle_cours_eau": "Le Riuferrer",
+   "latitude": 42.469252298,
+   "longitude": 2.607180759,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06166000",
+   "libelle_station": "DURANCE A CAUMONT-SUR-DURANCE ",
+   "libelle_commune": "Avignon",
+   "code_departement": "84",
+   "libelle_cours_eau": "La Durance",
+   "latitude": 43.888283266,
+   "longitude": 4.916184633,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06165050",
+   "libelle_station": "COULON A OPPEDE ",
+   "libelle_commune": "Oppède",
+   "code_departement": "84",
+   "libelle_cours_eau": "Le Coulon",
+   "latitude": 43.858166653,
+   "longitude": 5.161656829,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06131550",
+   "libelle_station": "RHONE A ARLES 2",
+   "libelle_commune": "Arles",
+   "code_departement": "13",
+   "libelle_cours_eau": "Le Rhône",
+   "latitude": 43.678911705,
+   "longitude": 4.622915558,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06130500",
+   "libelle_station": "GARD A REMOULINS ",
+   "libelle_commune": "Remoulins",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Gard",
+   "latitude": 43.931763437,
+   "longitude": 4.562848482,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06129950",
+   "libelle_station": "ALZON A ST-MAXIMIN ",
+   "libelle_commune": "Uzès",
+   "code_departement": "30",
+   "libelle_cours_eau": "L'Alzon",
+   "latitude": 43.982758758,
+   "longitude": 4.441477858,
+   "date_maj_infos": "2026-08-18"
+  },
+  {
+   "code_station": "06128720",
+   "libelle_station": "GARDON DE ST JEAN A THOIRAS ",
+   "libelle_commune": "Corbès",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Gardon de Saint-Jean",
+   "latitude": 44.075090221,
+   "longitude": 3.962214677,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06128620",
+   "libelle_station": "GARDON DE STE CROIX A STE-CROIX-VALLEE-FRANCAISE ",
+   "libelle_commune": "Sainte-Croix-Vallée-Française",
+   "code_departement": "48",
+   "libelle_cours_eau": "Le Gardon de Sainte-Croix",
+   "latitude": 44.175449611,
+   "longitude": 3.75054294,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06128000",
+   "libelle_station": "GARDON D'ALES A ST-HILAIRE-DE-BRETHMAS 1",
+   "libelle_commune": "Saint-Christol-lez-Alès",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Gardon d'Alès",
+   "latitude": 44.094547021,
+   "longitude": 4.099380242,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06127050",
+   "libelle_station": "GALEIZON A CENDRAS 2",
+   "libelle_commune": "Cendras",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Galeizon",
+   "latitude": 44.157059758,
+   "longitude": 4.024280766,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06123700",
+   "libelle_station": "SORGUE DES CAPUCINS A FONTAINE-DE-VAUCLUSE ",
+   "libelle_commune": "Fontaine-de-Vaucluse",
+   "code_departement": "84",
+   "libelle_cours_eau": "La Sorgue de Velleron",
+   "latitude": 43.919502279,
+   "longitude": 5.131410872,
+   "date_maj_infos": "2026-07-24"
+  },
+  {
+   "code_station": "06123500",
+   "libelle_station": "OUVEZE A SORGUES 1",
+   "libelle_commune": "Sorgues",
+   "code_departement": "84",
+   "libelle_cours_eau": "L'Ouvèze",
+   "latitude": 44.013344241,
+   "longitude": 4.871403963,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06122510",
+   "libelle_station": "ORSANNE A SAINT-ETIENNE-DE-SERRE 1",
+   "libelle_commune": "Saint-Sauveur-de-Montagut",
+   "code_departement": "07",
+   "libelle_cours_eau": "L'Orsanne",
+   "latitude": 44.817598113,
+   "longitude": 4.566904777,
+   "date_maj_infos": "2019-10-17"
+  },
+  {
+   "code_station": "06121500",
+   "libelle_station": "RHONE A ROQUEMAURE ",
+   "libelle_commune": "Orange",
+   "code_departement": "84",
+   "libelle_cours_eau": "Le Rhône",
+   "latitude": 44.071809603,
+   "longitude": 4.768910675,
+   "date_maj_infos": "2026-01-02"
+  },
+  {
+   "code_station": "06119950",
+   "libelle_station": "SEGUISSOUS A BOUQUET ",
+   "libelle_commune": "Bouquet",
+   "code_departement": "30",
+   "libelle_cours_eau": "Valat de Séguissous",
+   "latitude": 44.178960722,
+   "longitude": 4.262636285,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06118550",
+   "libelle_station": "LUECH A GENOLHAC ",
+   "libelle_commune": "Génolhac",
+   "code_departement": "30",
+   "libelle_cours_eau": "Le Luech",
+   "latitude": 44.324030487,
+   "longitude": 3.960898173,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06118500",
+   "libelle_station": "RIEUTORT A VIALAS ",
+   "libelle_commune": "Vialas",
+   "code_departement": "48",
+   "libelle_cours_eau": "Le Rieutort",
+   "latitude": 44.330667386,
+   "longitude": 3.878801414,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06117220",
+   "libelle_station": "LEZ A TAULIGNAN - LA CAILLONNE ",
+   "libelle_commune": "Taulignan",
+   "code_departement": "26",
+   "libelle_cours_eau": "Le lez",
+   "latitude": 44.423176548,
+   "longitude": 4.983934899,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06115700",
+   "libelle_station": "ARDECHE A ST-JULIEN-DE-PEYROLAS ",
+   "libelle_commune": "Saint-Julien-de-Peyrolas",
+   "code_departement": "30",
+   "libelle_cours_eau": "L'Ardèche",
+   "latitude": 44.283740319,
+   "longitude": 4.597914602,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06115090",
+   "libelle_station": "ARDECHE A VALLON-PONT-D'ARC 2",
+   "libelle_commune": "Vallon-Pont-d'Arc",
+   "code_departement": "07",
+   "libelle_cours_eau": "L'Ardèche",
+   "latitude": 44.386212738,
+   "longitude": 4.40823524,
+   "date_maj_infos": "2026-08-17"
+  },
+  {
+   "code_station": "06115080",
+   "libelle_station": "IBIE A LAGORCE 1",
+   "libelle_commune": "Lagorce",
+   "code_departement": "07",
+   "libelle_cours_eau": "L'Ibie",
+   "latitude": 44.459357957,
+   "longitude": 4.446287084,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06114800",
+   "libelle_station": "BORNE A ST-LAURENT-LES-BAINS 2",
+   "libelle_commune": "Saint-Laurent-les-Bains-Laval-d'Aurelle",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Borne",
+   "latitude": 44.600453592,
+   "longitude": 3.982833218,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06114450",
+   "libelle_station": "ARDECHE A VOGUE 1",
+   "libelle_commune": "Vogüé",
+   "code_departement": "07",
+   "libelle_cours_eau": "L'Ardèche",
+   "latitude": 44.551302841,
+   "longitude": 4.409444644,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06114295",
+   "libelle_station": "VOLANE A VALS-LES-BAINS 3",
+   "libelle_commune": "Vals-les-Bains",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Volane",
+   "latitude": 44.671822715,
+   "longitude": 4.363348593,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06114155",
+   "libelle_station": "LIGNON A LA-SOUCHE ",
+   "libelle_commune": "La Souche",
+   "code_departement": "07",
+   "libelle_cours_eau": "Le Lignon",
+   "latitude": 44.629617924,
+   "longitude": 4.160021227,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06113500",
+   "libelle_station": "RHONE A PIERRELATTE ",
+   "libelle_commune": "Pierrelatte",
+   "code_departement": "26",
+   "libelle_cours_eau": "Le Rhône",
+   "latitude": 44.368338568,
+   "longitude": 4.648964165,
+   "date_maj_infos": "2026-01-02"
+  },
+  {
+   "code_station": "06113270",
+   "libelle_station": "BERRE A VALAURIE 1",
+   "libelle_commune": "La Garde-Adhémar",
+   "code_departement": "26",
+   "libelle_cours_eau": "La Berre",
+   "latitude": 44.413984987,
+   "longitude": 4.767548138,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06109100",
+   "libelle_station": "DROME A LIVRON-SUR-DROME ",
+   "libelle_commune": "Livron-sur-Drôme",
+   "code_departement": "26",
+   "libelle_cours_eau": "La Drôme",
+   "latitude": 44.769257826,
+   "longitude": 4.82533716,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06106940",
+   "libelle_station": "DORNE A DORNAS 1",
+   "libelle_commune": "Dornas",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Dorne",
+   "latitude": 44.86211685,
+   "longitude": 4.360853339,
+   "date_maj_infos": "2023-05-10"
+  },
+  {
+   "code_station": "06106935",
+   "libelle_station": "DORNE A DORNAS 2",
+   "libelle_commune": "Dornas",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Dorne",
+   "latitude": 44.84856188,
+   "longitude": 4.340373229,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06105568",
+   "libelle_station": "DOUX A LABATIE-D'ANDAURE 1",
+   "libelle_commune": "Labatie-d'Andaure",
+   "code_departement": "07",
+   "libelle_cours_eau": "Le Doux",
+   "latitude": 45.02924554,
+   "longitude": 4.493850278,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "06101905",
+   "libelle_station": "CANCE A ST-JULIEN-VOCANCE 4",
+   "libelle_commune": "Saint-Julien-Vocance",
+   "code_departement": "07",
+   "libelle_cours_eau": "La Cance",
+   "latitude": 45.173924557,
+   "longitude": 4.50092904,
+   "date_maj_infos": "2025-09-22"
+  },
+  {
+   "code_station": "05236100",
+   "libelle_station": "L'Adour en amont de Bagnères-de-Bigorre",
+   "libelle_commune": "Gerde",
+   "code_departement": "65",
+   "libelle_cours_eau": "L'Adour",
+   "latitude": 43.054009315,
+   "longitude": 0.157561873,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05234290",
+   "libelle_station": "L'Echez en amont des Angles",
+   "libelle_commune": "Les Angles",
+   "code_departement": "65",
+   "libelle_cours_eau": "L'Echez",
+   "latitude": 43.077534888,
+   "longitude": 0.01262303,
+   "date_maj_infos": "2022-08-12"
+  },
+  {
+   "code_station": "05234020",
+   "libelle_station": "L'Echez à Maubourguet",
+   "libelle_commune": "Maubourguet",
+   "code_departement": "65",
+   "libelle_cours_eau": "L'Echez",
+   "latitude": 43.468186756,
+   "longitude": 0.031170022,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05234015",
+   "libelle_station": "L'Arros à Ozon",
+   "libelle_commune": "Ozon",
+   "code_departement": "65",
+   "libelle_cours_eau": "L'Arros",
+   "latitude": 43.159344434,
+   "longitude": 0.249087069,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05234000",
+   "libelle_station": "L'Arros à Tasque",
+   "libelle_commune": "Tasque",
+   "code_departement": "32",
+   "libelle_cours_eau": "L'Arros",
+   "latitude": 43.641074692,
+   "longitude": 0.021904637,
+   "date_maj_infos": "2018-05-04"
+  },
+  {
+   "code_station": "05233000",
+   "libelle_station": "L'Adour à St-Mont",
+   "libelle_commune": "Saint-Mont",
+   "code_departement": "32",
+   "libelle_cours_eau": "L'Adour",
+   "latitude": 43.653933617,
+   "longitude": -0.151175677,
+   "date_maj_infos": "2020-09-10"
+  },
+  {
+   "code_station": "05230500",
+   "libelle_station": "Le Gabas à Arrien",
+   "libelle_commune": "Arrien",
+   "code_departement": "64",
+   "libelle_cours_eau": "Le Gabas",
+   "latitude": 43.309226292,
+   "longitude": -0.170758066,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05230000",
+   "libelle_station": "Le Gabas au niveau de Montaut",
+   "libelle_commune": "Saint-Sever",
+   "code_departement": "40",
+   "libelle_cours_eau": "Le Gabas",
+   "latitude": 43.745851462,
+   "longitude": -0.626523746,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05229200",
+   "libelle_station": "L'Adour à Onard",
+   "libelle_commune": "Onard",
+   "code_departement": "40",
+   "libelle_cours_eau": "L'Adour",
+   "latitude": 43.789256614,
+   "longitude": -0.837279293,
+   "date_maj_infos": "2018-05-04"
+  },
+  {
+   "code_station": "05228000",
+   "libelle_station": "L'Estampon à Roquefort",
+   "libelle_commune": "Roquefort",
+   "code_departement": "40",
+   "libelle_cours_eau": "L'Estampon",
+   "latitude": 44.034549482,
+   "longitude": -0.324223499,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05223000",
+   "libelle_station": "L'Adour à St-Vincent de Paul",
+   "libelle_commune": "Saint-Vincent-de-Paul",
+   "code_departement": "40",
+   "libelle_cours_eau": "L'Adour",
+   "latitude": 43.73377237,
+   "longitude": -0.999545871,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05220950",
+   "libelle_station": "Le Luy de France à Amou",
+   "libelle_commune": "Amou",
+   "code_departement": "40",
+   "libelle_cours_eau": "Le Luy",
+   "latitude": 43.615427633,
+   "longitude": -0.714281292,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05218700",
+   "libelle_station": "Le Gave de Pau en amont de Gavarnie",
+   "libelle_commune": "Gavarnie-Gèdre",
+   "code_departement": "65",
+   "libelle_cours_eau": "Gave de Pau",
+   "latitude": 42.729686655,
+   "longitude": -0.007806789,
+   "date_maj_infos": "2022-08-12"
+  },
+  {
+   "code_station": "05218000",
+   "libelle_station": "Le Gave de Pau à Préchac",
+   "libelle_commune": "Lau-Balagnas",
+   "code_departement": "65",
+   "libelle_cours_eau": "Gave de Pau",
+   "latitude": 42.995650178,
+   "longitude": -0.079292776,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05204000",
+   "libelle_station": "Le Gave d'Oloron à Sauveterre",
+   "libelle_commune": "Sauveterre-de-Béarn",
+   "code_departement": "64",
+   "libelle_cours_eau": "Gave d'Oloron",
+   "latitude": 43.394554808,
+   "longitude": -0.943937469,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05202950",
+   "libelle_station": "Le Saison à Espes-Undurein",
+   "libelle_commune": "Espès-Undurein",
+   "code_departement": "64",
+   "libelle_cours_eau": "Le Saison",
+   "latitude": 43.282793615,
+   "longitude": -0.873775611,
+   "date_maj_infos": "2023-02-14"
+  },
+  {
+   "code_station": "05201055",
+   "libelle_station": "La Bidouze en aval de Saint-Palais",
+   "libelle_commune": "Aïcirits-Camou-Suhast",
+   "code_departement": "64",
+   "libelle_cours_eau": "La Bidouze",
+   "latitude": 43.337013899,
+   "longitude": -1.026563252,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05200050",
+   "libelle_station": "La Nive d'Arnéguy à Uhart Cize",
+   "libelle_commune": "Uhart-Cize",
+   "code_departement": "64",
+   "libelle_cours_eau": "La Nive d'Arnéguy",
+   "latitude": 43.169714795,
+   "longitude": -1.248127578,
+   "date_maj_infos": "2014-09-15"
+  },
+  {
+   "code_station": "05192320",
+   "libelle_station": "L'Onesse en amont du R. d'Hossegor",
+   "libelle_commune": "Onesse-Laharie",
+   "code_departement": "40",
+   "libelle_cours_eau": "Ruisseau d'Onesse",
+   "latitude": 44.055597011,
+   "longitude": -1.042439953,
+   "date_maj_infos": "2018-04-23"
+  },
+  {
+   "code_station": "05192100",
+   "libelle_station": "L'Escource en aval de Saint Paul en Born",
+   "libelle_commune": "Saint-Paul-en-Born",
+   "code_departement": "40",
+   "libelle_cours_eau": "Ruisseau d'Escource",
+   "latitude": 44.230410585,
+   "longitude": -1.180278381,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05192014",
+   "libelle_station": "La Petite Leyre à Belhade",
+   "libelle_commune": "Belhade",
+   "code_departement": "40",
+   "libelle_cours_eau": "La Petite Leyre",
+   "latitude": 44.375055861,
+   "longitude": -0.673633862,
+   "date_maj_infos": "2018-04-23"
+  },
+  {
+   "code_station": "05191900",
+   "libelle_station": "La Leyre à Belin Beliet",
+   "libelle_commune": "Belin-Béliet",
+   "code_departement": "33",
+   "libelle_cours_eau": "La Grande Leyre",
+   "latitude": 44.470602113,
+   "longitude": -0.792652266,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05184900",
+   "libelle_station": "La Jalle de Castelnau à Moulis en Médoc",
+   "libelle_commune": "Moulis-en-Médoc",
+   "code_departement": "33",
+   "libelle_cours_eau": "Jalle de Castelnau",
+   "latitude": 45.05601157,
+   "longitude": -0.745113091,
+   "date_maj_infos": "2022-04-25"
+  },
+  {
+   "code_station": "05184000",
+   "libelle_station": "La Garonne au Pont du Roi",
+   "libelle_commune": "Fos",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 42.849282942,
+   "longitude": 0.735863431,
+   "date_maj_infos": "2023-12-05"
+  },
+  {
+   "code_station": "05183930",
+   "libelle_station": "La Pique à Cier de Luchon",
+   "libelle_commune": "Cier-de-Luchon",
+   "code_departement": "31",
+   "libelle_cours_eau": "La Pique",
+   "latitude": 42.852679219,
+   "longitude": 0.602333509,
+   "date_maj_infos": "2023-06-13"
+  },
+  {
+   "code_station": "05151150",
+   "libelle_station": "La Mimente à Cassagnas",
+   "libelle_commune": "Cassagnas",
+   "code_departement": "48",
+   "libelle_cours_eau": "La Mimente",
+   "latitude": 44.267730364,
+   "longitude": 3.758628632,
+   "date_maj_infos": "2026-07-03"
+  },
+  {
+   "code_station": "05151100",
+   "libelle_station": "Le Tarnon en amont de Rousses",
+   "libelle_commune": "Bassurels",
+   "code_departement": "48",
+   "libelle_cours_eau": "Le Tarnon",
+   "latitude": 44.159646037,
+   "longitude": 3.610921936,
+   "date_maj_infos": "2026-08-19"
+  },
+  {
+   "code_station": "05151050",
+   "libelle_station": "Le Baumale en amont de Vebron",
+   "libelle_commune": "Vebron",
+   "code_departement": "48",
+   "libelle_cours_eau": "Valat de Baumale",
+   "latitude": 44.226892837,
+   "longitude": 3.592968577,
+   "date_maj_infos": "2026-07-03"
+  },
+  {
+   "code_station": "05150900",
+   "libelle_station": "Le Tarn en amont de Pont de Monvert",
+   "libelle_commune": "Pont de Montvert - Sud Mont Lozère",
+   "code_departement": "48",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 44.387380995,
+   "longitude": 3.819247206,
+   "date_maj_infos": "2026-07-03"
+  },
+  {
+   "code_station": "05149520",
+   "libelle_station": "La Jonte en aval de Gatuzières",
+   "libelle_commune": "Gatuzières",
+   "code_departement": "48",
+   "libelle_cours_eau": "La Jonte",
+   "latitude": 44.197402451,
+   "longitude": 3.475077863,
+   "date_maj_infos": "2026-07-03"
+  },
+  {
+   "code_station": "05148200",
+   "libelle_station": "La Dourbie en amont de Dourbies",
+   "libelle_commune": "Dourbies",
+   "code_departement": "30",
+   "libelle_cours_eau": "La Dourbie",
+   "latitude": 44.07537024,
+   "longitude": 3.491413062,
+   "date_maj_infos": "2026-07-03"
+  },
+  {
+   "code_station": "05148000",
+   "libelle_station": "La Dourbie au niveau de Monna",
+   "libelle_commune": "Millau",
+   "code_departement": "12",
+   "libelle_cours_eau": "La Dourbie",
+   "latitude": 44.107257641,
+   "longitude": 3.13749258,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05147000",
+   "libelle_station": "Le Tarn à l'amont de Millau",
+   "libelle_commune": "Millau",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 44.102089631,
+   "longitude": 3.086332525,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05145700",
+   "libelle_station": "Le Cernon à Saint-Rome de Cernon",
+   "libelle_commune": "Saint-Georges-de-Luzençon",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Cernon",
+   "latitude": 44.036866054,
+   "longitude": 2.964668153,
+   "date_maj_infos": "2019-08-21"
+  },
+  {
+   "code_station": "05145600",
+   "libelle_station": "Le Tarn à St-Rome du Tarn",
+   "libelle_commune": "Saint-Rome-de-Tarn",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 44.05806847,
+   "longitude": 2.902239594,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05145440",
+   "libelle_station": "L'Annou à St Jean et St Paul",
+   "libelle_commune": "Saint-Jean-et-Saint-Paul",
+   "code_departement": "12",
+   "libelle_cours_eau": "Ruisseau d'Annou",
+   "latitude": 43.929928672,
+   "longitude": 3.074217247,
+   "date_maj_infos": "2023-02-14"
+  },
+  {
+   "code_station": "05145410",
+   "libelle_station": "Le Verzolet en amont de Versols",
+   "libelle_commune": "Versols-et-Lapeyre",
+   "code_departement": "12",
+   "libelle_cours_eau": "Ruisseau de Versols",
+   "latitude": 43.902048257,
+   "longitude": 2.960133937,
+   "date_maj_infos": "2025-02-26"
+  },
+  {
+   "code_station": "05144000",
+   "libelle_station": "Le Tarn à Brousse le Chateau",
+   "libelle_commune": "Brousse-le-Château",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Tarn",
+   "latitude": 43.9976086,
+   "longitude": 2.621988744,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05128050",
+   "libelle_station": "Le Tantayrou en amont de Lapanouse",
+   "libelle_commune": "Sévérac d'Aveyron",
+   "code_departement": "12",
+   "libelle_cours_eau": "Ruisseau de Tantayrou",
+   "latitude": 44.358200823,
+   "longitude": 3.019773608,
+   "date_maj_infos": "2022-02-03"
+  },
+  {
+   "code_station": "05128000",
+   "libelle_station": "L'Aveyron à Lugans",
+   "libelle_commune": "Gaillac-d'Aveyron",
+   "code_departement": "12",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.366787788,
+   "longitude": 2.888618524,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05127000",
+   "libelle_station": "L'Aveyron à Druelle",
+   "libelle_commune": "Druelle Balsac",
+   "code_departement": "12",
+   "libelle_cours_eau": "L'Aveyron",
+   "latitude": 44.337952323,
+   "longitude": 2.493253108,
+   "date_maj_infos": "2018-04-20"
+  },
+  {
+   "code_station": "05125860",
+   "libelle_station": "Le Viaur à Ségur",
+   "libelle_commune": "Ségur",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Viaur",
+   "latitude": 44.296333618,
+   "longitude": 2.838236221,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05106820",
+   "libelle_station": "Le Rimbez en amont du Petit Rimbez",
+   "libelle_commune": "Escalans",
+   "code_departement": "40",
+   "libelle_cours_eau": "Le Rimbez",
+   "latitude": 44.017501896,
+   "longitude": 0.061951179,
+   "date_maj_infos": "2018-04-13"
+  },
+  {
+   "code_station": "05104500",
+   "libelle_station": "La Grande Baïse en aval de Vianne",
+   "libelle_commune": "Vianne",
+   "code_departement": "47",
+   "libelle_cours_eau": "La Baïse",
+   "latitude": 44.226918243,
+   "longitude": 0.334000327,
+   "date_maj_infos": "2019-12-18"
+  },
+  {
+   "code_station": "05104000",
+   "libelle_station": "La Garonne en amont du Lot",
+   "libelle_commune": "Aiguillon",
+   "code_departement": "47",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 44.288821633,
+   "longitude": 0.320431714,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05101000",
+   "libelle_station": "La Colagne à Marvejols (Pont de la N88 à Moriés)",
+   "libelle_commune": "Bourgs sur Colagne",
+   "code_departement": "48",
+   "libelle_cours_eau": "La Colagne",
+   "latitude": 44.491426629,
+   "longitude": 3.245665447,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05099170",
+   "libelle_station": "La Boralde Flaujaguèse en amont d'Espalion",
+   "libelle_commune": "Saint-Côme-d'Olt",
+   "code_departement": "12",
+   "libelle_cours_eau": "Boralde Flaujaguèse",
+   "latitude": 44.530304038,
+   "longitude": 2.79218471,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05099120",
+   "libelle_station": "La Coussane en amont de Coubisou",
+   "libelle_commune": "Coubisou",
+   "code_departement": "12",
+   "libelle_cours_eau": "La Coussane",
+   "latitude": 44.587672909,
+   "longitude": 2.721110847,
+   "date_maj_infos": "2018-04-24"
+  },
+  {
+   "code_station": "05099000",
+   "libelle_station": "Le lot à Entraygues",
+   "libelle_commune": "Entraygues-sur-Truyère",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Lot",
+   "latitude": 44.641562372,
+   "longitude": 2.569437145,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05098850",
+   "libelle_station": "La Truyère en amont de La Villedieu",
+   "libelle_commune": "Monts-de-Randon",
+   "code_departement": "48",
+   "libelle_cours_eau": "La Truyère",
+   "latitude": 44.72056007,
+   "longitude": 3.525180274,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05097750",
+   "libelle_station": "Le Ruisseau de La Roche",
+   "libelle_commune": "Ruynes-en-Margeride",
+   "code_departement": "15",
+   "libelle_cours_eau": "Ruisseau de la Roche",
+   "latitude": 44.983690477,
+   "longitude": 3.212008745,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05096400",
+   "libelle_station": "L'Epie au niveau d'Oradour",
+   "libelle_commune": "Neuvéglise-sur-Truyère",
+   "code_departement": "15",
+   "libelle_cours_eau": "Ruisseau de l'Epie",
+   "latitude": 44.962439466,
+   "longitude": 2.926558797,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05096050",
+   "libelle_station": "La Selves à Laguiole",
+   "libelle_commune": "Laguiole",
+   "code_departement": "12",
+   "libelle_cours_eau": "La Selves",
+   "latitude": 44.685945081,
+   "longitude": 2.837887107,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05096000",
+   "libelle_station": "La Truyère à Entraygues",
+   "libelle_commune": "Entraygues-sur-Truyère",
+   "code_departement": "12",
+   "libelle_cours_eau": "La Truyère",
+   "latitude": 44.649836503,
+   "longitude": 2.567267769,
+   "date_maj_infos": "2023-09-11"
+  },
+  {
+   "code_station": "05095000",
+   "libelle_station": "Le Dourdou à Grand Vabre",
+   "libelle_commune": null,
+   "code_departement": null,
+   "libelle_cours_eau": "Le Dourdou de Conques",
+   "latitude": 44.631971781,
+   "longitude": 2.355843884,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05094810",
+   "libelle_station": "Le Lot à Livinhac",
+   "libelle_commune": "Decazeville",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Lot",
+   "latitude": 44.585519887,
+   "longitude": 2.229703705,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05092200",
+   "libelle_station": "Le Lot à St-Pierre Toirac",
+   "libelle_commune": "Balaguier-d'Olt",
+   "code_departement": "12",
+   "libelle_cours_eau": "Le Lot",
+   "latitude": 44.519284356,
+   "longitude": 1.95854299,
+   "date_maj_infos": "2018-04-12"
+  },
+  {
+   "code_station": "05090000",
+   "libelle_station": "Le Célé à Cabrerets (Pont de Cabrerets)",
+   "libelle_commune": "Cabrerets",
+   "code_departement": "46",
+   "libelle_cours_eau": "Le Célé",
+   "latitude": 44.507662154,
+   "longitude": 1.657723635,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05089090",
+   "libelle_station": "La Rauze en amont de Cours",
+   "libelle_commune": "Bellefont-La Rauze",
+   "code_departement": "46",
+   "libelle_cours_eau": "La Rauze",
+   "latitude": 44.54433687,
+   "longitude": 1.519242243,
+   "date_maj_infos": "2022-04-25"
+  },
+  {
+   "code_station": "05084000",
+   "libelle_station": "Le Lot à Clairac",
+   "libelle_commune": "Clairac",
+   "code_departement": "47",
+   "libelle_cours_eau": "Le Lot",
+   "latitude": 44.358111686,
+   "longitude": 0.381491045,
+   "date_maj_infos": "2025-04-08"
+  },
+  {
+   "code_station": "05083700",
+   "libelle_station": "L'Ourbise à Caubeyres",
+   "libelle_commune": "Caubeyres",
+   "code_departement": "47",
+   "libelle_cours_eau": "L'Ourbise",
+   "latitude": 44.271148252,
+   "longitude": 0.189836967,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05081000",
+   "libelle_station": "La Garonne à Couthures",
+   "libelle_commune": "Couthures-sur-Garonne",
+   "code_departement": "47",
+   "libelle_cours_eau": "La Garonne",
+   "latitude": 44.509563595,
+   "longitude": 0.081872311,
+   "date_maj_infos": "2018-04-11"
+  },
+  {
+   "code_station": "05079100",
+   "libelle_station": "Le Dropt à Loubens",
+   "libelle_commune": "Saint-Martin-de-Lerm",
+   "code_departement": "33",
+   "libelle_cours_eau": "Le Dropt",
+   "latitude": 44.631949799,
+   "longitude": -0.0333965,
+   "date_maj_infos": "2018-05-03"
+  },
+  {
+   "code_station": "05078900",
+   "libelle_station": "Le Vignague à Morizès",
+   "libelle_commune": "Morizès",
+   "code_departement": "33",
+   "libelle_cours_eau": "La Vignague",
+   "latitude": 44.612716936,
+   "longitude": -0.087000255,
+   "date_maj_infos": "2024-02-14"
+  },
+  {
+   "code_station": "05069250",
+   "libelle_station": "La Tarentaine au niveau de Picherande",
+   "libelle_commune": "Picherande",
+   "code_departement": "63",
+   "libelle_cours_eau": "La Tarentaine",
+   "latitude": 45.474512781,
+   "longitude": 2.744828768,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05068950",
+   "libelle_station": "La Rhue à Condat- en- Feniers",
+   "libelle_commune": "Condat",
+   "code_departement": "15",
+   "libelle_cours_eau": "rivière la rhue",
+   "latitude": 45.358450488,
+   "longitude": 2.791787807,
+   "date_maj_infos": "2001-07-20"
+  },
+  {
+   "code_station": "05068850",
+   "libelle_station": "La Diège au Moulin de Beaune",
+   "libelle_commune": "Sornac",
+   "code_departement": "19",
+   "libelle_cours_eau": "La Diège",
+   "latitude": 45.692319386,
+   "longitude": 2.164193238,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05068645",
+   "libelle_station": "Le Mars au Vaulmier",
+   "libelle_commune": "Le Vaulmier",
+   "code_departement": "15",
+   "libelle_cours_eau": "Le Mars",
+   "latitude": 45.185112129,
+   "longitude": 2.569765818,
+   "date_maj_infos": "2018-05-18"
+  },
+  {
+   "code_station": "05068640",
+   "libelle_station": "La Sumène en amont de Valette",
+   "libelle_commune": "Valette",
+   "code_departement": "15",
+   "libelle_cours_eau": "La Sumène",
+   "latitude": 45.261059775,
+   "longitude": 2.605224233,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05068160",
+   "libelle_station": "La Maronne au droit de St Martin Valmeroux",
+   "libelle_commune": "Saint-Martin-Valmeroux",
+   "code_departement": "15",
+   "libelle_cours_eau": "La Maronne",
+   "latitude": 45.125973274,
+   "longitude": 2.469624114,
+   "date_maj_infos": "2005-07-07"
+  },
+  {
+   "code_station": "05068020",
+   "libelle_station": "Le Ruisseau du Peyret",
+   "libelle_commune": "Sexcles",
+   "code_departement": "19",
+   "libelle_cours_eau": "Ruisseau du Peyret",
+   "latitude": 45.053050395,
+   "longitude": 1.989489783,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05066000",
+   "libelle_station": "La Cère à Comblat le Pont",
+   "libelle_commune": "Vic-sur-Cère",
+   "code_departement": "15",
+   "libelle_cours_eau": "La Cère",
+   "latitude": 44.965399623,
+   "longitude": 2.615220376,
+   "date_maj_infos": "2018-04-11"
+  },
+  {
+   "code_station": "05065500",
+   "libelle_station": "La Jordanne en amont de Mandailles-St-Julien",
+   "libelle_commune": "Mandailles-Saint-Julien",
+   "code_departement": "15",
+   "libelle_cours_eau": "La Jordanne",
+   "latitude": 45.079565118,
+   "longitude": 2.670124384,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05064000",
+   "libelle_station": "La Cère à Sansac",
+   "libelle_commune": "Sansac-de-Marmiesse",
+   "code_departement": "15",
+   "libelle_cours_eau": "La Cère",
+   "latitude": 44.88214324,
+   "longitude": 2.350414975,
+   "date_maj_infos": "2025-11-18"
+  },
+  {
+   "code_station": "05061950",
+   "libelle_station": "Le Cayla en amont de Sousceyrac",
+   "libelle_commune": "Sousceyrac-en-Quercy",
+   "code_departement": "46",
+   "libelle_cours_eau": "Le Cayla",
+   "latitude": 44.863965179,
+   "longitude": 2.051473349,
+   "date_maj_infos": "2023-02-21"
+  },
+  {
+   "code_station": "05061942",
+   "libelle_station": "Le Tolerme en amont du Moulin de Bray",
+   "libelle_commune": "Sousceyrac-en-Quercy",
+   "code_departement": "46",
+   "libelle_cours_eau": "Le Tolerme",
+   "latitude": 44.83777212,
+   "longitude": 2.011192551,
+   "date_maj_infos": "2022-04-25"
+  },
+  {
+   "code_station": "05061500",
+   "libelle_station": "La Dordogne à Carennac",
+   "libelle_commune": "Carennac",
+   "code_departement": "46",
+   "libelle_cours_eau": "La Dordogne",
+   "latitude": 44.915655835,
+   "longitude": 1.743605132,
+   "date_maj_infos": "2018-04-11"
+  },
+  {
+   "code_station": "05061240",
+   "libelle_station": "La Doue en amont de Martel",
+   "libelle_commune": "Martel",
+   "code_departement": "46",
+   "libelle_cours_eau": "Le Vignon",
+   "latitude": 44.962531498,
+   "longitude": 1.597236461,
+   "date_maj_infos": "2022-08-12"
+  },
+  {
+   "code_station": "05059000",
+   "libelle_station": "La Dordogne à Cenac",
+   "libelle_commune": "Cénac-et-Saint-Julien",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Dordogne",
+   "latitude": 44.805941762,
+   "longitude": 1.204160284,
+   "date_maj_infos": "2018-04-09"
+  },
+  {
+   "code_station": "05057150",
+   "libelle_station": "La Vézère à Orlianges",
+   "libelle_commune": "Pérols-sur-Vézère",
+   "code_departement": "19",
+   "libelle_cours_eau": "La Vézère",
+   "latitude": 45.61187546,
+   "longitude": 1.95620189,
+   "date_maj_infos": "2020-09-18"
+  },
+  {
+   "code_station": "05056900",
+   "libelle_station": "Le Bradascou à Meilhards",
+   "libelle_commune": "Meilhards",
+   "code_departement": "19",
+   "libelle_cours_eau": "Le Bradascou",
+   "latitude": 45.561545331,
+   "longitude": 1.675177497,
+   "date_maj_infos": "2005-07-11"
+  },
+  {
+   "code_station": "05055600",
+   "libelle_station": "La Corrèze de Pradines à Gourdon Murat",
+   "libelle_commune": "Gourdon-Murat",
+   "code_departement": "19",
+   "libelle_cours_eau": "La Corrèze de Pradines",
+   "latitude": 45.538758422,
+   "longitude": 1.90038464,
+   "date_maj_infos": "2025-11-05"
+  },
+  {
+   "code_station": "05055550",
+   "libelle_station": "La Corrèze à St-Yrieix-le-Déjalat",
+   "libelle_commune": "Saint-Yrieix-le-Déjalat",
+   "code_departement": "19",
+   "libelle_cours_eau": "La Corrèze",
+   "latitude": 45.4687812,
+   "longitude": 1.946897981,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05051500",
+   "libelle_station": "L'Elle à Lavilledieu",
+   "libelle_commune": "Terrasson-Lavilledieu",
+   "code_departement": "24",
+   "libelle_cours_eau": "L'Elle",
+   "latitude": 45.137660364,
+   "longitude": 1.26858846,
+   "date_maj_infos": "2018-04-09"
+  },
+  {
+   "code_station": "05050800",
+   "libelle_station": "La Laurence en amont d'Auriac-du-Périgord",
+   "libelle_commune": "Auriac-du-Périgord",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Laurence",
+   "latitude": 45.109914706,
+   "longitude": 1.123462254,
+   "date_maj_infos": "2022-03-17"
+  },
+  {
+   "code_station": "05050000",
+   "libelle_station": "La Vézère à Thonac",
+   "libelle_commune": "Sergeac",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Vézère",
+   "latitude": 45.020287178,
+   "longitude": 1.117335675,
+   "date_maj_infos": "2018-04-09"
+  },
+  {
+   "code_station": "05049950",
+   "libelle_station": "Le Thonac à La Gibordie",
+   "libelle_commune": "Thonac",
+   "code_departement": "24",
+   "libelle_cours_eau": "Le Thonac",
+   "latitude": 45.036211428,
+   "longitude": 1.105710988,
+   "date_maj_infos": "2024-06-19"
+  },
+  {
+   "code_station": "05048000",
+   "libelle_station": "La Couze à Bayac",
+   "libelle_commune": "Bayac",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Couze",
+   "latitude": 44.804103805,
+   "longitude": 0.730485156,
+   "date_maj_infos": "2021-03-10"
+  },
+  {
+   "code_station": "05047500",
+   "libelle_station": "Le Caudeau au Pont de Monsac",
+   "libelle_commune": "Lamonzie-Montastruc",
+   "code_departement": "24",
+   "libelle_cours_eau": "Le Caudeau",
+   "latitude": 44.89919232,
+   "longitude": 0.600679737,
+   "date_maj_infos": "2023-02-21"
+  },
+  {
+   "code_station": "05047000",
+   "libelle_station": "La Dordogne en aval de Bergerac (Pont de la D4)",
+   "libelle_commune": "Saint-Pierre-d'Eyraud",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Dordogne",
+   "latitude": 44.839642336,
+   "longitude": 0.332017762,
+   "date_maj_infos": "2018-04-09"
+  },
+  {
+   "code_station": "05038000",
+   "libelle_station": "L'Isle à Bénevent",
+   "libelle_commune": "Saint-Martial-d'Artenset",
+   "code_departement": "24",
+   "libelle_cours_eau": "L'Isle",
+   "latitude": 45.029723524,
+   "longitude": 0.246817807,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05035000",
+   "libelle_station": "La Dronne à St-Front La Rivière",
+   "libelle_commune": "Saint-Front-la-Rivière",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Dronne",
+   "latitude": 45.47141379,
+   "longitude": 0.722421231,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05033700",
+   "libelle_station": "La Dronne à Valeuil",
+   "libelle_commune": "Brantôme en Périgord",
+   "code_departement": "24",
+   "libelle_cours_eau": "La Dronne",
+   "latitude": 45.334452331,
+   "longitude": 0.616879957,
+   "date_maj_infos": "2025-04-09"
+  },
+  {
+   "code_station": "05027010",
+   "libelle_station": "Le Gestas à St Germain du Puch",
+   "libelle_commune": "Saint-Germain-du-Puch",
+   "code_departement": "33",
+   "libelle_cours_eau": "Le Gestas",
+   "latitude": 44.866575207,
+   "longitude": -0.337426687,
+   "date_maj_infos": "2023-02-21"
+  },
+  {
+   "code_station": "05025600",
+   "libelle_station": "La Livenne à St Aubin de Blaye",
+   "libelle_commune": "Saint-Aubin-de-Blaye",
+   "code_departement": "33",
+   "libelle_cours_eau": "La Livenne",
+   "latitude": 45.242388177,
+   "longitude": -0.578544911,
+   "date_maj_infos": "2023-02-15"
+  },
+  {
+   "code_station": "05025000",
+   "libelle_station": "La Seudre à Saujon (Amont immédiat de Saujon)",
+   "libelle_commune": "Saujon",
+   "code_departement": "17",
+   "libelle_cours_eau": "La Seudre",
+   "latitude": 45.665485296,
+   "longitude": -0.912102425,
+   "date_maj_infos": "2018-04-09"
+  },
+  {
+   "code_station": "05024300",
+   "libelle_station": "La Charente à Suris",
+   "libelle_commune": "Terres-de-Haute-Charente",
+   "code_departement": "16",
+   "libelle_cours_eau": "La Charente",
+   "latitude": 45.84730468,
+   "longitude": 0.637330166,
+   "date_maj_infos": "2019-10-04"
+  },
+  {
+   "code_station": "05022400",
+   "libelle_station": "L'Argent-Or à Poursac",
+   "libelle_commune": "Poursac",
+   "code_departement": "16",
+   "libelle_cours_eau": "L'Argent-Or",
+   "latitude": 45.960492483,
+   "longitude": 0.25553416,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05019930",
+   "libelle_station": "La Bonnieure à Puygelier",
+   "libelle_commune": "Puyréaux",
+   "code_departement": "16",
+   "libelle_cours_eau": "La Bonnieure",
+   "latitude": 45.873890309,
+   "longitude": 0.207215283,
+   "date_maj_infos": "2024-02-14"
+  },
+  {
+   "code_station": "05018000",
+   "libelle_station": "La Charente à Roffit",
+   "libelle_commune": "Saint-Yrieix-sur-Charente",
+   "code_departement": "16",
+   "libelle_cours_eau": "La Charente",
+   "latitude": 45.678465734,
+   "longitude": 0.153785593,
+   "date_maj_infos": "2024-02-14"
+  },
+  {
+   "code_station": "05015900",
+   "libelle_station": "La Touvre au Gond-Pontouvre",
+   "libelle_commune": "Gond-Pontouvre",
+   "code_departement": "16",
+   "libelle_cours_eau": "La Touvre",
+   "latitude": 45.669711338,
+   "longitude": 0.160366429,
+   "date_maj_infos": "2018-05-18"
+  },
+  {
+   "code_station": "05011730",
+   "libelle_station": "Le Né au Moulin de Lussaud",
+   "libelle_commune": "Pérignac",
+   "code_departement": "16",
+   "libelle_cours_eau": "Le Né",
+   "latitude": 45.480210568,
+   "longitude": 0.055176234,
+   "date_maj_infos": "2018-03-30"
+  },
+  {
+   "code_station": "05010000",
+   "libelle_station": "Le Pharaon à St-Pardon",
+   "libelle_commune": "Mortiers",
+   "code_departement": "17",
+   "libelle_cours_eau": "Le Pharaon",
+   "latitude": 45.388740494,
+   "longitude": -0.309880913,
+   "date_maj_infos": "2020-07-16"
+  },
+  {
+   "code_station": "05008000",
+   "libelle_station": "La Seugne à St-Germain de Lusignan",
+   "libelle_commune": "Saint-Germain-de-Lusignan",
+   "code_departement": "17",
+   "libelle_cours_eau": "La Seugne",
+   "latitude": 45.450690136,
+   "longitude": -0.458065669,
+   "date_maj_infos": "2023-04-03"
+  },
+  {
+   "code_station": "05007600",
+   "libelle_station": "La Seugne au Château Renaud",
+   "libelle_commune": "Pons",
+   "code_departement": "17",
+   "libelle_cours_eau": "La Seugne",
+   "latitude": 45.594717207,
+   "longitude": -0.536477788,
+   "date_maj_infos": "2018-05-18"
+  },
+  {
+   "code_station": "05006880",
+   "libelle_station": "Le Bramerit en aval de Grandjean (Lieu-dit Chez Ferret)",
+   "libelle_commune": "Taillebourg",
+   "code_departement": "17",
+   "libelle_cours_eau": "Le Bramerit",
+   "latitude": 45.864229714,
+   "longitude": -0.644330792,
+   "date_maj_infos": "2025-04-08"
+  },
+  {
+   "code_station": "04093800",
+   "libelle_station": "SEMME à DROUX",
+   "libelle_commune": "Droux",
+   "code_departement": "87",
+   "libelle_cours_eau": "la Semme",
+   "latitude": 46.150817323,
+   "longitude": 1.1421526,
+   "date_maj_infos": "2013-12-09"
+  },
+  {
+   "code_station": "04092800",
+   "libelle_station": "GARTEMPE à LE GRAND-BOURG",
+   "libelle_commune": "Le Grand-Bourg",
+   "code_departement": "23",
+   "libelle_cours_eau": "la Gartempe",
+   "latitude": 46.175622625,
+   "longitude": 1.62531155,
+   "date_maj_infos": "2010-02-17"
+  },
+  {
+   "code_station": "04088000",
+   "libelle_station": "CREUSE à GLENIC",
+   "libelle_commune": "Glénic",
+   "code_departement": "23",
+   "libelle_cours_eau": "la Creuse",
+   "latitude": 46.223834032,
+   "longitude": 1.919143788,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04076420",
+   "libelle_station": "TAURION à SAINT-HILAIRE-LE-CHATEAU",
+   "libelle_commune": "Saint-Hilaire-le-Château",
+   "code_departement": "23",
+   "libelle_cours_eau": "le Taurion",
+   "latitude": 45.987791211,
+   "longitude": 1.867252643,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04076100",
+   "libelle_station": "TAURION à GENTIOUX-PIGEROLLES",
+   "libelle_commune": "Gentioux-Pigerolles",
+   "code_departement": "23",
+   "libelle_cours_eau": "le Taurion",
+   "latitude": 45.800472067,
+   "longitude": 2.033113997,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04075887",
+   "libelle_station": "MAULDE à SAINT-MARTIN-CHATEAU",
+   "libelle_commune": "Saint-Martin-Château",
+   "code_departement": "23",
+   "libelle_cours_eau": "la Maulde",
+   "latitude": 45.848661795,
+   "longitude": 1.804512537,
+   "date_maj_infos": "2010-02-12"
+  },
+  {
+   "code_station": "04075882",
+   "libelle_station": "COMBADE à SAINT-DENIS-DES-MURS",
+   "libelle_commune": "Saint-Denis-des-Murs",
+   "code_departement": "87",
+   "libelle_cours_eau": "la Combade",
+   "latitude": 45.785016575,
+   "longitude": 1.552953651,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04075865",
+   "libelle_station": "COMBADE à DOMPS",
+   "libelle_commune": "Domps",
+   "code_departement": "87",
+   "libelle_cours_eau": "la Combade",
+   "latitude": 45.638742612,
+   "longitude": 1.720754234,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04075700",
+   "libelle_station": "VIENNE à SAINT-SETIERS",
+   "libelle_commune": "Saint-Setiers",
+   "code_departement": "19",
+   "libelle_cours_eau": "la Vienne",
+   "latitude": 45.693659901,
+   "longitude": 2.076371745,
+   "date_maj_infos": "2010-06-08"
+  },
+  {
+   "code_station": "04057200",
+   "libelle_station": "TARDES à SAINT-ORADOUX-PRES-CROCQ",
+   "libelle_commune": "Saint-Oradoux-près-Crocq",
+   "code_departement": "23",
+   "libelle_cours_eau": "la Tardes",
+   "latitude": 45.880563173,
+   "longitude": 2.362423283,
+   "date_maj_infos": "2014-10-16"
+  },
+  {
+   "code_station": "04057000",
+   "libelle_station": "CHER à CHAMBONCHARD",
+   "libelle_commune": "Chambonchard",
+   "code_departement": "23",
+   "libelle_cours_eau": "le Cher",
+   "latitude": 46.144206309,
+   "longitude": 2.566288286,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04041780",
+   "libelle_station": "SIOULE à LISSEUIL",
+   "libelle_commune": "Lisseuil",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Sioule",
+   "latitude": 46.054503898,
+   "longitude": 2.915905164,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04041760",
+   "libelle_station": "SAUNADE à LANDOGNE",
+   "libelle_commune": "Landogne",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Saunade",
+   "latitude": 45.883315182,
+   "longitude": 2.638912292,
+   "date_maj_infos": "2009-10-26"
+  },
+  {
+   "code_station": "04041750",
+   "libelle_station": "SIOULET à COMBRAILLES",
+   "libelle_commune": "Combrailles",
+   "code_departement": "63",
+   "libelle_cours_eau": "le Sioulet",
+   "latitude": 45.825346163,
+   "longitude": 2.61859276,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04041700",
+   "libelle_station": "SIOULE à MONTFERMY",
+   "libelle_commune": "Montfermy",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Sioule",
+   "latitude": 45.879678279,
+   "longitude": 2.809031706,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04041675",
+   "libelle_station": "SIOULE à MAZAYE",
+   "libelle_commune": "Mazaye",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Sioule",
+   "latitude": 45.770258801,
+   "longitude": 2.835214742,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04039000",
+   "libelle_station": "DORE à DORAT",
+   "libelle_commune": "Dorat",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Dore",
+   "latitude": 45.878180929,
+   "longitude": 3.482185056,
+   "date_maj_infos": "2013-02-19"
+  },
+  {
+   "code_station": "04037900",
+   "libelle_station": "DORE à OLLIERGUES",
+   "libelle_commune": "Olliergues",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Dore",
+   "latitude": 45.675106745,
+   "longitude": 3.630143903,
+   "date_maj_infos": "2009-10-26"
+  },
+  {
+   "code_station": "04036300",
+   "libelle_station": "DORE à DORE-L'EGLISE",
+   "libelle_commune": "Dore-l'Église",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Dore",
+   "latitude": 45.382636782,
+   "longitude": 3.74557209,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04034650",
+   "libelle_station": "BEDAT à SAINT-LAURE",
+   "libelle_commune": "Saint-Laure",
+   "code_departement": "63",
+   "libelle_cours_eau": "le Bedat",
+   "latitude": 45.900166064,
+   "longitude": 3.295036299,
+   "date_maj_infos": "2009-10-26"
+  },
+  {
+   "code_station": "04033300",
+   "libelle_station": "MORGE à MONTCEL",
+   "libelle_commune": "Montcel",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Morge",
+   "latitude": 46.018130522,
+   "longitude": 3.074826052,
+   "date_maj_infos": "2009-10-26"
+  },
+  {
+   "code_station": "04030020",
+   "libelle_station": "COUZE CHAMBON à CHAMBON-SUR-LAC",
+   "libelle_commune": "Chambon-sur-Lac",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Couze Chambon",
+   "latitude": 45.557298971,
+   "longitude": 2.882879465,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04029700",
+   "libelle_station": "COUZE PAVIN à SAINT-DIERY",
+   "libelle_commune": "Saint-Diéry",
+   "code_departement": "63",
+   "libelle_cours_eau": "la Couze Pavin",
+   "latitude": 45.532612344,
+   "longitude": 3.010764857,
+   "date_maj_infos": "2011-01-10"
+  },
+  {
+   "code_station": "04029050",
+   "libelle_station": "ALAGNON à BEAULIEU",
+   "libelle_commune": "Beaulieu",
+   "code_departement": "63",
+   "libelle_cours_eau": "l'Alagnon",
+   "latitude": 45.449011768,
+   "longitude": 3.298846085,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04028500",
+   "libelle_station": "ALAGNON à JOURSAC",
+   "libelle_commune": "Joursac",
+   "code_departement": "15",
+   "libelle_cours_eau": "l'Alagnon",
+   "latitude": 45.141909949,
+   "longitude": 3.01412345,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04028450",
+   "libelle_station": "ALLANCHE ou COURBIERES À PRADIERS",
+   "libelle_commune": "Pradiers",
+   "code_departement": "15",
+   "libelle_cours_eau": "l'Allanche",
+   "latitude": 45.281619366,
+   "longitude": 2.909123676,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04027810",
+   "libelle_station": "SENOUIRE à SAINT-PAL-DE-SENOUIRE",
+   "libelle_commune": "Saint-Pal-de-Senouire",
+   "code_departement": "43",
+   "libelle_cours_eau": "la Senouire",
+   "latitude": 45.253265098,
+   "longitude": 3.654940367,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04027740",
+   "libelle_station": "ALLIER à BLASSAC",
+   "libelle_commune": "Blassac",
+   "code_departement": "43",
+   "libelle_cours_eau": "l'Allier",
+   "latitude": 45.166178316,
+   "longitude": 3.412967391,
+   "date_maj_infos": "2013-04-10"
+  },
+  {
+   "code_station": "04027650",
+   "libelle_station": "DESGES à DESGES",
+   "libelle_commune": "Desges",
+   "code_departement": "43",
+   "libelle_cours_eau": "la Desges",
+   "latitude": 45.015630849,
+   "longitude": 3.458752234,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04027350",
+   "libelle_station": "ANCE DU SUD à SAINT-PREJET-D'ALLIER",
+   "libelle_commune": "Saint-Préjet-d'Allier",
+   "code_departement": "43",
+   "libelle_cours_eau": "l'Ance",
+   "latitude": 44.8986312,
+   "longitude": 3.632054669,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04027210",
+   "libelle_station": "CHAPEAUROUX à PIERREFICHE",
+   "libelle_commune": "Pierrefiche",
+   "code_departement": "48",
+   "libelle_cours_eau": "le Chapeauroux",
+   "latitude": 44.69931942,
+   "longitude": 3.743922592,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04026500",
+   "libelle_station": "ALLIER à CHASSERADES",
+   "libelle_commune": "Mont Lozère et Goulet",
+   "code_departement": "48",
+   "libelle_cours_eau": "l'Allier",
+   "latitude": 44.563916272,
+   "longitude": 3.848476604,
+   "date_maj_infos": "2013-05-14"
+  },
+  {
+   "code_station": "04026420",
+   "libelle_station": "RAU DE LIAURON à CELLIER-DU-LUC",
+   "libelle_commune": "Cellier-du-Luc",
+   "code_departement": "07",
+   "libelle_cours_eau": "le Liauron",
+   "latitude": 44.67579868,
+   "longitude": 3.916144834,
+   "date_maj_infos": "2013-06-10"
+  },
+  {
+   "code_station": "04009350",
+   "libelle_station": "MARE à SAINT-MARCELLIN-EN-FOREZ",
+   "libelle_commune": "Saint-Marcellin-en-Forez",
+   "code_departement": "42",
+   "libelle_cours_eau": "la Mare",
+   "latitude": 45.496587298,
+   "longitude": 4.155904475,
+   "date_maj_infos": "2013-05-27"
+  },
+  {
+   "code_station": "04003900",
+   "libelle_station": "ANCE DU NORD à BEAUZAC",
+   "libelle_commune": "Beauzac",
+   "code_departement": "43",
+   "libelle_cours_eau": "l'Ance",
+   "latitude": 45.285562614,
+   "longitude": 4.11411131,
+   "date_maj_infos": "2009-10-23"
+  },
+  {
+   "code_station": "04003645",
+   "libelle_station": "ANCE DU NORD à SAUVESSANGES",
+   "libelle_commune": "Sauvessanges",
+   "code_departement": "63",
+   "libelle_cours_eau": "l'Ance",
+   "latitude": 45.379774285,
+   "longitude": 3.890924135,
+   "date_maj_infos": "2013-02-19"
+  },
+  {
+   "code_station": "04003355",
+   "libelle_station": "DUNIERES à DUNIERES",
+   "libelle_commune": "Dunières",
+   "code_departement": "43",
+   "libelle_cours_eau": "la Dunières",
+   "latitude": 45.220056143,
+   "longitude": 4.331558616,
+   "date_maj_infos": "2010-06-07"
+  },
+  {
+   "code_station": "04003340",
+   "libelle_station": "RAU DE ST-JULIEN à SAINT-JULIEN-MOLHESABATE",
+   "libelle_commune": "Saint-Julien-Molhesabate",
+   "code_departement": "43",
+   "libelle_cours_eau": "le Saint Julien",
+   "latitude": 45.181744472,
+   "longitude": 4.388112978,
+   "date_maj_infos": "2005-11-10"
+  },
+  {
+   "code_station": "04002870",
+   "libelle_station": "LIGNON à CHAUDEYROLLES",
+   "libelle_commune": "Chaudeyrolles",
+   "code_departement": "43",
+   "libelle_cours_eau": "le Lignon",
+   "latitude": 44.96387977,
+   "longitude": 4.178732398,
+   "date_maj_infos": "2005-11-10"
+  },
+  {
+   "code_station": "04001600",
+   "libelle_station": "SAY à SAINT-JEAN-DE-NAY",
+   "libelle_commune": "Saint-Jean-de-Nay",
+   "code_departement": "43",
+   "libelle_cours_eau": null,
+   "latitude": 45.044381262,
+   "longitude": 3.699206269,
+   "date_maj_infos": "2001-02-28"
+  },
+  {
+   "code_station": "04000948",
+   "libelle_station": "GAGNE à SAINT-JULIEN-CHAPTEUIL",
+   "libelle_commune": "Saint-Julien-Chapteuil",
+   "code_departement": "43",
+   "libelle_cours_eau": "la Gagne",
+   "latitude": 44.992631022,
+   "longitude": 4.059834713,
+   "date_maj_infos": "2014-02-10"
+  },
+  {
+   "code_station": "04000600",
+   "libelle_station": "LOIRE à GOUDET",
+   "libelle_commune": "Goudet",
+   "code_departement": "43",
+   "libelle_cours_eau": "la Loire",
+   "latitude": 44.891747794,
+   "longitude": 3.921178458,
+   "date_maj_infos": "2014-02-10"
+  },
+  {
+   "code_station": "04000100",
+   "libelle_station": "LOIRE à SAINTE-EULALIE",
+   "libelle_commune": "Sainte-Eulalie",
+   "code_departement": "07",
+   "libelle_cours_eau": "la Loire",
+   "latitude": 44.823864762,
+   "longitude": 4.194331861,
+   "date_maj_infos": "2013-05-17"
+  }
+ ]
+}

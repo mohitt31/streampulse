@@ -1,0 +1,80 @@
+{
+ "synthetic": false,
+ "product_model": "weather_corr_v1",
+ "primary_lead": 3,
+ "decision": "GO: Track 6 forecast product",
+ "passed": true,
+ "criteria": [
+  {
+   "id": 1,
+   "name": "N paired >= 120 and May-Aug >= 60",
+   "value": {
+    "n": 196,
+    "n_may_aug": 79
+   },
+   "passed": true
+  },
+  {
+   "id": 2,
+   "name": "S3 >= 10%",
+   "value": 0.6471314036958606,
+   "passed": true
+  },
+  {
+   "id": 3,
+   "name": "Delta3 >= max(0.1 C, 0.1 x 2024 persistence MAE) = 0.134 C",
+   "value": 0.9799137755102044,
+   "passed": true
+  },
+  {
+   "id": 4,
+   "name": "95% moving-block bootstrap lower bound on Delta > 0 (14-day and 28-day blocks)",
+   "value": {
+    "b14": {
+     "mean": 0.9799137755102042,
+     "lo": 0.7858144642857144,
+     "hi": 1.1638787117346943,
+     "block_days": 14,
+     "reps": 2000,
+     "n": 196,
+     "n_blocks_admissible": 183
+    },
+    "b28": {
+     "mean": 0.9799137755102042,
+     "lo": 0.8007387372448979,
+     "hi": 1.047324668367347,
+     "block_days": 28,
+     "reps": 2000,
+     "n": 196,
+     "n_blocks_admissible": 169
+    }
+   },
+   "passed": true
+  },
+  {
+   "id": 5,
+   "name": "beats climatology overall and persistence in May-Aug",
+   "value": {
+    "mae_prod": 0.5343285714285714,
+    "mae_clim": 1.5645668367346937,
+    "mae_prod_may_aug": 0.5092835443037973,
+    "mae_pers_may_aug": 1.5029341772151898
+   },
+   "passed": true
+  },
+  {
+   "id": 6,
+   "name": "chronology assertions pass and 24h-delay sensitivity keeps positive skill",
+   "value": {
+    "chronology_passed": true,
+    "S_delay1": 0.6575751814755717
+   },
+   "passed": true
+  }
+ ],
+ "mae": {
+  "product": 0.5343285714285714,
+  "persistence": 1.5142423469387758,
+  "climatology": 1.5645668367346937
+ }
+}

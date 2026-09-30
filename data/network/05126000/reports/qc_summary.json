@@ -1,0 +1,101 @@
+{
+ "readings_in": 97992,
+ "dropped": {},
+ "identical_duplicates_collapsed": 0,
+ "conflicting_duplicates_quarantined": 24,
+ "readings_used": 97968,
+ "days": 5679,
+ "eligible_days": 4080,
+ "first_date": "2010-01-01",
+ "last_date": "2025-07-19",
+ "per_year": {
+  "2010": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2011": {
+   "calendar_days": 365,
+   "days_with_data": 255,
+   "eligible_days": 254
+  },
+  "2012": {
+   "calendar_days": 366,
+   "days_with_data": 295,
+   "eligible_days": 294
+  },
+  "2013": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2014": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2015": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2016": {
+   "calendar_days": 366,
+   "days_with_data": 366,
+   "eligible_days": 366
+  },
+  "2017": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2018": {
+   "calendar_days": 365,
+   "days_with_data": 142,
+   "eligible_days": 140
+  },
+  "2019": {
+   "calendar_days": 365,
+   "days_with_data": 115,
+   "eligible_days": 114
+  },
+  "2020": {
+   "calendar_days": 366,
+   "days_with_data": 0,
+   "eligible_days": 0
+  },
+  "2021": {
+   "calendar_days": 365,
+   "days_with_data": 0,
+   "eligible_days": 0
+  },
+  "2022": {
+   "calendar_days": 365,
+   "days_with_data": 158,
+   "eligible_days": 157
+  },
+  "2023": {
+   "calendar_days": 365,
+   "days_with_data": 365,
+   "eligible_days": 365
+  },
+  "2024": {
+   "calendar_days": 366,
+   "days_with_data": 366,
+   "eligible_days": 366
+  },
+  "2025": {
+   "calendar_days": 200,
+   "days_with_data": 200,
+   "eligible_days": 199
+  }
+ },
+ "synthetic": false,
+ "daily_water_sha256": "801a87eb687e825ceee79ff7bde11bd1aeb0d1d3bbcb08f6f2cd418804f52430",
+ "air_runs": {
+  "runs": 523,
+  "first_run": "2024-03-14",
+  "last_run": "2025-08-22",
+  "sha256": "a7293a460d4b82270746ef7f8883c805b0556fba9f680ace75e96b88930f72e3"
+ }
+}

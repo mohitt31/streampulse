@@ -1,0 +1,19 @@
+{
+ "entries": {
+  "2010": {
+   "api_count": 5575,
+   "pages": 1,
+   "path": "data/raw/hubeau/chronique_06178023_2010.json",
+   "retrieved_at": "2026-09-30T07:52:18Z",
+   "rows": 5575,
+   "sha256": "d4c40dae7584d934bc295ef73fdffaf980a580a997913baea863c2a8d22b204f",
+   "url": "https://hubeau.eaufrance.fr/api/v1/temperature/chronique?code_station=06178023&date_debut_mesure=2010-01-01&date_fin_mesure=2010-12-31&size=20000&fields=code_station%2Cdate_mesure_temp%2Cheure_mesure_temp%2Cresultat%2Ccode_qualification%2Ccode_unite%2Csymbole_unite&sort=asc"
+  }
+ },
+ "source": "hubeau temperature chronique",
+ "station_meta": {
+  "retrieved_at": "2026-09-30T07:51:53Z",
+  "sha256": "0ef6a4a85407d91e207524cb450f2f50fced3c4cfe9969856c80e37bbf6f391c",
+  "url": "https://hubeau.eaufrance.fr/api/v1/temperature/station?code_station=06178023&size=1"
+ }
+}

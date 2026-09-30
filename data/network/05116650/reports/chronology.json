@@ -1,0 +1,45 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "splits ordered: train < tune < val < test",
+   "passed": true,
+   "detail": "{\"train_start\": \"2010-01-01\", \"train_end\": \"2022-12-31\", \"tune_start\": \"2023-01-01\", \"tune_end\": \"2023-12-31\", \"refit_start\": \"2010-01-01\", \"refit_end\": \"2023-12-31\", \"val_start\": \"2024-01-01\", \"val_end\": \"2024-12-31\", \"val_expanding_first_eval\": \"2024-07-01\", \"test_start\": \"2025-01-01\", \"test_end\": \"2025-08-21\"}"
+  },
+  {
+   "check": "climatology/refit ends before validation",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "frozen selection created before first test open",
+   "passed": true,
+   "detail": "2026-09-30T09:18:54Z <= 2026-09-30T09:18:54Z"
+  },
+  {
+   "check": "last obs date == origin - 1 - delay",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "target == origin + lead",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "all input obs dates <= last obs date",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "weather run init <= issuance time",
+   "passed": true,
+   "detail": "1603 weather rows"
+  },
+  {
+   "check": "every replayed origin is after all fitting data (origin >= test_start > val_end)",
+   "passed": true,
+   "detail": "first origin 2025-01-01"
+  }
+ ]
+}
