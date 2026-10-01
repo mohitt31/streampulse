@@ -141,6 +141,8 @@ The proposed adapter would link the watch, assignment and returned observation b
 
 ## Reproduce without reopening the test
 
+The public repository records a concentrated hackathon sprint. Its history is preserved as-is, with the initial pipeline, frozen test opening, FHIR work, pre-download regional rules and subsequent results visible as separate milestones. See the [development provenance log](docs/BUILD_LOG.md). No earlier public development is claimed.
+
 ```bash
 pip install -e ".[dev]" scikit-learn
 pytest -q
