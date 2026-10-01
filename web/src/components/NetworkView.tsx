@@ -51,9 +51,11 @@ export function NetworkView({ v, originIdx, setOriginIdx, openPrimary }: Props) 
     const m = L.map(mapEl.current, { scrollWheelZoom: false, attributionControl: true });
     const dark = document.documentElement.getAttribute("data-theme") === "dark" ||
       (!document.documentElement.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
-    L.tileLayer(`https://{s}.basemaps.cartocdn.com/${dark ? "dark_all" : "light_all"}/{z}/{x}/{y}{r}.png`, {
-      maxZoom: 13, subdomains: "abcd",
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    // OpenStreetMap standard tiles (no API key). Dark theme dims them with a CSS filter on the tile pane.
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 13,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      className: dark ? "tiles-dark" : "",
     }).addTo(m);
     const pts = net.stations.map((s) => [s.lat, s.lon] as [number, number]);
     if (pts.length) m.fitBounds(L.latLngBounds(pts).pad(0.15));
