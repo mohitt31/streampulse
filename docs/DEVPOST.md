@@ -8,7 +8,7 @@
 
 - Prototype: https://mohitt31.github.io/streampulse/
 - Code: https://github.com/mohitt31/streampulse
-- Video: recording link pending
+- Video: https://youtu.be/mbE1ybx11cg
 
 ## For judges: evidence by criterion
 

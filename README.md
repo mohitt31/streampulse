@@ -4,7 +4,7 @@
 
 Historical proof of concept on the Garonne at Portet-sur-Garonne, near Toulouse (Hub'eau station `05174000`). This is a large-river pilot near an OAH research city; membership of this station in the official OAH sampling network is **UNVERIFIED**.
 
-**[Live replay dashboard](https://mohitt31.github.io/streampulse/)** · [Video recording script](docs/VIDEO_SCRIPT.md) (recording link pending) · **Track 6: Resilience Informatics** · **Track 7: Digital Health Standards**
+**[Live replay dashboard](https://mohitt31.github.io/streampulse/)** · **[Demo video (4:48)](https://youtu.be/mbE1ybx11cg)** · **Track 6: Resilience Informatics** · **Track 7: Digital Health Standards**
 
 **Two-minute tour for reviewers:** [June warm-anomaly replay](https://mohitt31.github.io/streampulse/?d=2025-06-20#replay) · [regional map and visit planner during the late-June heatwave](https://mohitt31.github.io/streampulse/?d=2025-06-30#network) · [frozen evaluation and gate](https://mohitt31.github.io/streampulse/#evaluation) · [FHIR validation evidence](reports/fhir-validation/summary.json)
 
