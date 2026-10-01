@@ -1,6 +1,6 @@
 # Development provenance
 
-StreamPulse was assembled in a concentrated hackathon sprint. This page makes that rapid public history easy to audit instead of implying a longer development period.
+StreamPulse was assembled in a concentrated hackathon sprint. This page lists the public milestones in order.
 
 The repository's public history begins on 29 September 2026. No earlier public development is claimed. Commit timestamps and immutable report artifacts are the evidence for the sequence below.
 
