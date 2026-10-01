@@ -11,7 +11,7 @@
 
 - Hub'eau source clock timezone and historical publication latency.
 - Unsampled daily ECMWF runs; field readiness and operational telemetry.
-- Claude's actual model outputs, model commit/artifact identity, watch decision policy, original weather request/snapshot identity (contract supplies only initialization time).
+- The pipeline's actual model outputs, model commit/artifact identity, watch decision policy, original weather request/snapshot identity (contract supplies only initialization time).
 - Real external alert delivery, authenticated acknowledgement, biological assessment effectiveness.
 - Remote repository integration, GitHub Actions execution and public canonical URL hosting. Both anonymous GitHub and authenticated gh lookup could not resolve the supplied repository during this task; nothing was pushed.
 - Explicit licence grant for redistributing the pinned OAH source-derived package; do not relicense it MIT.

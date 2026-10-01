@@ -1,9 +1,9 @@
 info  Running SUSHI v3.20.1 (implements FHIR Shorthand specification v3.0.0)
 info  Arguments:
 info    --snapshot
-info    /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/fhir
+info    <repo>/fhir
 info  No output path specified. Output to fhir
-info  Using configuration file: /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/fhir/sushi-config.yaml
+info  Using configuration file: <repo>/fhir/sushi-config.yaml
 info  Importing FSH text...
 info  Preprocessed 1 documents with 2 aliases.
 info  Imported 6 definitions and 0 instances.

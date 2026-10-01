@@ -1,9 +1,9 @@
 info  Running SUSHI v3.20.1 (implements FHIR Shorthand specification v3.0.0)
 info  Arguments:
 info    --snapshot
-info    /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/vendor/oah
+info    <repo>/vendor/oah
 info  No output path specified. Output to vendor/oah
-info  Using configuration file: /Users/mohit/Documents/Codex/2026-09-29/files-pasted-by-the-user-you/work/streampulse-handoff/vendor/oah/sushi-config.yaml
+info  Using configuration file: <repo>/vendor/oah/sushi-config.yaml
 info  Importing FSH text...
 info  Preprocessed 61 documents with 192 aliases.
 info  Imported 28 definitions and 475 instances.

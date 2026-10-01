@@ -32,7 +32,7 @@ Exact requests, retrieval timestamps, HTTP status and SHA-256 hashes are in `aud
 ## Safest handling
 
 - Preserve raw date and source-clock time. Do not append Z or infer Europe/Paris from coordinates.
-- Keep Claude's daily source-calendar `date` unchanged. FHIR raw examples use date-only effectiveDateTime and retain the original hour in a note. Forecast effectivePeriod uses the same date for start and end at date precision: that source calendar day; no midnight UTC boundary is invented.
+- Keep the pipeline's daily source-calendar `date` unchanged. FHIR raw examples use date-only effectiveDateTime and retain the original hour in a note. Forecast effectivePeriod uses the same date for start and end at date precision: that source calendar day; no midnight UTC boundary is invented.
 - Actual generation and acknowledgement timestamps must be explicitly timezone-aware. Simulated issuance remains the contract's UTC timestamp and is a separate extension.
 - Weather alignment needs producer confirmation or an explicitly declared source-clock assumption plus sensitivity analysis. Do not call it fully verified while unresolved.
 - DST-shaped duplicates or yearly counts are not proof of timezone. Do not borrow the separate hydrometry API's convention.
