@@ -22,5 +22,5 @@ lines+=['','## Informational findings','', '- OAH indicator and component-code b
 for name,r in summary.items():
     if not isinstance(r,dict) or name=='positive':continue
     lines.append('- '+name+': '+json.dumps(r['counts'])+'; expected conformance failure, asserted by scripts/check_validation.py.')
-lines+=['','A passing fixture establishes encoding/conformance behavior, not model skill, actual message delivery, source sensor quality, or authentication. The fixture forecast, all-zero model SHA, and acknowledgement are explicitly synthetic. Actual Claude pipeline outputs must be exported and validated separately.']
+lines+=['','A passing fixture establishes encoding/conformance behavior, not model skill, actual message delivery, source sensor quality, or authentication. The fixture forecast, all-zero model SHA, and acknowledgement are explicitly synthetic. Actual pipeline outputs must be exported and validated separately.']
 (folder/'WARNINGS.md').write_text('\n'.join(lines)+'\n');print(json.dumps(summary,indent=2))

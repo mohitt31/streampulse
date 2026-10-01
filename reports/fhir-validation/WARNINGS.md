@@ -24,4 +24,4 @@ The missing-performer fixture intentionally produces the base best-practice warn
 - wrong-subject-type: {"information": 4, "error": 1}; expected conformance failure, asserted by scripts/check_validation.py.
 - missing-run-mode: {"information": 35, "error": 2}; expected conformance failure, asserted by scripts/check_validation.py.
 
-A passing fixture establishes encoding/conformance behavior, not model skill, actual message delivery, source sensor quality, or authentication. The fixture forecast, all-zero model SHA, and acknowledgement are explicitly synthetic. Actual Claude pipeline outputs must be exported and validated separately.
+A passing fixture establishes encoding/conformance behavior, not model skill, actual message delivery, source sensor quality, or authentication. The fixture forecast, all-zero model SHA, and acknowledgement are explicitly synthetic. Actual pipeline outputs must be exported and validated separately.
